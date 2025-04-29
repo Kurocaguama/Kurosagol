@@ -1,28 +1,18 @@
-#class Ejemplo:
-#	def __init__(
-#		self,
-#		model_id
-#	):
-#		self.model_id = model_id
-#		self.params = ['hola', 'prueba', 'dinosaurios']
-#
-#	def print_params(self):
-#		for _ in self.params:
-#			print(_)
-
-
 class DatasetLoader:
+	"""
+	La idea va a ser que con las funciones definidas en esta clase
+	podamos crear un nuevo dataset adecuado para DPO (eventualmente para el algoritmo que sea).
+
+	Habrá que dejarlo bonito y consistente con la metodología de MSc-Thesis
+	"""
 	def __init__(self, dataset):
 		self.dataset = dataset
 
-	def test_function(self, dataset):
-		return dataset['chosen']
+	def get_chosen(self):
+		return self.dataset['chosen']
 
-	def test_length(self, dataset):
-		return len(dataset)
+	def get_rejected(self):
+		return self.dataset['rejected']
 
-#def test_function(dataset):
-#	return dataset['chosen']
-
-#def length(dataset):
-#	return len(dataset)
+	def get_length(self):
+		return len(self.dataset)
