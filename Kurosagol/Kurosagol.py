@@ -31,16 +31,16 @@ class DatasetManager:
 		self.quant_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype = torch.bfloat16)
 		self.gen_config = GenerationConfig.from_pretrained(model_id)
 		self.tokenizer = AutoTokenizer.from_pretrained(model_id)
-		self.model = AutoModelForCausalLM.from_pretrained(model_id)
+		self.model = AutoModelForCausalLM.from_pretrained(model_id).to(self.dev)
 		self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
 		# Generated lists per strategy
-		self.greedy = None
-		self.constrastive = None
-		self.beam = None
-		self.diverse_beam = None
-		self.multinomial = None
-		self.beam_multinomial = None
+		self.greedy = []
+		self.contrastive = []
+		self.beam = []
+		self.diverse_beam = []
+		self.multinomial = []
+		self.beam_multinomial = []
 
 	# Shit test functions
 	def get_chosen(self):
@@ -67,8 +67,8 @@ class DatasetManager:
 		"""
 		Limpia el dataset en cuestión. Regresa una lista ordenada sin repeticiones de premisas.
 		"""
-		premise_full = [self.dataset['premise'][i].split('\n') for i in range(len(self.dataset['premise']))]
-		premise_list = [self.unite_str(premise_full[i]) for i in range(len(premise_full))]
+		premise_full = [self.dataset['premises'][i].split('\n') for i in range(len(self.dataset['premises']))]
+		#premise_list = [self.unite_str(premise_full[i]) for i in range(len(premise_full))]
 
 		ordered_list = []
 		ordered_list.append(premise_full[0])
@@ -93,7 +93,7 @@ class DatasetManager:
 		inputs = self.tokenizer(self.prompt, return_tensors = 'pt').to(self.dev)
 
 		if strategy == 'gs':
-			outputs = self.model.generate(**inputs, max_new_tokens = self.max_new_tokens)
+			outputs = self.model.generate(**inputs, max_new_tokens = self.max_new_tokens)#.to(self.dev)
 		elif strategy == 'cs':
 			outputs = self.model.generate(**inputs, max_new_tokens = self.max_new_tokens, penalty_alpha = 0.6, top_k = 5)
 		elif strategy == 'bs':
@@ -112,7 +112,7 @@ class DatasetManager:
 	
 	def vector_generation(self):
 		"""
-		Genera un vector de 
+		Genera un vector que contiene todos las posibles generaciones de un modelo 
 		"""
 		gen_strats = ['gs', 'cs', 'bs', 'dbs', 'ms', 'bsms']
 		return [self.generation_with_strat(_) for _ in gen_strats]
@@ -122,7 +122,7 @@ class DatasetManager:
 		Itera sobre el dataset limpio y agrega a los valores de la instancia de la clase.		
 		"""
 		for _ in self.clean_list:
-			prompt = prompt.format(_)
+			self.prompt = self.prompt.format(_)
 			llm_ans = self.vector_generation()
 			self.greedy.append(llm_ans[0])
 			self.contrastive.append(llm_ans[1])
@@ -133,12 +133,15 @@ class DatasetManager:
 
 
 	def list_dict(self, nl_value, ds_value):
+		"""
+		Genera una lista compuesta por dos diccionarios. Este valor será una entrada para el DPO Dataset
+		"""
 		d1 = {'content': self.prompt.format(nl_value), 'role' : 'user'}
 		d2 = {'content': ds_value, 'role': 'assistant'}
 		return [d1, d2]
 
 	def good_dataset(self, ds_list):
-		chosen = [self.list_dict(self.clean_list[i], self.dataset['premise'][i]) for i in range(len(self.clean_list))]
+		chosen = [self.list_dict(self.clean_list[i], self.dataset['premises-FOL'][i]) for i in range(len(self.clean_list))]
 		rejected = [self.list_dict(self.clean_list[i], ds_list[i]) for i in range(len(self.clean_list))]
 		pref_scores = [np.random.rand(1)[0] + 8 for i in range(len(self.clean_list))]
 		bad_scores = [np.random.rand(1)[0] + 3 for i in range(len(self.clean_list))]
