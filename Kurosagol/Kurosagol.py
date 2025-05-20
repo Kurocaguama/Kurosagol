@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from datasets import Dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig
+import utils
 
 class DatasetManager:
 	"""
@@ -141,10 +142,18 @@ class DatasetManager:
 		return [d1, d2]
 
 	def good_dataset(self, ds_list):
+		"""
+		Genera un Dataset en formato de HuggingFace a partir de las listas provenientes del dataset y de las generaciones del modelo.
+		"""
 		chosen = [self.list_dict(self.clean_list[i], self.dataset['premises-FOL'][i]) for i in range(len(self.clean_list))]
 		rejected = [self.list_dict(self.clean_list[i], ds_list[i]) for i in range(len(self.clean_list))]
-		pref_scores = [np.random.rand(1)[0] + 8 for i in range(len(self.clean_list))]
-		bad_scores = [np.random.rand(1)[0] + 3 for i in range(len(self.clean_list))]
+
+		# Queremos listas cuyo valor sea más alto entre más similares sean los pares de oraciones.
+		pref_scores = [round(np.random.rand(1)[0], 3) + 8 if utils.get_sim(chosen[i], rejected[i]) > 0.5 else round(np.random.rand(1)[0], 3) + 7 for i in range(len(chosen))]
+		bad_scores = [round(np.random.rand(1)[0], 3) + 4 if utils.get_sim(chosen[i], rejected[i]) > 0.5 else round(np.random.rand(1)[0], 3) + 3 for i in range(len(chosen))]
+
+		#pref_scores = [np.random.rand(1)[0] + 8 for i in range(len(self.clean_list))]
+		#bad_scores = [np.random.rand(1)[0] + 3 for i in range(len(self.clean_list))]
 
 		preference_dictionary = {'chosen': chosen, 'rejected': rejected, 'score_chosen': pref_scores, 'score_rejected': bad_scores}
 		return Dataset.from_pandas(pd.DataFrame(preference_dictionary))

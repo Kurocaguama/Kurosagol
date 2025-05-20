@@ -45,19 +45,24 @@ prompt = """
 """
 
 # Declaramos la instancia del DatasetManager con los parámetros necesarios (dataset['columna'], model_id, max_new_tokens)
-test = k.DatasetManager(aux, 'meta-llama/Llama-3.2-1B', 100, prompt)
+test = k.DatasetManager(aux, 'meta-llama/Llama-3.2-1B', 60, prompt)
+
 
 # Usando .clean_dataset() obtenemos la versión limpia y sin repeticiones de FOLIO
 test.clean_dataset()
 
-# La línea de abajo solo se ejecuta en caso de que se quiera hacer más corta la implementación
-#test.clean_list = test.clean_list[:2]
 
+# La línea de abajo solo se ejecuta en caso de que se quiera hacer más corta la implementación. La segunda línea de este bloque es necesaria.
+test.clean_list = test.clean_list[:2]
 test.gen_strats_list()
+
 
 # Se define la lista a partir de la cual se va a generar el dataset final. La función .good_dataset() regresa el dataset en formato de preferencias.
 test_dataset = test.good_dataset(test.greedy)
+
+# Solo en caso de que se vaya a hacer un commit a HuggingFace
 #test_dataset.push_to_hub('Kurosawama/greedy_DPO')
+
 
 # Pruebas para ver los elementos del dataset
 print(test_dataset)
