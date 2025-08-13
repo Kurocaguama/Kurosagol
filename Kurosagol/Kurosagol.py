@@ -32,7 +32,7 @@ class DatasetManager:
 		self.quant_config = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype = torch.bfloat16)
 		self.gen_config = GenerationConfig.from_pretrained(model_id)
 		self.tokenizer = AutoTokenizer.from_pretrained(model_id)
-		self.model = AutoModelForCausalLM.from_pretrained(model_id).to(self.dev)
+		self.model = AutoModelForCausalLM.from_pretrained(model_id, quantization_config = self.quant_config).to(self.dev)
 		self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 
 		# Generated lists per strategy
