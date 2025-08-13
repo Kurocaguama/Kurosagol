@@ -3,6 +3,8 @@ import numpy as np
 import pandas as pd
 from datasets import Dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig
+from peft import LoraConfig, TaskType
+from trl import DPOConfig, DPOTrainer
 import utils
 
 class DatasetManager:
@@ -11,7 +13,7 @@ class DatasetManager:
 
 	Hay que ejecutar el código presente en test.py para ver qué pingas.
 	Dudas:
-		1.- ¿Funcionan los cambios que le estamos haciendo al prompt? (prompt = prompt.format(_))
+		1.- ¿Funcionan los cambios que le estamos haciendo al prompt? (prompt = prompt.format(_)) # SÍ
 		2.- ¿Podemos tirarle un tqdm a la generación?
 	"""
 	def __init__(self, dataset, model_id, max_new_tokens, prompt):
@@ -43,25 +45,12 @@ class DatasetManager:
 		self.multinomial = []
 		self.beam_multinomial = []
 
-	# Shit test functions
-	def get_chosen(self):
-		return self.dataset['chosen']
-
-	# Shit test functions 2
-	def get_rejected(self):
-		return self.dataset['rejected']
-
-	# Shit test functions 3
-	def get_length(self):
-		print(len(self.dataset)) 
-
 	# Funciones auxiliares
 	def unite_str(self, aux):
 		string = ''
 		for _ in aux:
 			string += _ + ' '
 		return string
-
 
 	# Construcción del dataset de FOLIO		
 	def clean_dataset(self):
@@ -157,3 +146,48 @@ class DatasetManager:
 
 		preference_dictionary = {'chosen': chosen, 'rejected': rejected, 'score_chosen': pref_scores, 'score_rejected': bad_scores}
 		return Dataset.from_pandas(pd.DataFrame(preference_dictionary))
+	
+
+
+class DPO:
+	"""
+	Clase para realizar el alineamiento de los modelos a partir de los conjuntos de preferencia.
+	"""
+	def __init__(self, model_id, output_dir):
+		
+		# Primero definimos los detalles para 
+		self.hf_key = ''
+		self.quant_config = BitsAndBytesConfig(load_in_4bit = True, bnb_4bit_compute_dtype = torch.bfloat16)
+		self.gen_config = GenerationConfig.from_pretrained(model_id)
+		self.tokenizer = AutoTokenizer.from_pretrained(model_id)
+		self.gen_config.pad_token_id = self.tokenizer.pad_token_id
+		self.dev = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+		self.lora_config = LoraConfig(
+			task_type = TaskType.CAUSAL_LM,
+			inference_model = False,
+			r = 8,
+			lora_alpha = 32,
+			lora_dropout = 0.1
+		)
+		self.tokenizer.chat_template = """
+			<|im_start|>system
+			{SYSTEM}<|im_end|>
+			<|im_start|>user
+			{INPUT}<|im_ed|>
+			<|im_start|>assistant
+			{OUTPUT}<|im_end|>
+		"""
+
+		# Instanciamos el modelo
+		self.model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir = output_dir, quantization_config = self.quant_config, generation_config = self.gen_config).to(self.dev)
+		self.model.add_adapter(self.lora_config, adapter_name = 'LoRa_Adapter')
+		self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
+		self.tokenizer.pad_token = self.tokenizer.eos_token
+
+	def train_and_push(self, dataset, aligned_id):
+		training_args = DPOConfig(output_dir = self.output_dir, logging_steps = 30)
+		trainer = DPOTrainer(model = self.model, args = training_args, processing_class = self.tokenizer, train_dataset = dataset)
+		trainer.train()
+		print('Fully trained. VM.')
+		self.model.push_to_hub(aligned_id)
+		print('Model in the hub. VM.')
