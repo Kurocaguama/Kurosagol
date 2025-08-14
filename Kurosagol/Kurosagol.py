@@ -69,7 +69,6 @@ class DatasetManager:
 			column = 'conclusion-FOL'
 		else:
 			print('Etapa desconocida. Favor de redefinir')
-			break
 
 		premise_full = [self.dataset[column][i].split('\n') for i in range(len(self.dataset[column]))]
 		#premise_list = [self.unite_str(premise_full[i]) for i in range(len(premise_full))]
@@ -160,7 +159,6 @@ class DatasetManager:
 			column = 'conclusion'
 		else:
 			print('Etapa desconocida.')
-			break
 
 		chosen = [self.list_dict(self.clean_list[i], self.dataset[column][i]) for i in range(len(self.clean_list))]
 		#chosen = [self.list_dict(self.clean_list[i], self.dataset[column][i]) for i in range(len(self.clean_list))]
