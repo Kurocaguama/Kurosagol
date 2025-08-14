@@ -41,8 +41,9 @@ torch.cuda.empty_cache()
 
 translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_to_fol)
 translation.clean_dataset()
-translation.clean_list = translation.clean_list[0]
+#translation.clean_list = translation.clean_list[0]
+print(translation.dataset, print(len(translation.clean_list)))
 translation.gen_strats_list()
-
 translation_ds = translation.good_dataset(translation.greedy)
-translation_ds.push_to_hub('Kurosawama/Translation_DPO_greedy')
+print(translation_ds)
+translation_ds.push_to_hub('Kurosawama/Translation_DPO_greedy_test1')

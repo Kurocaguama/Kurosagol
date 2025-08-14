@@ -104,7 +104,8 @@ class DatasetManager:
 		"""
 		Genera un vector que contiene todos las posibles generaciones de un modelo 
 		"""
-		gen_strats = ['gs', 'cs', 'bs', 'dbs', 'ms', 'bsms']
+		#gen_strats = ['gs', 'cs', 'bs', 'dbs', 'ms', 'bsms'] # You can use this line in case you want to add multiple generation strategies.
+		gen_strats = ['gs']
 		return [self.generation_with_strat(_) for _ in gen_strats]
 
 	def gen_strats_list(self):
@@ -115,11 +116,13 @@ class DatasetManager:
 			self.prompt = self.prompt.format(_)
 			llm_ans = self.vector_generation()
 			self.greedy.append(llm_ans[0])
-			self.contrastive.append(llm_ans[1])
-			self.beam.append(llm_ans[2])
-			self.diverse_beam.append(llm_ans[3])
-			self.multinomial.append(llm_ans[4])
-			self.beam_multinomial.append(llm_ans[5])	
+
+			# Uncomment the following lines if multiple generation strategies are used.
+			#self.contrastive.append(llm_ans[1])
+			#self.beam.append(llm_ans[2])
+			#self.diverse_beam.append(llm_ans[3])
+			#self.multinomial.append(llm_ans[4])
+			#self.beam_multinomial.append(llm_ans[5])	
 
 
 	def list_dict(self, nl_value, ds_value):
