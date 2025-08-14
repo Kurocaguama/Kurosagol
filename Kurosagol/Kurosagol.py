@@ -14,14 +14,15 @@ class DatasetManager:
 	Hay que ejecutar el código presente en test.py para ver qué pingas.
 	Dudas:
 		1.- ¿Funcionan los cambios que le estamos haciendo al prompt? (prompt = prompt.format(_)) # SÍ
-		2.- ¿Podemos tirarle un tqdm a la generación?
+		2.- ¿Podemos tirarle un tqdm a la generación? # Chance pero zzzzzzzzzzzzz
 	"""
-	def __init__(self, dataset, model_id, max_new_tokens, prompt):
+	def __init__(self, dataset, model_id, max_new_tokens, prompt, stage):
 		"""
 		dataset = load_dataset('a/b', split = 'x') ; 
 		model_id = str ; Model_id directo de HuggingFace.
 		max_new_tokens = int ; Cantidad máxima de tokens para la generación.
 		prompt = str ; Prompt definido de manera externa. Debe de permitir un .format(premise) (Detalles en test.py)
+		stage = str ; Opciones: 'trans', 'infer', 'retrans'. Cada una determina el proceso en cuestión.
 		"""
 		# General details
 		self.dataset = dataset
@@ -45,6 +46,9 @@ class DatasetManager:
 		self.multinomial = []
 		self.beam_multinomial = []
 
+		# Stage of the pipeline
+		self.stage = stage
+
 	# Funciones auxiliares
 	def unite_str(self, aux):
 		string = ''
@@ -57,7 +61,17 @@ class DatasetManager:
 		"""
 		Limpia el dataset en cuestión. Regresa una lista ordenada sin repeticiones de premisas.
 		"""
-		premise_full = [self.dataset['premises'][i].split('\n') for i in range(len(self.dataset['premises']))]
+		if self.stage == 'trans':
+			column = 'premises'
+		if self.stage == 'infer':
+			column = 'premises-FOL'
+		if self.stage == 'retrans':
+			column = 'conclusion-FOL'
+		else:
+			print('Etapa desconocida. Favor de redefinir')
+			break
+
+		premise_full = [self.dataset[column][i].split('\n') for i in range(len(self.dataset[column]))]
 		#premise_list = [self.unite_str(premise_full[i]) for i in range(len(premise_full))]
 
 		ordered_list = []
@@ -67,7 +81,6 @@ class DatasetManager:
 				ordered_list.append(premise_full[i])
 
 		self.clean_list = ordered_list
-#		return ordered_list
 	
 	def generation_with_strat(self, strategy):
 		"""
@@ -133,19 +146,29 @@ class DatasetManager:
 		d2 = {'content': ds_value, 'role': 'assistant'}
 		return [d1, d2]
 
+	#def good_dataset(self, ds_list, column):
 	def good_dataset(self, ds_list):
 		"""
 		Genera un Dataset en formato de HuggingFace a partir de las listas provenientes del dataset y de las generaciones del modelo.
 		"""
-		chosen = [self.list_dict(self.clean_list[i], self.dataset['premises-FOL'][i]) for i in range(len(self.clean_list))]
+
+		if self.stage == 'trans':
+			column = 'premises-FOL'
+		if self.stage == 'infer':
+			column = 'conclusion-FOL'
+		if self.stage == 'retrans':
+			column = 'conclusion'
+		else:
+			print('Etapa desconocida.')
+			break
+
+		chosen = [self.list_dict(self.clean_list[i], self.dataset[column][i]) for i in range(len(self.clean_list))]
+		#chosen = [self.list_dict(self.clean_list[i], self.dataset[column][i]) for i in range(len(self.clean_list))]
 		rejected = [self.list_dict(self.clean_list[i], ds_list[i]) for i in range(len(self.clean_list))]
 
 		# Queremos listas cuyo valor sea más alto entre más similares sean los pares de oraciones.
 		pref_scores = [round(np.random.rand(1)[0], 3) + 8 if utils.get_sim(chosen[i], rejected[i]) > 0.5 else round(np.random.rand(1)[0], 3) + 7 for i in range(len(chosen))]
 		bad_scores = [round(np.random.rand(1)[0], 3) + 4 if utils.get_sim(chosen[i], rejected[i]) > 0.5 else round(np.random.rand(1)[0], 3) + 3 for i in range(len(chosen))]
-
-		#pref_scores = [np.random.rand(1)[0] + 8 for i in range(len(self.clean_list))]
-		#bad_scores = [np.random.rand(1)[0] + 3 for i in range(len(self.clean_list))]
 
 		preference_dictionary = {'chosen': chosen, 'rejected': rejected, 'score_chosen': pref_scores, 'score_rejected': bad_scores}
 		return Dataset.from_pandas(pd.DataFrame(preference_dictionary))

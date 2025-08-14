@@ -37,13 +37,78 @@ prompt_nl_to_fol = """
     Predicates:
 """
 
-torch.cuda.empty_cache()
 
-translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_to_fol)
-translation.clean_dataset()
-#translation.clean_list = translation.clean_list[0]
-print(translation.dataset, print(len(translation.clean_list)))
-translation.gen_strats_list()
-translation_ds = translation.good_dataset(translation.greedy)
-print(translation_ds)
-translation_ds.push_to_hub('Kurosawama/Translation_DPO_greedy_test1')
+prompt_inference = """
+    Given a set of premises in first order logic, the task is to perform a series of inference steps to deduct the logical solution of the problem.
+    Valid inference rules are such as: 
+    Modus Ponens (p, p → q, therefore q)
+    Modus Tollens (p → q, ¬q, therefore ¬p)
+    Hypotheticall Syllogism (p → q, q → r, therfore p → r)
+    Destructive Dilemma (p → q, r → s, ¬q ∨ ¬s, therefore ¬p ∨ ¬r)
+    Constructive Dilemma (p → q, r → s, p ∨ r, therefore q ∨ s)
+    Bidirectional Dilemma (p → q, r → s, p ∨ ¬s, therefore q ∨ ¬r)
+    Express your result in first order logic.
+    -------------------
+    Problem:
+    ∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))
+    ∀x (DrinkRegularly(x, coffee) ∨ (¬WantToBeAddictedTo(x, caffeine)))
+    ∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))
+    ¬(Student(rina) ⊕ ¬AwareThatDrug(rina, caffeine))
+    ¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))
+    Conclusion:
+    ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))
+    -------------------
+
+    Problem:
+    {}
+    Conclusion:
+"""
+
+prompt_retranslation = """
+    Given a single premise in first order logic, the task is to retranslate it to natural language.
+    The grammar of the first-order logic formular is defined as follows:
+    1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
+    2) logical disjunction of expr1 and expr2: expr1 ∨ expr2
+    3) logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+    4) logical negation of expr1: ¬expr1
+    5) expr1 implies expr2: expr1 → expr2
+    6) expr1 if and only if expr2: expr1 ↔ expr2
+    7) logical universal quantification: ∀x
+    8) logical existential quantification: ∃x
+    --------------
+    Premise:
+    ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))
+
+    Retranslation:
+    Rina doesn't want to be addicted to caffeine or is unaware that caffeine is a drug.
+    --------------
+
+    Premise:
+    {}
+    Retranslation:
+"""
+
+
+def full_pipeline(k_instance, dataset_name):
+    """
+    Realiza el proceso de limpiar y subir el dataset a HF.
+
+    k_instance = k.DatasetManager(folio, checkpoint_name, 85, prompt)
+    dataset_name = str ; Tiene que ser el nombre final para subirlo a HuggingFace. OJO.
+    """
+    torch.cuda.empty_cache()
+    k_instance.clean_dataset()
+    k_instance.gen_strats_list()
+    dataset = k_instance.good_dataset(k_instance.greedy)
+    dataset.push_to_hub(dataset_name)
+    torch.cuda.empty_cache()
+    print("{} subido a HuggingFace".format(dataset_name))
+
+translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_to_fol, 'trans')
+full_pipeline(translation, "Kurosawama/Translation_DPO_Llama-3.1-8B")
+
+inference = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_inference, 'infer')
+full_pipeline(translation, "Kurosawama/Inference_DPO_Llama-3.1-8B")
+
+retranslation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_retranslation, 'retrans')
+full_pipeline(translation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B")
