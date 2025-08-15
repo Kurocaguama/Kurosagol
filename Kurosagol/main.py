@@ -1,5 +1,5 @@
 import Kurosagol as k
-import torch
+import torch, re
 from datasets import load_dataset
 
 folio = load_dataset('yale-nlp/FOLIO', split = 'train')
@@ -109,12 +109,13 @@ def full_pipeline(k_instance, dataset_name):
 
 
 def full_pipe_final(model_id):
+    model_regex = re.split('\/', model_id)
     translation = k.DatasetManager(folio, model_id, 100, prompt_nl_to_fol, 'trans')
-    full_pipeline(translation, f"Kurosawama/Translation_DPO_{model_id}")
+    full_pipeline(translation, f"Kurosawama/Translation_DPO_{model_regex}")
     inference = k.DatasetManager(folio, model_id, 100, prompt_inference, 'infer')
-    full_pipeline(inference, f"Kurosawama/Inference_DPO_{model_id}")
+    full_pipeline(inference, f"Kurosawama/Inference_DPO_{model_regex}")
     retranslation = k.DatasetManager(folio, model_id, 100, prompt_retranslation, 'retrans')
-    full_pipeline(retranslation, f"Kurosawama/Retranslation_DPO_{model_id}")
+    full_pipeline(retranslation, f"Kurosawama/Retranslation_DPO_{model_regex}")
     print("Fin. Favor de revisar en HuggingFace.")
     print("Viva Messi.")
 

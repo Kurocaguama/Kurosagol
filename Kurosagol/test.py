@@ -5,7 +5,7 @@ Ejemplo de uso de la paquetería para generar los datasets de DPO.
 """
 
 import Kurosagol as k
-import torch
+import torch, re
 from datasets import load_dataset
 
 # Ahorita la paquetería está enfocada en su totalidad a este dataset. A largo plazo se busca generalizar para poder trabajar con múltiples datasets.
@@ -83,8 +83,18 @@ prompt_fol_to_nl = """
     Translation:
 """
 
-torch.cuda.empty_cache()
-testing = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_to_fol, 'trans')
-print('Device: {}'.format(testing.dev))
-testing.clean_dataset()
-testing.gen_strats_list()
+checkpoint_list = [
+    'meta-llama/Llama-3.1-8B',
+    'meta-llama/Llama-3.1-8B-Instruct',
+    'meta-llama/Llama-3.2-3B',
+    'meta-llama/Llama-3.2-3B-Instruct',
+    'meta-llama/Llama-3.3-70B-Instruct',
+    'openai/gpt-oss-20b',
+    'deepseek-ai/DeepSeek-R1',
+    'google/gemma-3-270m',
+    'google/gemma-3-1b-it'
+]
+
+for _ in checkpoint_list:
+    print(re.search('\/', _))
+    print(re.split('\/', _)[1])
