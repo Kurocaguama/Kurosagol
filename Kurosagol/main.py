@@ -109,7 +109,7 @@ def full_pipeline(k_instance, dataset_name):
 
 
 def full_pipe_final(model_id):
-    model_regex = re.split('\/', model_id)
+    model_regex = re.split('\/', model_id)[1]
     translation = k.DatasetManager(folio, model_id, 100, prompt_nl_to_fol, 'trans')
     full_pipeline(translation, f"Kurosawama/Translation_DPO_{model_regex}")
     inference = k.DatasetManager(folio, model_id, 100, prompt_inference, 'infer')
