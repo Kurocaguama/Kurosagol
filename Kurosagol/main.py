@@ -108,7 +108,7 @@ translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_t
 full_pipeline(translation, "Kurosawama/Translation_DPO_Llama-3.1-8B")
 
 inference = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_inference, 'infer')
-full_pipeline(translation, "Kurosawama/Inference_DPO_Llama-3.1-8B")
+full_pipeline(inference, "Kurosawama/Inference_DPO_Llama-3.1-8B")
 
 retranslation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_retranslation, 'retrans')
-full_pipeline(translation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B")
+full_pipeline(retranslation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B")
