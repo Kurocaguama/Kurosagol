@@ -69,17 +69,18 @@ class DatasetManager:
 			column = 'conclusion-FOL'
 		else:
 			print('Etapa desconocida. Favor de redefinir')
+ 
+		self.clean_list = [self.dataset[column][i].split('\n') for i in range(1, len(self.dataset[column]))]
 
-		premise_full = [self.dataset[column][i].split('\n') for i in range(len(self.dataset[column]))]
-		#premise_list = [self.unite_str(premise_full[i]) for i in range(len(premise_full))]
+		# Lo que hace esto es eliminar casos en donde se repiten premisas, no obstante puede ser problemático ya que se genera una cantidad dispareja de elementos.
+		# Evitaremos eliminar los casos repetidos para evitar desfases entre conjuntos de datos.
+		#ordered_list = []
+		#ordered_list.append(premise_full[0])
+		#for i in range(1, len(premise_full)):
+		#	if premise_full[i] != ordered_list[-1]:
+		#		ordered_list.append(premise_full[i])
 
-		ordered_list = []
-		ordered_list.append(premise_full[0])
-		for i in range(1, len(premise_full)):
-			if premise_full[i] != ordered_list[-1]:
-				ordered_list.append(premise_full[i])
-
-		self.clean_list = ordered_list
+		#self.clean_list = ordered_list
 	
 	def generation_with_strat(self, strategy):
 		"""
