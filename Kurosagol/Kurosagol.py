@@ -125,7 +125,7 @@ class DatasetManager:
 		Itera sobre el dataset limpio y agrega a los valores de la instancia de la clase.		
 		"""
 		og_prompt = self.prompt
-		for _ in self.clean_list[:20]:
+		for _ in self.clean_list:
 			self.prompt = og_prompt.format(_)
 			llm_ans = self.vector_generation()
 			self.greedy.append(llm_ans[0])
