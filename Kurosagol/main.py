@@ -104,11 +104,11 @@ def full_pipeline(k_instance, dataset_name):
     torch.cuda.empty_cache()
     print("{} subido a HuggingFace".format(dataset_name))
 
-translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_to_fol, 'trans')
-full_pipeline(translation, "Kurosawama/Translation_DPO_Llama-3.1-8B")
+translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B-Instruct', 85, prompt_nl_to_fol, 'trans')
+full_pipeline(translation, "Kurosawama/Translation_DPO_Llama-3.1-8B-Instruct")
 
-inference = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_inference, 'infer')
-full_pipeline(inference, "Kurosawama/Inference_DPO_Llama-3.1-8B")
+inference = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B-Instruct', 85, prompt_inference, 'infer')
+full_pipeline(inference, "Kurosawama/Inference_DPO_Llama-3.1-8B-Instruct")
 
-retranslation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_retranslation, 'retrans')
-full_pipeline(retranslation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B")
+retranslation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B-Instruct', 85, prompt_retranslation, 'retrans')
+full_pipeline(retranslation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B-Instruct")
