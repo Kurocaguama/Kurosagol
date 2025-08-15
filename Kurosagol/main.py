@@ -15,6 +15,7 @@ prompt_nl_to_fol = """
     6) expr1 if and only if expr2: expr1 ↔ expr2
     7) logical universal quantification: ∀x
     8) logical existential quantification: ∃x
+    A detailed example is shown next. Only answer with the premises, omit the explanation.
     --------------
     Problem:
     All people who regularly drink coffee are dependent on caffeine. People either regularly drink coffee or joke about being addicted to caffeine. No one who jokes about being addicted to caffeine is unaware that caffeine is a drug. Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug. If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student.
@@ -48,6 +49,7 @@ prompt_inference = """
     Constructive Dilemma (p → q, r → s, p ∨ r, therefore q ∨ s)
     Bidirectional Dilemma (p → q, r → s, p ∨ ¬s, therefore q ∨ ¬r)
     Express your result in first order logic.
+    A detailed example is shown next. Only answer with the conclusion.
     -------------------
     Problem:
     ∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))
@@ -75,6 +77,7 @@ prompt_retranslation = """
     6) expr1 if and only if expr2: expr1 ↔ expr2
     7) logical universal quantification: ∀x
     8) logical existential quantification: ∃x
+    A detailed example is shown next. Only answer with the retranslation.
     --------------
     Premise:
     ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))
@@ -104,11 +107,37 @@ def full_pipeline(k_instance, dataset_name):
     torch.cuda.empty_cache()
     print("{} subido a HuggingFace".format(dataset_name))
 
-translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B-Instruct', 85, prompt_nl_to_fol, 'trans')
-full_pipeline(translation, "Kurosawama/Translation_DPO_Llama-3.1-8B-Instruct")
 
-inference = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B-Instruct', 85, prompt_inference, 'infer')
-full_pipeline(inference, "Kurosawama/Inference_DPO_Llama-3.1-8B-Instruct")
+def full_pipe_final(model_id):
+    translation = k.DatasetManager(folio, model_id, 100, prompt_nl_to_fol, 'trans')
+    full_pipeline(translation, f"Kurosawama/Translation_DPO_{model_id}")
+    inference = k.DatasetManager(folio, model_id, 100, prompt_inference, 'infer')
+    full_pipeline(inference, f"Kurosawama/Inference_DPO_{model_id}")
+    retranslation = k.DatasetManager(folio, model_id, 100, prompt_retranslation, 'retrans')
+    full_pipeline(retranslation, f"Kurosawama/Retranslation_DPO_{model_id}")
+    print("Fin. Favor de revisar en HuggingFace.")
+    print("Viva Messi.")
 
-retranslation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B-Instruct', 85, prompt_retranslation, 'retrans')
-full_pipeline(retranslation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B-Instruct")
+# For a further iteration
+checkpoint_list = [
+    'meta-llama/Llama-3.1-8B',
+    'meta-llama/Llama-3.1-8B-Instruct',
+    'meta-llama/Llama-3.2-3B',
+    'meta-llama/Llama-3.2-3B-Instruct',
+    'meta-llama/Llama-3.3-70B-Instruct',
+    'openai/gpt-oss-20b',
+    'deepseek-ai/DeepSeek-R1',
+    'google/gemma-3-270m',
+    'google/gemma-3-1b-it'
+]
+
+full_pipe_final('meta-llama/Llama-3.1-8B')
+
+#translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 100, prompt_nl_to_fol, 'trans')
+#full_pipeline(translation, "Kurosawama/Translation_DPO_Llama-3.1-8B")
+
+#inference = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 100, prompt_inference, 'infer')
+#full_pipeline(inference, "Kurosawama/Inference_DPO_Llama-3.1-8B")
+
+#retranslation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 100, prompt_retranslation, 'retrans')
+#full_pipeline(retranslation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B")

@@ -13,7 +13,7 @@ class DatasetManager:
 
 	Hay que ejecutar el código presente en test.py para ver qué pingas.
 	Dudas:
-		1.- ¿Funcionan los cambios que le estamos haciendo al prompt? (prompt = prompt.format(_)) # SÍ
+		1.- ¿Funcionan los cambios que le estamos haciendo al prompt? (prompt = prompt.format(_)) # SÍ XD pero se tiene que hacer bien flaco nmms
 		2.- ¿Podemos tirarle un tqdm a la generación? # Chance pero zzzzzzzzzzzzz
 	"""
 	def __init__(self, dataset, model_id, max_new_tokens, prompt, stage):
@@ -124,8 +124,9 @@ class DatasetManager:
 		"""
 		Itera sobre el dataset limpio y agrega a los valores de la instancia de la clase.		
 		"""
-		for _ in self.clean_list:
-			self.prompt = self.prompt.format(_)
+		og_prompt = self.prompt
+		for _ in self.clean_list[:20]:
+			self.prompt = og_prompt.format(_)
 			llm_ans = self.vector_generation()
 			self.greedy.append(llm_ans[0])
 
@@ -134,7 +135,8 @@ class DatasetManager:
 			#self.beam.append(llm_ans[2])
 			#self.diverse_beam.append(llm_ans[3])
 			#self.multinomial.append(llm_ans[4])
-			#self.beam_multinomial.append(llm_ans[5])	
+			#self.beam_multinomial.append(llm_ans[5])
+		self.prompt = og_prompt	
 
 
 	def list_dict(self, nl_value, ds_value):
