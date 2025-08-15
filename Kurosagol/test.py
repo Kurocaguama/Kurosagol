@@ -71,7 +71,6 @@ prompt_fol_inference = """
     Conclusion:
 """
 
-
 prompt_fol_to_nl = """
     Given a conclusion in first order logic, the task is to retranslate the conclusion to natural language.
     -------------------
@@ -84,8 +83,8 @@ prompt_fol_to_nl = """
     Translation:
 """
 
-#torch.cuda.empty_cache()
-#testing = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_to_fol, 'trans')
-#print('Device: {}'.format(testing.dev))
-#testing.clean_dataset()
-#testing.gen_strats_list()
+torch.cuda.empty_cache()
+testing = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 85, prompt_nl_to_fol, 'trans')
+print('Device: {}'.format(testing.dev))
+testing.clean_dataset()
+testing.gen_strats_list()
