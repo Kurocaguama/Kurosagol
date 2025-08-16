@@ -132,13 +132,6 @@ checkpoint_list = [
     'google/gemma-3-1b-it'
 ]
 
-full_pipe_final('meta-llama/Llama-3.1-8B')
-
-#translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 100, prompt_nl_to_fol, 'trans')
-#full_pipeline(translation, "Kurosawama/Translation_DPO_Llama-3.1-8B")
-
-#inference = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 100, prompt_inference, 'infer')
-#full_pipeline(inference, "Kurosawama/Inference_DPO_Llama-3.1-8B")
-
-#retranslation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 100, prompt_retranslation, 'retrans')
-#full_pipeline(retranslation, "Kurosawama/Retranslation_DPO_Llama-3.1-8B")
+test_checkpoint = ['meta-llama/Llama-3.1-8B-Instruct', 'meta-llama/Llama-3.2-3B']
+for _ in test_checkpoint:
+    full_pipe_final(_)
