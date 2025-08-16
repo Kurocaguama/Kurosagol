@@ -1,18 +1,80 @@
+=========================================================
+============== RAW QUESTION ANSWERING ===================
+=========================================================
+Translation:
 """
-Ejemplo de uso de la paquetería para generar los datasets de DPO.
-
-1.- El prompt se debe de declarar antes de pasar la instancia del DatasetManager. Aquí es cuando se determina si es una estrategia con zero-shot, one-shot, o few-shot.
+    Translate the following problem from natural language to first order logic predicates:
+    Problem:
+    {}
+    Predicates:
 """
 
-import Kurosagol as k
-import torch, re
-from datasets import load_dataset
+Inference:
+"""
+    Based on the given premises in first order logic, infer the correct solution:
+    Premises:
+    {}
+    Solution:
+"""
 
-# Ahorita la paquetería está enfocada en su totalidad a este dataset. A largo plazo se busca generalizar para poder trabajar con múltiples datasets.
-folio = load_dataset('yale-nlp/FOLIO', split = 'train')
+Retranslation:
+"""
+    Retranslate the following statement from first order logic to natural language:
+    Statement:
+    {}
+    Retranslation:
+"""
 
-# Prompt consistente con Logic-LLM.
-prompt_nl_to_fol = """
+
+=========================================================
+================ IN CONTEXT LEARNING ====================
+=========================================================
+ZERO SHOT
+
+Translation
+"""
+    Given a problem description and a question, the task is to parse the problem and the question into first-order logic formulars.
+    The grammar of the first-order logic formular is defined as follows:
+    1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
+    2) logical disjunction of expr1 and expr2: expr1 ∨ expr2
+    3) logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+    4) logical negation of expr1: ¬expr1
+    5) expr1 implies expr2: expr1 → expr2
+    6) expr1 if and only if expr2: expr1 ↔ expr2
+    7) logical universal quantification: ∀x
+    8) logical existential quantification: ∃x
+    --------------    
+    Problem:
+    {}
+    Predicates:
+"""
+
+Inference:
+"""
+    Given a problem in first order logic, the task is to perform a series of inference steps to deduct the logical solution of the problem.
+    Valid inference rules are such as: 
+    Modus Ponens (p, p → q, therefore q)
+    Modus Tollens (p → q, ¬q, therefore ¬p)
+    Hypotheticall Syllogism (p → q, q → r, therfore p → r)
+    Destructive Dilemma (p → q, r → s, ¬q ∨ ¬s, therefore ¬p ∨ ¬r)
+    Constructive Dilemma (p → q, r → s, p ∨ r, therefore q ∨ s)
+    Bidirectional Dilemma (p → q, r → s, p ∨ ¬s, therefore q ∨ ¬r)
+    -------------------
+    Problem:
+    {}
+    Conclusion:
+"""
+
+
+
+
+
+
+
+ONE SHOT LEARNING
+
+Translation:
+"""
     Given a problem description and a question, the task is to parse the problem and the question into first-order logic formulars.
     The grammar of the first-order logic formular is defined as follows:
     1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
@@ -45,8 +107,8 @@ prompt_nl_to_fol = """
     Predicates:
 """
 
-# ¿Se tendría que explicar el procedimiento de inferencia o con las reglas estamos bien?
-prompt_fol_inference = """
+Inference:
+"""
     Given a problem in first order logic, the task is to perform a series of inference steps to deduct the logical solution of the problem.
     Valid inference rules are such as: 
     Modus Ponens (p, p → q, therefore q)
@@ -71,19 +133,31 @@ prompt_fol_inference = """
     Conclusion:
 """
 
-prompt_fol_to_nl = """
-    Given a conclusion in first order logic, the task is to retranslate the conclusion to natural language.
-    -------------------
-    Conclusion:
-    -------------------
-    Translation:
-    -------------------
-    Conclusion:
+
+Retranslation:
+"""
+    Given a single premise in first order logic, the task is to retranslate it to natural language.
+    The grammar of the first-order logic formular is defined as follows:
+    1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
+    2) logical disjunction of expr1 and expr2: expr1 ∨ expr2
+    3) logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+    4) logical negation of expr1: ¬expr1
+    5) expr1 implies expr2: expr1 → expr2
+    6) expr1 if and only if expr2: expr1 ↔ expr2
+    7) logical universal quantification: ∀x
+    8) logical existential quantification: ∃x
+    --------------
+    Premise:
+    ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))
+
+    Retranslation:
+    Rina doesn't want to be addicted to caffeine or is unaware that caffeine is a drug.
+    --------------
+
+    Premise:
     {}
-    Translation:
+    Retranslation:
 """
 
-translation = k.DatasetManager(folio, 'meta-llama/Llama-3.1-8B', 100, prompt_nl_to_fol, 'trans')
-translation.clean_dataset()
 
-print(len(translation.clean_list), len(folio['premises']))
+3-SHOT LEARNING

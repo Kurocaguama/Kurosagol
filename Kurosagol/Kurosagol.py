@@ -70,7 +70,7 @@ class DatasetManager:
 		else:
 			print('Etapa desconocida. Favor de redefinir')
  
-		self.clean_list = [self.dataset[column][i].split('\n') for i in range(1, len(self.dataset[column]))]
+		self.clean_list = [self.dataset[column][i].split('\n') for i in range(len(self.dataset[column]))]
 
 		# Lo que hace esto es eliminar casos en donde se repiten premisas, no obstante puede ser problemático ya que se genera una cantidad dispareja de elementos.
 		# Evitaremos eliminar los casos repetidos para evitar desfases entre conjuntos de datos.
