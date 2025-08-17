@@ -110,21 +110,21 @@ def full_pipeline(k_instance, dataset_name):
 
 def full_pipe_final(model_id):
     model_regex = re.split('\/', model_id)[1]
-    translation = k.DatasetManager(folio, model_id, 100, prompt_nl_to_fol, 'trans')
+    translation = k.DatasetManager(folio, model_id, 150, prompt_nl_to_fol, 'trans')
     full_pipeline(translation, f"Kurosawama/Translation_DPO_{model_regex}")
-    inference = k.DatasetManager(folio, model_id, 100, prompt_inference, 'infer')
+    inference = k.DatasetManager(folio, model_id, 150, prompt_inference, 'infer')
     full_pipeline(inference, f"Kurosawama/Inference_DPO_{model_regex}")
-    retranslation = k.DatasetManager(folio, model_id, 100, prompt_retranslation, 'retrans')
+    retranslation = k.DatasetManager(folio, model_id, 150, prompt_retranslation, 'retrans')
     full_pipeline(retranslation, f"Kurosawama/Retranslation_DPO_{model_regex}")
     print("Fin. Favor de revisar en HuggingFace.")
     print("Viva Messi.")
 
 # For a further iteration
-checkpoint_list = [
-    'meta-llama/Llama-3.1-8B',
-    'meta-llama/Llama-3.1-8B-Instruct',
-    'meta-llama/Llama-3.2-3B',
-    'meta-llama/Llama-3.2-3B-Instruct',
+checkpoint_list = [ 
+    'meta-llama/Llama-3.1-8B', #Done 85 
+    'meta-llama/Llama-3.1-8B-Instruct', #Done 100
+    'meta-llama/Llama-3.2-3B', #Done 100
+    'meta-llama/Llama-3.2-3B-Instruct', #Done 100
     'meta-llama/Llama-3.3-70B-Instruct',
     'openai/gpt-oss-20b',
     'deepseek-ai/DeepSeek-R1',
@@ -132,6 +132,6 @@ checkpoint_list = [
     'google/gemma-3-1b-it'
 ]
 
-test_checkpoint = ['meta-llama/Llama-3.1-8B-Instruct', 'meta-llama/Llama-3.2-3B']
-for _ in test_checkpoint:
-    full_pipe_final(_)
+#test_checkpoint = ['meta-llama/Llama-3.1-8B-Instruct', 'meta-llama/Llama-3.2-3B']
+#for _ in test_checkpoint:    
+full_pipe_final('meta-llama/Llama-3.3-70B-Instruct')
