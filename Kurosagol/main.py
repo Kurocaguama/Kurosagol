@@ -132,6 +132,8 @@ checkpoint_list = [
     'google/gemma-3-1b-it'
 ]
 
-test_checkpoint = ['google/gemma-3-270m', 'google/gemma-3-1b-it']
-for _ in test_checkpoint:    
-    full_pipe_final(_)  
+#test_checkpoint = ['google/gemma-3-270m', 'google/gemma-3-1b-it']
+#for _ in test_checkpoint:    
+#    full_pipe_final(_)  
+
+full_pipe_final('google/gemma-3-1b-it')
