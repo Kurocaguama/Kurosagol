@@ -126,6 +126,7 @@ class DatasetManager:
 		Itera sobre el dataset limpio y agrega a los valores de la instancia de la clase.		
 		"""
 		og_prompt = self.prompt
+		it = 0
 		for _ in self.clean_list:
 			self.prompt = og_prompt.format(_)
 			llm_ans = self.vector_generation()
@@ -137,6 +138,9 @@ class DatasetManager:
 			#self.diverse_beam.append(llm_ans[3])
 			#self.multinomial.append(llm_ans[4])
 			#self.beam_multinomial.append(llm_ans[5])
+			it += 1
+			if it % 50 == 0:
+				print('Iteración: {}'.format(it))
 		self.prompt = og_prompt	
 
 
