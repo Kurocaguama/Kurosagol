@@ -132,6 +132,6 @@ checkpoint_list = [
     'google/gemma-3-1b-it'
 ]
 
-#test_checkpoint = ['meta-llama/Llama-3.1-8B-Instruct', 'meta-llama/Llama-3.2-3B']
-#for _ in test_checkpoint:    
-full_pipe_final('meta-llama/Llama-3.3-70B-Instruct')
+test_checkpoint = ['google/gemma-3-270m', 'google/gemma-3-1b-it']
+for _ in test_checkpoint:    
+    full_pipe_final(_)  
