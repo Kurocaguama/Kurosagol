@@ -32,7 +32,7 @@ def t_and_p(model_id):
 checkpoint_list = [ 
     #'meta-llama/Llama-3.1-8B',  
     #'meta-llama/Llama-3.1-8B-Instruct', 
-    'meta-llama/Llama-3.2-3B', 
+    #'meta-llama/Llama-3.2-3B', 
     'meta-llama/Llama-3.2-3B-Instruct', 
     'google/gemma-3-1b-it'
 ]
