@@ -184,7 +184,7 @@ class DPO:
 	"""
 	Clase para realizar el alineamiento de los modelos a partir de los conjuntos de preferencia.
 	"""
-	def __init__(self, model_id, output_dir, device_id):
+	def __init__(self, model_id, output_dir, device_id=None):
 		# Hiperparámetros
 		#self.dev = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 		if device_id is not None:
