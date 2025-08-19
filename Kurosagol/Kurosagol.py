@@ -194,7 +194,7 @@ class DPO:
 		self.dev = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 		self.lora_config = LoraConfig(
 			task_type = TaskType.CAUSAL_LM,
-			inference_model = False,
+			inference_mode = False,
 			r = 8,
 			lora_alpha = 32,
 			lora_dropout = 0.1

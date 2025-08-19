@@ -27,7 +27,6 @@ def t_and_p(model_id):
         aux.train_and_push(dataset, pushed_model_name)
         print('Modelo {} subido a HuggingFace'.format(pushed_model_name))
     print('Finalizado. Como siempre, Viva Messi.')
-    print('Igual viva Sabrina Carpenter.')
 
 
 checkpoint_list = [ 
@@ -40,6 +39,8 @@ checkpoint_list = [
 
 for _ in checkpoint_list:
     t_and_p(_)
+
+print('Final total. Grande Sabrina Carpenter.')
 
 #translation = load_dataset('Kurosawama/Translation_DPO_Llama-3.1-8B')
 #aligner = k.DPO('meta-llama/Llama-3.1-8B', '/media/discoexterno/francisco/modelos')
