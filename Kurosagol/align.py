@@ -34,11 +34,24 @@ checkpoint_list = [
     #'meta-llama/Llama-3.1-8B-Instruct', 
     #'meta-llama/Llama-3.2-3B', 
     #'meta-llama/Llama-3.2-3B-Instruct', 
-    'google/gemma-3-1b-it'
+    #'google/gemma-3-1b-it'
 ]
 
-for _ in checkpoint_list:
-    t_and_p(_)
+#for _ in checkpoint_list:
+#    t_and_p(_)
+
+def align(ds_name, output_dir, model_name, model_hub_name):
+    dataset = load_dataset(ds_name, split = 'train')
+    aligner = k.DPO(model_name, output_dir)
+    aligner.train_and_push(dataset, model_hub_name)
+    print("--------------------------------------------------")
+
+align('Kurosawama/Full_DPO_Llama-3.1-8B', '/media/discoexterno/francisco/modelos', 'meta-llama/Llama-3.1-8B', 'Kurosawama/Llama-3.1-8B-Full-align')
+align('Kurosawama/Full_DPO_Llama-3.1-8B-Instruct', '/media/discoexterno/francisco/modelos', 'meta-llama/Llama-3.1-8B-Instruct', 'Kurosawama/Llama-3.1-8B-Instruct-Full-align')
+align('Kurosawama/Full_DPO_Llama-3.2-3B', '/media/discoexterno/francisco/modelos', 'meta-llama/Llama-3.2-3B', 'Kurosawama/Llama-3.2-3B-Full-align')
+align('Kurosawama/Full_DPO_Llama-3.2-3B-Instruct', '/media/discoexterno/francisco/modelos', 'meta-llama/Llama-3.2-3B-Instruct', 'Kurosawama/Llama-3.2-3B-Instruct-Full-align')
+align('Kurosawama/Full_DPO_gemma-3-1b-it', '/media/discoexterno/francisco/modelos', 'google/gemma-3-1b-it', 'Kurosawama/gemma-3-1b-it-Full-align')
+
 
 print('Final total. Grande Sabrina Carpenter.')
 
