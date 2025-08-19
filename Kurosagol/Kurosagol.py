@@ -187,12 +187,12 @@ class DPO:
 	def __init__(self, model_id, output_dir):
 		
 		# Hiperparámetros
+		self.dev = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 		self.quant_config = BitsAndBytesConfig(load_in_4bit = True, bnb_4bit_compute_dtype = torch.bfloat16)
 		self.gen_config = GenerationConfig.from_pretrained(model_id)
 		self.tokenizer = AutoTokenizer.from_pretrained(model_id)
 		self.gen_config.pad_token_id = self.tokenizer.pad_token_id
 		self.output_dir = output_dir
-		self.dev = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 		self.lora_config = LoraConfig(
 			task_type = TaskType.CAUSAL_LM,
 			inference_mode = False,
@@ -210,7 +210,7 @@ class DPO:
 		"""
 
 		# Instanciamos el modelo
-		self.model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir = output_dir, quantization_config = self.quant_config, generation_config = self.gen_config).to(self.dev)
+		self.model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir = output_dir, quantization_config = self.quant_config, generation_config = self.gen_config, device_map={"": self.dev}, torch_dtype = torch.bfloat16).to(self.dev)
 		self.model.add_adapter(self.lora_config, adapter_name = 'LoRa_Adapter')
 		self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 		self.tokenizer.pad_token = self.tokenizer.eos_token
