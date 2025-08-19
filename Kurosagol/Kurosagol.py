@@ -204,6 +204,7 @@ class DPO:
 			task_type = TaskType.CAUSAL_LM,
 			inference_mode = False,
 			r = 8,
+			target_modules = ["q_proj", "o_proj", "k_proj", "v_proj", "gate_proj", "up_proj", "down_proj"],
 			lora_alpha = 32,
 			lora_dropout = 0.1
 		)
