@@ -191,6 +191,7 @@ class DPO:
 		self.gen_config = GenerationConfig.from_pretrained(model_id)
 		self.tokenizer = AutoTokenizer.from_pretrained(model_id)
 		self.gen_config.pad_token_id = self.tokenizer.pad_token_id
+		self.output_dir = output_dir
 		self.dev = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 		self.lora_config = LoraConfig(
 			task_type = TaskType.CAUSAL_LM,
