@@ -1,4 +1,4 @@
-import torch 
+import torch, os
 import numpy as np
 import pandas as pd
 from datasets import Dataset
@@ -184,10 +184,17 @@ class DPO:
 	"""
 	Clase para realizar el alineamiento de los modelos a partir de los conjuntos de preferencia.
 	"""
-	def __init__(self, model_id, output_dir):
-		
+	def __init__(self, model_id, output_dir, device_id):
 		# Hiperparámetros
-		self.dev = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+		#self.dev = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+		if device_id is not None:
+			self.dev = torch.device(f'cuda:{device_id}')
+			os.environ["CUDA_VISIBLE_DEVICES"] = str(device_id)
+		else:
+			self.dev = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+			if torch.cuda.is_available():
+				os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 		self.quant_config = BitsAndBytesConfig(load_in_4bit = True, bnb_4bit_compute_dtype = torch.bfloat16)
 		self.gen_config = GenerationConfig.from_pretrained(model_id)
 		self.tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -210,7 +217,7 @@ class DPO:
 		"""
 
 		# Instanciamos el modelo
-		self.model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir = output_dir, quantization_config = self.quant_config, generation_config = self.gen_config, device_map={"": self.dev}, torch_dtype = torch.bfloat16).to(self.dev)
+		self.model = AutoModelForCausalLM.from_pretrained(model_id, cache_dir = output_dir, quantization_config = self.quant_config, generation_config = self.gen_config).to(self.dev)
 		self.model.add_adapter(self.lora_config, adapter_name = 'LoRa_Adapter')
 		self.model.generation_config.pad_token_id = self.tokenizer.pad_token_id
 		self.tokenizer.pad_token = self.tokenizer.eos_token
