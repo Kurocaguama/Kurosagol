@@ -14,13 +14,13 @@ def t_and_p(model_id):
     aux = k.DPO(model_id, '/media/discoexterno/francisco/modelos')
     for _ in steps:
         if _ == 'trans':
-            dataset = load_dataset('Kurosawama/Translation_DPO_{}}'.format(filtered_name))
+            dataset = load_dataset('Kurosawama/Translation_DPO_{}'.format(filtered_name))
             pushed_model_name = filtered_name + '-Translation-align'
         if _ == 'infer':
-            dataset = load_dataset('Kurosawama/Inference_DPO_{}}'.format(filtered_name))
+            dataset = load_dataset('Kurosawama/Inference_DPO_{}'.format(filtered_name))
             pushed_model_name = filtered_name + '-Inference-align'
         if _ == 'retrans':
-            dataset = load_dataset('Kurosawama/Retranslation_DPO_{}}'.format(filtered_name))
+            dataset = load_dataset('Kurosawama/Retranslation_DPO_{}'.format(filtered_name))
             pushed_model_name = filtered_name + '-Retranslation-align'
         torch.cuda.empty_cache()
 
