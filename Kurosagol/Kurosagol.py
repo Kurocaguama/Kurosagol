@@ -186,8 +186,7 @@ class DPO:
 	"""
 	def __init__(self, model_id, output_dir):
 		
-		# Primero definimos los detalles para 
-		self.hf_key = ''
+		# Hiperparámetros
 		self.quant_config = BitsAndBytesConfig(load_in_4bit = True, bnb_4bit_compute_dtype = torch.bfloat16)
 		self.gen_config = GenerationConfig.from_pretrained(model_id)
 		self.tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -216,6 +215,10 @@ class DPO:
 		self.tokenizer.pad_token = self.tokenizer.eos_token
 
 	def train_and_push(self, dataset, aligned_id):
+		"""
+			dataset = load_dataset(id) ; El conjunto de datos de preferencia
+			aligned_id = str ; El nombre del modelo.
+		"""
 		training_args = DPOConfig(output_dir = self.output_dir, logging_steps = 30)
 		trainer = DPOTrainer(model = self.model, args = training_args, processing_class = self.tokenizer, train_dataset = dataset)
 		trainer.train()
