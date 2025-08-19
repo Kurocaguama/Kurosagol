@@ -30,13 +30,18 @@ def t_and_p(model_id):
 
 
 checkpoint_list = [ 
-    'meta-llama/Llama-3.1-8B',  
-    'meta-llama/Llama-3.1-8B-Instruct', 
+    #'meta-llama/Llama-3.1-8B',  
+    #'meta-llama/Llama-3.1-8B-Instruct', 
     'meta-llama/Llama-3.2-3B', 
     'meta-llama/Llama-3.2-3B-Instruct', 
     'google/gemma-3-1b-it'
 ]
 
+retrans_ds = load_dataset('Kurosawama/Retranslation_DPO_Llama-3.1-8B-Instruct', split='train')
+retrans = k.DPO('meta-llama/Llama-3.1-8B-Instruct', '/media/discoexterno/francisco/modelos')
+retrans.train_and_push(retrans_ds, 'Llama-3.1-8B-Instruct-Retranslation-align')
+
+t_and_p()
 for _ in checkpoint_list:
     t_and_p(_)
 
