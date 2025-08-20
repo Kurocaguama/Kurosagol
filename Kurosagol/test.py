@@ -116,25 +116,28 @@ def respond(model_id, stage):
         prompt = os_retranslation
 
     answer_list = []
+    aux_iter = 0
     for _ in dataset:
         aux_prompt = prompt.format(_)
         #answer = pipe([{"role": "user", "content": aux_prompt}], max_new_tokens = 150)
-        answer = pipe(aux_prompt, max_new_tokens = 350)
+        answer = pipe(aux_prompt, max_new_tokens = 275)
         cut_answer = answer[0]["generated_text"]
         cut_answer = cut_answer[len(aux_prompt):]
-        print(cut_answer)
+        if aux_iter % 5 == 0:
+            print(cut_answer)
         answer_list.append(cut_answer)
+        aux_iter += 1
     return answer_list
 
 
 def llm_gen_to_hf_dataset(checkpoint, stage):
     name = re.split('\/', checkpoint)[1]
     if stage == 'trans':
-        ds = trans
-    if stage == 'infer':
         ds = infer
-    if stage == 'retrans':
+    if stage == 'infer':
         ds = retrans
+    if stage == 'retrans':
+        ds = final_trans
     eval_generation = respond(checkpoint, stage)
     dic1 = {'FOLIO': ds, f'{checkpoint}\'s Answer': eval_generation}
     eval_df = pd.DataFrame(data=dic1)
