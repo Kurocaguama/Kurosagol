@@ -1,12 +1,5 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import PeftConfig, PeftModel
+from transformers import pipeline
 
-import torch
-dev = ('cuda' if torch.cuda.is_available() else 'cpu')
-
-base_model = 'Kurosawama/Llama-3.1-8B-Full-align'
-adapter_model_name = 'media/discoexterno/francisco/modelos/checkpoint-1128/adapter_model.safetensors'
-
-tokenizer = AutoTokenizer.from_pretrained(base_model)
-model = AutoModelForCausalLM.from_pretrained(base_model)
-model = PeftModel.from_pretrained(model, adapter_model_name)
+model_name_or_path = 'Kurosawama/gemma-3-1b-it-Full-align'
+pipe = pipeline("text-generation", model=model_name_or_path)
+print(pipe("This movie was really")[0]["generated_text"])
