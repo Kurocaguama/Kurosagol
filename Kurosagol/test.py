@@ -97,7 +97,7 @@ checkpoint_list = [
 ]
 
 def respond(model_id, stage):
-    pipe = pipeline("text-generation", model = model_id)
+    pipe = pipeline("text-generation", model = model_id, device = 'cuda:0')
     if stage == 'trans':
         dataset = trans
         prompt = os_translation
@@ -111,14 +111,17 @@ def respond(model_id, stage):
     answer_list = []
     for _ in dataset[:5]:
         aux_prompt = prompt.format(_)
-        answer = pipe([{"role": "user", "content": aux_prompt}], max_new_tokens = 150)
+        #answer = pipe([{"role": "user", "content": aux_prompt}], max_new_tokens = 150)
+        answer = pipe(aux_prompt, max_new_tokens = 150)
         print(answer[0]["generated_text"])
         answer_list.append(answer[0]["generated_text"])
-        #print(pipe(aux_prompt)[0]["generated_text"], max_new_tokens = 150)
     return answer_list
 
 testing = respond(checkpoint_list[0], "trans")
 print(len(testing))
+
+
+# Esto de abajo funciona
 
 #model_name_or_path = 'Kurosawama/gemma-3-1b-it-Full-align'
 #pipe = pipeline("text-generation", model=model_name_or_path)
