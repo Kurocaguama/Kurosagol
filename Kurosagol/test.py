@@ -165,13 +165,3 @@ for normal_check in checkpoint_list_baseline:
     llm_gen_to_hf_dataset(normal_check, 'trans')
     llm_gen_to_hf_dataset(normal_check, 'infer')
     llm_gen_to_hf_dataset(normal_check, 'retrans')
-
-#testing = respond(checkpoint_list[0], "trans")
-#print(len(testing))
-
-# Lo de arriba también venga.
-# Esto de abajo funciona
-
-#model_name_or_path = 'Kurosawama/gemma-3-1b-it-Full-align'
-#pipe = pipeline("text-generation", model=model_name_or_path)
-#print(pipe("Translate the following set of premises to First-Order Logic: All men are mortal. Plato is a man.")[0]["generated_text"])
