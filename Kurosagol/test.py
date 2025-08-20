@@ -142,7 +142,7 @@ def llm_gen_to_hf_dataset(checkpoint, stage):
     dic1 = {'FOLIO': ds, f'{checkpoint}\'s Answer': eval_generation}
     eval_df = pd.DataFrame(data=dic1)
     hf_dataset = Dataset.from_pandas(eval_df)
-    hf_dataset.push_to_hub('Kurosawama/EVALUATION_{}'.format(name))
+    hf_dataset.push_to_hub(f'Kurosawama/EVALUATION_{stage}_{name}')
 
 for check in checkpoint_list:
     llm_gen_to_hf_dataset(check, 'trans')
