@@ -114,8 +114,9 @@ def respond(model_id, stage):
         #answer = pipe([{"role": "user", "content": aux_prompt}], max_new_tokens = 150)
         answer = pipe(aux_prompt, max_new_tokens = 150)
         cut_answer = answer[0]["generated_text"]
-        print(cut_answer[len(aux_prompt):])
-        answer_list.append(answer[0]["generated_text"])
+        cut_answer = cut_answer[len(aux_prompt):]
+        print(cut_answer)
+        answer_list.append(cut_answer)
     return answer_list
 
 testing = respond(checkpoint_list[0], "trans")
