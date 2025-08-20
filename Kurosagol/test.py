@@ -91,14 +91,6 @@ infer = folio['premises-FOL']
 retrans = folio['conclusion-FOL']
 final_trans = folio['conclusion']
 
-checkpoint_list = [
-    'Kurosawama/Llama-3.1-8B-Full-align',
-    'Kurosawama/Llama-3.1-8B-Instruct-Full-align',
-    'Kurosawama/Llama-3.2-3B-Full-align',
-    'Kurosawama/Llama-3.2-3B-Instruct-Full-align',
-    'Kurosawama/gemma-3-1b-it-Full-align'
-]
-
 # Las siguientes dos funciones son necesarias para evaluar los modelos ALINEADOS.
 # respond() genera las respuestas de cada modelo dentro de cada etapa del pipeline.
 # llm_gen_to_hf_dataset() ajusta estas respuestas y las sube al hf hub.
@@ -144,13 +136,35 @@ def llm_gen_to_hf_dataset(checkpoint, stage):
     hf_dataset = Dataset.from_pandas(eval_df)
     hf_dataset.push_to_hub(f'Kurosawama/EVALUATION_{stage}_{name}')
 
-for check in checkpoint_list:
-    llm_gen_to_hf_dataset(check, 'trans')
-    llm_gen_to_hf_dataset(check, 'infer')
-    llm_gen_to_hf_dataset(check, 'retrans')
+
+# Evaluating models
+#checkpoint_list = [
+#    'Kurosawama/Llama-3.1-8B-Full-align',
+#    'Kurosawama/Llama-3.1-8B-Instruct-Full-align',
+#    'Kurosawama/Llama-3.2-3B-Full-align',
+#    'Kurosawama/Llama-3.2-3B-Instruct-Full-align',
+#    'Kurosawama/gemma-3-1b-it-Full-align'
+#]
+
+#for check in checkpoint_list:
+#    llm_gen_to_hf_dataset(check, 'trans')
+#    llm_gen_to_hf_dataset(check, 'infer')
+#    llm_gen_to_hf_dataset(check, 'retrans')
 
 
+# Getting baselines
+checkpoint_list_baseline = [
+    'meta-llama/Llama-3.1-8B',
+    'meta-llama/Llama-3.1-8B-Instruct',
+    'meta-llama/Llama-3.2-3B',
+    'meta-llama/Llama-3.2-3B-Instruct',
+    'google/gemma-3-1b-it'
+]
 
+for normal_check in checkpoint_list_baseline:
+    llm_gen_to_hf_dataset(normal_check, 'trans')
+    llm_gen_to_hf_dataset(normal_check, 'infer')
+    llm_gen_to_hf_dataset(normal_check, 'retrans')
 
 #testing = respond(checkpoint_list[0], "trans")
 #print(len(testing))
