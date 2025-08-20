@@ -113,7 +113,8 @@ def respond(model_id, stage):
         aux_prompt = prompt.format(_)
         #answer = pipe([{"role": "user", "content": aux_prompt}], max_new_tokens = 150)
         answer = pipe(aux_prompt, max_new_tokens = 150)
-        print(answer[0]["generated_text"])
+        cut_answer = answer[0]["generated_text"]
+        print(cut_answer[len(aux_prompt):])
         answer_list.append(answer[0]["generated_text"])
     return answer_list
 
