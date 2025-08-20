@@ -101,7 +101,7 @@ checkpoint_list = [
 
 # Las siguientes dos funciones son necesarias para evaluar los modelos ALINEADOS.
 # respond() genera las respuestas de cada modelo dentro de cada etapa del pipeline.
-# llm_gen_to_hf_dataset() ajusta estas respuestas y las sube al hub.
+# llm_gen_to_hf_dataset() ajusta estas respuestas y las sube al hf hub.
 
 def respond(model_id, stage):
     pipe = pipeline("text-generation", model = model_id, device = 'cuda:0')
@@ -119,7 +119,7 @@ def respond(model_id, stage):
     for _ in dataset:
         aux_prompt = prompt.format(_)
         #answer = pipe([{"role": "user", "content": aux_prompt}], max_new_tokens = 150)
-        answer = pipe(aux_prompt, max_new_tokens = 200)
+        answer = pipe(aux_prompt, max_new_tokens = 350)
         cut_answer = answer[0]["generated_text"]
         cut_answer = cut_answer[len(aux_prompt):]
         print(cut_answer)
