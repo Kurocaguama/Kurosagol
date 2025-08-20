@@ -1,5 +1,7 @@
 from transformers import pipeline
-from datasets import load_dataset
+from datasets import load_dataset, Dataset
+import pandas as pd
+import re
 
 os_translation = """
     Given a problem description and a question, the task is to parse the problem and the question into first-order logic formulars.
@@ -87,6 +89,7 @@ folio = load_dataset('yale-nlp/FOLIO', split = 'validation')
 trans = folio['premises']
 infer = folio['premises-FOL']
 retrans = folio['conclusion-FOL']
+final_trans = folio['conclusion']
 
 checkpoint_list = [
     'Kurosawama/Llama-3.1-8B-Full-align',
@@ -95,6 +98,10 @@ checkpoint_list = [
     'Kurosawama/Llama-3.2-3B-Instruct-Full-align',
     'Kurosawama/gemma-3-1b-it-Full-align'
 ]
+
+# Las siguientes dos funciones son necesarias para evaluar los modelos ALINEADOS.
+# respond() genera las respuestas de cada modelo dentro de cada etapa del pipeline.
+# llm_gen_to_hf_dataset() ajusta estas respuestas y las sube al hub.
 
 def respond(model_id, stage):
     pipe = pipeline("text-generation", model = model_id, device = 'cuda:0')
@@ -109,20 +116,43 @@ def respond(model_id, stage):
         prompt = os_retranslation
 
     answer_list = []
-    for _ in dataset[:5]:
+    for _ in dataset:
         aux_prompt = prompt.format(_)
         #answer = pipe([{"role": "user", "content": aux_prompt}], max_new_tokens = 150)
-        answer = pipe(aux_prompt, max_new_tokens = 150)
+        answer = pipe(aux_prompt, max_new_tokens = 200)
         cut_answer = answer[0]["generated_text"]
         cut_answer = cut_answer[len(aux_prompt):]
         print(cut_answer)
         answer_list.append(cut_answer)
     return answer_list
 
-testing = respond(checkpoint_list[0], "trans")
-print(len(testing))
+
+def llm_gen_to_hf_dataset(checkpoint, stage):
+    name = re.split('\/', checkpoint)[1]
+    if stage == 'trans':
+        ds = trans
+    if stage == 'infer':
+        ds = infer
+    if stage == 'retrans':
+        ds = retrans
+    eval_generation = respond(checkpoint, stage)
+    dic1 = {'FOLIO': ds, f'{checkpoint}\'s Answer': eval_generation}
+    eval_df = pd.DataFrame(data=dic1)
+    hf_dataset = Dataset.from_pandas(eval_df)
+    hf_dataset.push_to_hub('Kurosawama/EVALUATION_{}'.format(name))
+
+for check in checkpoint_list:
+    llm_gen_to_hf_dataset(check, 'trans')
+    llm_gen_to_hf_dataset(check, 'infer')
+    llm_gen_to_hf_dataset(check, 'retrans')
 
 
+
+
+#testing = respond(checkpoint_list[0], "trans")
+#print(len(testing))
+
+# Lo de arriba también venga.
 # Esto de abajo funciona
 
 #model_name_or_path = 'Kurosawama/gemma-3-1b-it-Full-align'

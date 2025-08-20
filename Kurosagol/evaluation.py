@@ -134,7 +134,7 @@ def evaluate(model_id, tokenizer_id, stage):
 
         outputs = model.generate(**inputs, max_new_tokens = 100)
         answer = tokenizer.batch_decode(outputs, skip_special_tokens = True)[0]
-        answer = answer[len(self.prompt):]
+        answer = answer[len(prompt):]
         answer_list.append(answer)
 
     return evaluate
