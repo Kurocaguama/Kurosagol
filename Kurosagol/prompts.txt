@@ -65,13 +65,28 @@ Inference:
     Conclusion:
 """
 
+Retranslation:
+"""
+    Given a single premise in first order logic, the task is to retranslate it to natural language.
+    The grammar of the first-order logic formular is defined as follows:
+    1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
+    2) logical disjunction of expr1 and expr2: expr1 ∨ expr2
+    3) logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+    4) logical negation of expr1: ¬expr1
+    5) expr1 implies expr2: expr1 → expr2
+    6) expr1 if and only if expr2: expr1 ↔ expr2
+    7) logical universal quantification: ∀x
+    8) logical existential quantification: ∃x
+    -------------------
+    Problem:
+    {}
+    Conclusion:
+"""
 
 
-
-
-
-
-ONE SHOT LEARNING
+========================================================================
+========================== ONE SHOT LEARNING ===========================
+========================================================================
 
 Translation:
 """
@@ -159,5 +174,6 @@ Retranslation:
     Retranslation:
 """
 
-
-3-SHOT LEARNING
+========================================================================
+========================= MULTI SHOT LEARNING ==========================
+========================================================================
