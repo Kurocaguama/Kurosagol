@@ -136,7 +136,7 @@ def evaluate(model_id, tokenizer_id, stage):
         answer = tokenizer.batch_decode(outputs, skip_special_tokens = True)[0]
         answer = answer[len(prompt):]
         answer_list.append(answer)
-
-    return evaluate
+    
+    # FALTA COMPLETAR ESTA FUNCIÓN. PA K LA KEREMOS?
 
 print(evaluate('Kurosawama/Llama-3.1-8B-Full-align', 'meta-llama/Llama-3.1-8B', 'trans'))

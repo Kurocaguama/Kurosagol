@@ -152,7 +152,6 @@ class DatasetManager:
 		d2 = {'content': ds_value, 'role': 'assistant'}
 		return [d1, d2]
 
-	#def good_dataset(self, ds_list, column):
 	def good_dataset(self, ds_list):
 		"""
 		Genera un Dataset en formato de HuggingFace a partir de las listas provenientes del dataset y de las generaciones del modelo.
@@ -168,10 +167,10 @@ class DatasetManager:
 			print('Etapa desconocida.')
 
 		chosen = [self.list_dict(self.clean_list[i], self.dataset[column][i]) for i in range(len(self.clean_list))]
-		#chosen = [self.list_dict(self.clean_list[i], self.dataset[column][i]) for i in range(len(self.clean_list))]
 		rejected = [self.list_dict(self.clean_list[i], ds_list[i]) for i in range(len(self.clean_list))]
 
 		# Queremos listas cuyo valor sea más alto entre más similares sean los pares de oraciones.
+		# OBS: Esto se tiene que modificar para el proceso de inferencia.
 		pref_scores = [round(np.random.rand(1)[0], 3) + 8 if utils.get_sim(chosen[i], rejected[i]) > 0.5 else round(np.random.rand(1)[0], 3) + 7 for i in range(len(chosen))]
 		bad_scores = [round(np.random.rand(1)[0], 3) + 4 if utils.get_sim(chosen[i], rejected[i]) > 0.5 else round(np.random.rand(1)[0], 3) + 3 for i in range(len(chosen))]
 
@@ -186,7 +185,8 @@ class DPO:
 	"""
 	def __init__(self, model_id, output_dir, device_id=None):
 		# Hiperparámetros
-		#self.dev = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
+		# Arreglamos esto para el cluster de Helena.
 		if device_id is not None:
 			self.dev = torch.device(f'cuda:{device_id}')
 			os.environ["CUDA_VISIBLE_DEVICES"] = str(device_id)
