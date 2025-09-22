@@ -1,3 +1,5 @@
+# This file generates an LLM's answer to a given question extracted from FOLIO's validation dataset.
+
 from transformers import pipeline
 from datasets import load_dataset, Dataset
 import pandas as pd
@@ -137,20 +139,26 @@ def llm_gen_to_hf_dataset(checkpoint, stage):
     hf_dataset.push_to_hub(f'Kurosawama/EVALUATION_{stage}_{name}')
 
 
-# Evaluating models
-#checkpoint_list = [
-#    'Kurosawama/Llama-3.1-8B-Full-align',
-#    'Kurosawama/Llama-3.1-8B-Instruct-Full-align',
-#    'Kurosawama/Llama-3.2-3B-Full-align',
-#    'Kurosawama/Llama-3.2-3B-Instruct-Full-align',
-#    'Kurosawama/gemma-3-1b-it-Full-align'
-#]
+# Evaluating models. 
+checkpoint_list = [
+    'Kurosawama/Llama-3.1-8B-Full-align',
+    'Kurosawama/Llama-3.1-8B-Instruct-Full-align',
+    'Kurosawama/Llama-3.2-3B-Full-align',
+    'Kurosawama/Llama-3.2-3B-Instruct-Full-align',
+    'Kurosawama/gemma-3-1b-it-Full-align'
+]
 
-#for check in checkpoint_list:
-#    llm_gen_to_hf_dataset(check, 'trans')
-#    llm_gen_to_hf_dataset(check, 'infer')
-#    llm_gen_to_hf_dataset(check, 'retrans')
+for check in checkpoint_list:
+    llm_gen_to_hf_dataset(check, 'trans')
+    llm_gen_to_hf_dataset(check, 'infer')
+    llm_gen_to_hf_dataset(check, 'retrans')
 
+# ==========================================================
+# ==========================================================
+# ▲ Evaluating aligned models.
+# ▼ Evaluating base models.
+# ==========================================================
+# ==========================================================
 
 # Getting baselines
 checkpoint_list_baseline = [

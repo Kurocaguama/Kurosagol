@@ -1,3 +1,5 @@
+# Main classes used for any and all experiments.
+
 import torch, os
 import numpy as np
 import pandas as pd
@@ -234,3 +236,74 @@ class DPO:
 		print('Fully trained. VM.')
 		self.model.push_to_hub(aligned_id)
 		print('Model in the hub. VM.')
+
+
+
+class Evaluation:
+	"""
+		Permite evaluar el dataset de las respuestas de los modelos.
+	"""
+	def __init__(self, dataset, split):
+		"""
+		dataset = str ;  Nombre del dataset en HuggingFace
+		split = str ; Split a trabajar.
+		"""
+		self.ds = load_dataset(dataset, split = split) 
+	
+	def premises_per_answer(self, ds_answer, llm):
+		"""
+			Limpia la respuesta de un dataset y extrae las premisas necesarias para calcular LogicSim.
+
+			llm = Bool ; Señala si se va a evaluar la respuesta generada por un LLM.
+		"""
+		instance = ds_answer.split('\n')
+		if llm:
+			for i in range(len(instance)):
+				instance[i] = re.sub('(:::)+([ A-z.]+)', '', instance[i])
+				instance[i] = re.sub('(  )+', '', instance[i])
+			
+		function_list = []
+		for _ in instance:
+			# La siguiente expresión separa las respuestas en sus premisas.
+			aux = re.finditer(r'[A-z]+\(([A-z]+(,? [A-z]+)*)\)', _)
+			for regex in aux:
+				function_list.append(regex.group())
+		function_set = list(set(function_list))
+
+		return function_list, len(instance), len(function_list), len(function_set)
+
+	def compare_answers(self):
+		"""
+			Dadas dos entradas de un mismo dataset (folio[i], llm_ans[i]), extrae y calcula los valores para LogicSim(x,y)
+		"""
+		gs_prem, gs_prem_count, gs_funcs_apps, gs_total_funcs = self.premises_per_answer(False)
+		llm_prem, llm_prem_count, llm_funcs_apps, llm_total_funcs = self.premises_per_answer(True)
+
+		# Operaciones de conjuntos
+		union_prem = len(list(set(gs_prem).union(set(llm_prem))))
+		intersection_prem = len(list(set(gs_prem).intersection(set(llm_prem))))
+		iou = intersection_prem / union_prem
+
+		# Valores absolutos
+		prem_dif = abs(gs_prem_count - llm_prem_count)
+		func_apps_dif = abs(gs_funcs_apps - llm_funcs_apps)
+		func_total_dif = abs(gs_total_funcs - llm_total_funcs)
+
+		logicsim = round(iou + prem_dif + func_apps_dif + func_total_dif, 2)
+		print(logicsim)
+		return logicsim
+
+
+	def logic_sim(self, column_name):
+		"""
+			Calcula LogicSim(x,y) entre x = FOLIO_answer, y = LLM_answer.
+
+			column_name = str ; El nombre de la columna donde se almacenan las respuestas de los LLMs.
+		"""
+		folio_column = self.ds['FOLIO'] # Ya existe una columna del ds que se llama 'FOLIO'.
+
+		# OBS: Hay que cambiar esta parte, los nombres de las columnas están muy wack.
+		llm_column = self.ds[column_name]
+
+		for i in range(len(folio_column)):
+			self.compare_answers(folio_column[i], llm_column[i])

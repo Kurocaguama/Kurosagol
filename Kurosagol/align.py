@@ -1,12 +1,12 @@
+# This file implements DPO to a given LLM and pushes the resulting model to the HF Hub.
+
 import Kurosagol as k
 import torch, re
 from datasets import load_dataset
-from trl import DPOConfig, DPOTrainer
-from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig, BitsAndBytesConfig
-from peft import LoraConfig, TaskType
 
 def t_and_p(model_id):
     """
+        Alinea y sube a huggingface. OBS: SE GENERAR TRES (3) MODELOS, UNO POR CADA OBJETIVO DE ALINEACIÓN.
         model_id = str ; El modelo a alinear
     """
     filtered_name = re.split('\/', model_id)[1]
@@ -30,17 +30,26 @@ def t_and_p(model_id):
 
 
 checkpoint_list = [ 
-    #'meta-llama/Llama-3.1-8B',  
-    #'meta-llama/Llama-3.1-8B-Instruct', 
-    #'meta-llama/Llama-3.2-3B', 
-    #'meta-llama/Llama-3.2-3B-Instruct', 
-    #'google/gemma-3-1b-it'
+    'meta-llama/Llama-3.1-8B',  
+    'meta-llama/Llama-3.1-8B-Instruct', 
+    'meta-llama/Llama-3.2-3B', 
+    'meta-llama/Llama-3.2-3B-Instruct', 
+    'google/gemma-3-1b-it'
 ]
 
+# Iteración previa. NO SE USÓ PARA EL PAPER.
 #for _ in checkpoint_list:
 #    t_and_p(_)
 
 def align(ds_name, output_dir, model_name, model_hub_name):
+    """
+    Alinea (Mixture-of-Steps, Single Objective) y sube el modelo en cuestión a HuggingFace. OBS: SE GENERA UN ÚNICO MODELO. ESTOS SON LOS REPORTADOS EN EL PAPER.
+
+    ds_name = str ; Nombre en HuggingFace del dataset.
+    output_dir = str ; Dirección de guardado del modelo (en el cluster de Helena)
+    model_name = str ;  Nombre del checkpoint a alinear.
+    model_hub_name = str ; Nombre para guardar el modelo el HF.
+    """
     dataset = load_dataset(ds_name, split = 'train')
     aligner = k.DPO(model_name, output_dir)
     aligner.train_and_push(dataset, model_hub_name)
@@ -54,7 +63,3 @@ align('Kurosawama/Full_DPO_gemma-3-1b-it', '/media/discoexterno/francisco/modelo
 
 
 print('Final total. Grande Sabrina Carpenter.')
-
-#translation = load_dataset('Kurosawama/Translation_DPO_Llama-3.1-8B')
-#aligner = k.DPO('meta-llama/Llama-3.1-8B', '/media/discoexterno/francisco/modelos')
-#aligner.train_and_push(translation, 'Llama-3.1-8B-Translation')
