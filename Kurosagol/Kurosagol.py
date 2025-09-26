@@ -272,12 +272,12 @@ class Evaluation:
 
 		return function_list, len(instance), len(function_list), len(function_set)
 
-	def compare_answers(self):
+	def compare_answers(self, folio, llm):
 		"""
 			Dadas dos entradas de un mismo dataset (folio[i], llm_ans[i]), extrae y calcula los valores para LogicSim(x,y)
 		"""
-		gs_prem, gs_prem_count, gs_funcs_apps, gs_total_funcs = self.premises_per_answer(False)
-		llm_prem, llm_prem_count, llm_funcs_apps, llm_total_funcs = self.premises_per_answer(True)
+		gs_prem, gs_prem_count, gs_funcs_apps, gs_total_funcs = self.premises_per_answer(folio, False)
+		llm_prem, llm_prem_count, llm_funcs_apps, llm_total_funcs = self.premises_per_answer(llm, True)
 
 		# Operaciones de conjuntos
 		union_prem = len(list(set(gs_prem).union(set(llm_prem))))
@@ -290,7 +290,7 @@ class Evaluation:
 		func_total_dif = abs(gs_total_funcs - llm_total_funcs)
 
 		logicsim = round(iou + prem_dif + func_apps_dif + func_total_dif, 2)
-		print(logicsim)
+		#print(logicsim)
 		return logicsim
 
 
@@ -304,6 +304,8 @@ class Evaluation:
 
 		# OBS: Hay que cambiar esta parte, los nombres de las columnas están muy wack.
 		llm_column = self.ds[column_name]
+		average = 0
 
 		for i in range(len(folio_column)):
-			self.compare_answers(folio_column[i], llm_column[i])
+			average += self.compare_answers(folio_column[i], llm_column[i])
+		print("LogicSim promedio: {}".format(average/len(folio_column)))

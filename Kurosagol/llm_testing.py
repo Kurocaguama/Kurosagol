@@ -102,10 +102,10 @@ def respond(model_id, stage):
     if stage == 'trans':
         dataset = trans
         prompt = os_translation
-    if stage == 'infer':
+    if stage == 'inference':
         dataset = infer
         prompt = os_inference
-    if stage == 'retrans':
+    if stage == 'retranslation':
         dataset = retrans
         prompt = os_retranslation
 
@@ -128,30 +128,30 @@ def llm_gen_to_hf_dataset(checkpoint, stage):
     name = re.split('\/', checkpoint)[1]
     if stage == 'trans':
         ds = infer
-    if stage == 'infer':
+    if stage == 'inference':
         ds = retrans
-    if stage == 'retrans':
+    if stage == 'retranslation':
         ds = final_trans
     eval_generation = respond(checkpoint, stage)
     dic1 = {'FOLIO': ds, f'{checkpoint}\'s Answer': eval_generation}
     eval_df = pd.DataFrame(data=dic1)
     hf_dataset = Dataset.from_pandas(eval_df)
-    hf_dataset.push_to_hub(f'Kurosawama/EVALUATION_{stage}_{name}')
+    hf_dataset.push_to_hub(f'Kurosawama/EVAL_{name}_BASE', split = stage)
 
 
 # Evaluating models. 
-checkpoint_list = [
-    'Kurosawama/Llama-3.1-8B-Full-align',
-    'Kurosawama/Llama-3.1-8B-Instruct-Full-align',
-    'Kurosawama/Llama-3.2-3B-Full-align',
-    'Kurosawama/Llama-3.2-3B-Instruct-Full-align',
-    'Kurosawama/gemma-3-1b-it-Full-align'
-]
+#checkpoint_list = [
+#    'Kurosawama/Llama-3.1-8B-Full-align',
+#    'Kurosawama/Llama-3.1-8B-Instruct-Full-align',
+#    'Kurosawama/Llama-3.2-3B-Full-align',
+#    'Kurosawama/Llama-3.2-3B-Instruct-Full-align',
+#    'Kurosawama/gemma-3-1b-it-Full-align'
+#]
 
-for check in checkpoint_list:
-    llm_gen_to_hf_dataset(check, 'trans')
-    llm_gen_to_hf_dataset(check, 'infer')
-    llm_gen_to_hf_dataset(check, 'retrans')
+#for check in checkpoint_list:
+#    llm_gen_to_hf_dataset(check, 'trans')
+#    llm_gen_to_hf_dataset(check, 'infer')
+#    llm_gen_to_hf_dataset(check, 'retrans')
 
 # ==========================================================
 # ==========================================================
@@ -171,5 +171,5 @@ checkpoint_list_baseline = [
 
 for normal_check in checkpoint_list_baseline:
     llm_gen_to_hf_dataset(normal_check, 'trans')
-    llm_gen_to_hf_dataset(normal_check, 'infer')
-    llm_gen_to_hf_dataset(normal_check, 'retrans')
+    llm_gen_to_hf_dataset(normal_check, 'inference')
+    llm_gen_to_hf_dataset(normal_check, 'retranslation')
