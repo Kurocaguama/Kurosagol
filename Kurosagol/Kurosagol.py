@@ -1,9 +1,9 @@
 # Main classes used for any and all experiments.
 
-import torch, os
+import torch, os, re
 import numpy as np
 import pandas as pd
-from datasets import Dataset
+from datasets import Dataset, load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, GenerationConfig
 from peft import LoraConfig, TaskType
 from trl import DPOConfig, DPOTrainer

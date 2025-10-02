@@ -1,3 +1,6 @@
+# This file creates the preference datasets used for alignment.
+
+
 import Kurosagol as k
 import torch, re
 from datasets import load_dataset
@@ -125,15 +128,16 @@ checkpoint_list = [
     'meta-llama/Llama-3.1-8B-Instruct', #Done 100
     'meta-llama/Llama-3.2-3B', #Done 100
     'meta-llama/Llama-3.2-3B-Instruct', #Done 100
-    'meta-llama/Llama-3.3-70B-Instruct',
-    'openai/gpt-oss-20b',
-    'deepseek-ai/DeepSeek-R1',
-    'google/gemma-3-270m',
+    # The following 4 models weren't used in the final version
+    #'meta-llama/Llama-3.3-70B-Instruct',
+    #'openai/gpt-oss-20b',
+    #'deepseek-ai/DeepSeek-R1',
+    #'google/gemma-3-270m',
     'google/gemma-3-1b-it'
 ]
 
-#test_checkpoint = ['google/gemma-3-270m', 'google/gemma-3-1b-it']
-#for _ in test_checkpoint:    
-#    full_pipe_final(_)  
+test_checkpoint = ['google/gemma-3-270m', 'google/gemma-3-1b-it']
+for _ in test_checkpoint:    
+    full_pipe_final(_)  
 
 full_pipe_final('meta-llama/Llama-3.2-3B-Instruct')
