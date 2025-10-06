@@ -1,6 +1,6 @@
-=========================================================
-============== RAW QUESTION ANSWERING ===================
-=========================================================
+=============================================================================================================================
+================================================ RAW QUESTION ANSWERING =====================================================
+=============================================================================================================================
 Translation:
 """
     Translate the following problem from natural language to first order logic predicates:
@@ -26,9 +26,9 @@ Retranslation:
 """
 
 
-=========================================================
-================ IN CONTEXT LEARNING ====================
-=========================================================
+=============================================================================================================================
+================================================== IN CONTEXT LEARNING ======================================================
+=============================================================================================================================
 ZERO SHOT
 
 Translation
@@ -84,9 +84,9 @@ Retranslation:
 """
 
 
-========================================================================
-========================== ONE SHOT LEARNING ===========================
-========================================================================
+============================================================================================================================================
+============================================================ ONE SHOT LEARNING =============================================================
+============================================================================================================================================
 
 Translation:
 """
@@ -174,6 +174,155 @@ Retranslation:
     Retranslation:
 """
 
-========================================================================
-========================= MULTI SHOT LEARNING ==========================
-========================================================================
+============================================================================================================================================
+=========================================================== MULTI SHOT LEARNING ===========================================================
+============================================================================================================================================   
+
+Translation:
+"""
+    Given a problem description and a question, the task is to parse the problem and the question into first-order logic formulars.
+    The grammar of the first-order logic formular is defined as follows:
+    1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
+    2) logical disjunction of expr1 and expr2: expr1 ∨ expr2
+    3) logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+    4) logical negation of expr1: ¬expr1
+    5) expr1 implies expr2: expr1 → expr2
+    6) expr1 if and only if expr2: expr1 ↔ expr2
+    7) logical universal quantification: ∀x
+    8) logical existential quantification: ∃x
+    --------------
+    EXAMPLE 1
+
+    Problem:
+    All people who regularly drink coffee are dependent on caffeine. People either regularly drink coffee or joke about being addicted to caffeine. No one who jokes about being addicted to caffeine is unaware that caffeine is a drug. Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug. If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student.
+    Predicates:
+    Dependent(x) ::: x is a person dependent on caffeine.
+    Drinks(x) ::: x regularly drinks coffee.
+    Jokes(x) ::: x jokes about being addicted to caffeine.
+    Unaware(x) ::: x is unaware that caffeine is a drug.
+    Student(x) ::: x is a student.
+    Premises:
+    ∀x (Drinks(x) → Dependent(x)) ::: All people who regularly drink coffee are dependent on caffeine.
+    ∀x (Drinks(x) ⊕ Jokes(x)) ::: People either regularly drink coffee or joke about being addicted to caffeine.
+    ∀x (Jokes(x) → ¬Unaware(x)) ::: No one who jokes about being addicted to caffeine is unaware that caffeine is a drug. 
+    (Student(rina) ∧ Unaware(rina)) ⊕ ¬(Student(rina) ∨ Unaware(rina)) ::: Rina is either a student and unaware that caffeine is a drug, or neither a student nor unaware that caffeine is a drug. 
+    ¬(Dependent(rina) ∧ Student(rina)) → (Dependent(rina) ∧ Student(rina)) ⊕ ¬(Dependent(rina) ∨ Student(rina)) ::: If Rina is not a person dependent on caffeine and a student, then Rina is either a person dependent on caffeine and a student, or neither a person dependent on caffeine nor a student.
+    --------------
+    EXAMPLE 2
+
+    Problem:
+    There are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey. Tom is not an Eastern wild turkey. Tom is not an Osceola wild turkey. Tom is not a Gould's wild turkey. Tom is neither a Merriam's wild turkey nor a Rio Grande wild turkey. Tom is a wild turkey.
+    Predicates:
+    ∀x (WildTurkey(x) → (EasternWildTurkey(x) ∨ OsceolaWildTurkey(x) ∨ GouldsWildTurkey(x) ∨ MerriamsWildTurkey(x) ∨ RiograndeWildTurkey(x) ∨ OcellatedWildTurkey(x)))
+    ¬(EasternWildTurkey(tom))
+    ¬(OsceolaWildTurkey(tom))
+    ¬(GouldsWildTurkey(tom))
+    ¬(MerriamsWildTurkey(tom) ∨ RiograndeWildTurkey(tom))
+    WildTurkey(tom)
+    --------------
+    EXAMPLE 3
+
+    Problem:
+    Mary has the flu. If someone has the flu, then they have influenza. Susan doesn't have influenza.
+    Predicates:
+    Has(mary, flu)
+    ∀x (Has(x, flu) → Has(x, influenza))
+    ¬Has(susan, influenza)
+    --------------
+    Problem:
+    {}
+    Predicates:
+"""
+
+
+
+
+
+Inference:
+"""
+    Given a problem in first order logic, the task is to perform a series of inference steps to deduct the logical solution of the problem.
+    Valid inference rules are such as: 
+    Modus Ponens (p, p → q, therefore q)
+    Modus Tollens (p → q, ¬q, therefore ¬p)
+    Hypotheticall Syllogism (p → q, q → r, therfore p → r)
+    Destructive Dilemma (p → q, r → s, ¬q ∨ ¬s, therefore ¬p ∨ ¬r)
+    Constructive Dilemma (p → q, r → s, p ∨ r, therefore q ∨ s)
+    Bidirectional Dilemma (p → q, r → s, p ∨ ¬s, therefore q ∨ ¬r)
+    -------------------
+    EXAMPLE 1
+
+    Problem:
+    ∀x (DrinkRegularly(x, coffee) → IsDependentOn(x, caffeine))
+    ∀x (DrinkRegularly(x, coffee) ∨ (¬WantToBeAddictedTo(x, caffeine)))
+    ∀x (¬WantToBeAddictedTo(x, caffeine) → ¬AwareThatDrug(x, caffeine))
+    ¬(Student(rina) ⊕ ¬AwareThatDrug(rina, caffeine))
+    ¬(IsDependentOn(rina, caffeine) ⊕ Student(rina))
+    Conclusion:
+    ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))
+    -------------------
+    EXAMPLE 2
+
+    Problem:
+    ∀x (WildTurkey(x) → (EasternWildTurkey(x) ∨ OsceolaWildTurkey(x) ∨ GouldsWildTurkey(x) ∨ MerriamsWildTurkey(x) ∨ RiograndeWildTurkey(x) ∨ OcellatedWildTurkey(x)))
+    ¬(EasternWildTurkey(tom))
+    ¬(OsceolaWildTurkey(tom))
+    ¬(GouldsWildTurkey(tom))
+    ¬(MerriamsWildTurkey(tom) ∨ RiograndeWildTurkey(tom))
+    WildTurkey(tom)
+    Conclusion:
+    OcellatedWildTurkey(tom)
+    -------------------
+    EXAMPLE 3
+
+    Problem:
+    Has(mary, flu)
+    ∀x (Has(x, flu) → Has(x, influenza))
+    ¬Has(susan, influenza)
+    Conclusion:
+    Has(mary, influenza) ⊕ Has(susan, influenza)
+    -------------------
+    Problem:
+    {}
+    Conclusion:
+"""
+
+
+Retranslation:
+"""
+    Given a single premise in first order logic, the task is to retranslate it to natural language.
+    The grammar of the first-order logic formular is defined as follows:
+    1) logical conjunction of expr1 and expr2: expr1 ∧ expr2
+    2) logical disjunction of expr1 and expr2: expr1 ∨ expr2
+    3) logical exclusive disjunction of expr1 and expr2: expr1 ⊕ expr2
+    4) logical negation of expr1: ¬expr1
+    5) expr1 implies expr2: expr1 → expr2
+    6) expr1 if and only if expr2: expr1 ↔ expr2
+    7) logical universal quantification: ∀x
+    8) logical existential quantification: ∃x
+    --------------
+    EXAMPLE 1
+
+    Premise:
+    ¬WantToBeAddictedTo(rina, caffeine) ∨ (¬AwareThatDrug(rina, caffeine))
+
+    Retranslation:
+    Rina doesn't want to be addicted to caffeine or is unaware that caffeine is a drug.
+    --------------
+    EXAMPLE 2
+
+    Premise:
+    OcellatedWildTurkey(tom)
+    Retranslation:
+    Tom is an Ocellated wild turkey.
+    --------------
+    EXAMPLE 3
+
+    Premise:
+    Has(mary, influenza) ⊕ Has(susan, influenza)
+    Retranslation:
+    Either Mary or Susan has influenza.
+    --------------
+    Premise:
+    {}
+    Retranslation:
+"""
