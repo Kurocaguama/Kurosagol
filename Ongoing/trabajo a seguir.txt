@@ -1,0 +1,6 @@
+1.- Setup para el cluster del GIL.
+2.- Hacer el setup de entrenamiento para los distintos modelos:
+    'openai/gpt-oss-20b', 'openai/gpt-oss-120b' (Si es que Amoxtli lo corre), 'Qwen/Qwen3-4B-Instruct-2507', 'Qwen/Qwen-4B-Thinking-2507', algún deepsex
+3.- Hacer datasets para cada nuevo modelo usando distintos algoritmos. 
+4.- Ver implementación multi-objetivo.
+5.- Actualizar los cambios de LogicSim hechos por Karla.
