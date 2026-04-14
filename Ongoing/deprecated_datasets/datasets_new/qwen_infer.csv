@@ -1,0 +1,1138 @@
+Inference,Avg Logit Value,Std Logit Value,Avg Non Zero,Std Non Zero
+"
+
+Uncertain
+
+The conclusion ""Athlete(stephenCurry)"" is not directly supported by the premises. While the premises mention that there exists an athlete who is professional and center back, this does not imply that all professionals are athletes. Stephen Curry is identified as playing professional basketball, which makes him a professional, but the premises do not explicitly link being a professional to being an athlete. Therefore, the conclusion cannot be definitively inferred or contradicted, making it **Uncertain**.",107.9052402306214,20.846410679039593,1.242152466367713,0.5460629383868634
+"
+
+False
+
+The conclusion asserts that **stephenCurry** is an **Athlete**, **Professional**, and **CenterBack**. From the premises:
+
+1. **Premise 5** states:  
+   `Play(stephenCurry, professionalBasketball)`  
+   This implies **stephenCurry** is involved in professional basketball.
+
+2. **Premise 1** states:  
+   `∀x ((Professional(x) ∧ SoccerPlayer(x)) → ¬Play(x, professionalBasketball))`  
+   Since **stephenCurry** plays professional basketball, this means:  
+   `¬(Professional(stephenCurry) ∧ SoccerPlayer(stephenCurry))`  
+   (i.e., **stephenCurry** cannot be both **Professional** and **SoccerPlayer**).
+
+3. **Premise 3** and **Premise 2** form a chain:  
+   - If **stephenCurry** is **Professional** and **CenterBack**, then via Premise 3, he is **Professional** and **Defender**.  
+   - Then, via Premise 2, he is **Professional** and **SoccerPlayer**.  
+   This would make him both **Professional** and **SoccerPlayer**, which directly contradicts Premise 1 (since he plays professional basketball).  
+
+Thus, the conclusion that **stephenCurry** is **Professional** and **CenterBack** leads to a contradiction with the premises. While the conclusion includes **Athlete**, this is not directly contradicted (Premise 4 only guarantees the existence of at least one such person, not that **stephenCurry** must be that person). However, the **Professional** and **CenterBack** claims are invalid due to the contradiction.  
+
+**Answer:** False",114.8591251713111,21.218998504304466,1.1873001370488807,0.4659276760116554
+"
+
+True
+
+**Reasoning:**  
+The conclusion is a conditional:  
+**If** Stephen Curry is both *Professional* and *CenterBack*, **then** he is not an *Athlete*.  
+
+From the premises:  
+1. **Play(stephenCurry, professionalBasketball)** is true (Premise 5).  
+2. If Stephen Curry were both *Professional* and *CenterBack*, then via Premises 3 and 2, he would also be a *SoccerPlayer*.  
+3. Premise 1 states that if someone is both *Professional* and *SoccerPlayer*, they **cannot** play professional basketball.  
+4. This creates a contradiction because Stephen Curry **is** playing professional basketball.  
+
+Thus, the assumption that Stephen Curry is both *Professional* and *CenterBack* leads to a contradiction. This makes the **antecedent** of the conclusion false. In logic, a conditional with a false antecedent is **vacuously true**. Therefore, the conclusion holds.  
+
+**Answer:** True",111.04456187368912,19.492221293938684,1.2008855744581683,0.4962775990603188
+"
+
+Uncertai",111.6258300621118,20.53845596239395,1.2116770186335404,0.5116411737869547
+"
+
+Uncertain
+
+The conclusion is a conditional statement that depends on the truth values of its antecedent and consequent. While the premises establish relationships between variables (e.g., `StayAloneIn` implies `¬ManyOpportunity...`), the conclusion's validity hinges on whether the antecedent and consequent are logically connected. 
+
+In some scenarios, the conclusion holds (e.g., when `¬(A XOR B)` is false or when `¬(C XOR A)` is true), and in others, it does not (e.g., when `¬(A XOR B)` is true but `¬(C XOR A)` is false). Since the premises do not provide enough information to determine the truth value of the conclusion in all cases, the conclusion's validity remains **Uncertain**. 
+
+Answer: Uncertai",109.07568418772561,18.226781936576508,1.2352346570397112,0.5344186414097605
+"
+
+False
+
+The conclusion ""MajorIn(tim, computerScience)"" leads to a contradiction with the premises. Assuming it is true, it implies that From(tim, yaleRunningClub) is true (since Wear(tim, tshirt) cannot be true without contradicting the XOR condition in premise 6). This, combined with premise 2, leads to RankedIn(tim, top1000), and with premise 1, implies FinishWithin(tim, bostonMarathon, 3Hours). However, premise 5 then asserts that if FinishWithin(tim, ...) is true, then ¬(From(tim, ...) ∧ RankedIn(...)), which directly contradicts the derived truth of both From and RankedIn. Thus, the assumption that MajorIn(tim, computerScience) is true results in a contradiction, making the conclusion **False**.",110.96227112887114,19.715146185820874,1.204995004995005,0.500883360508403
+"
+
+True
+
+The conclusion ¬MajorIn(tim, computerScience) ∧ ¬From(tim, yaleRunningClub) is **True**. 
+
+1. **MajorIn(tim, computerScience) → contradiction**:  
+   - If MajorIn(tim, computerScience) were true, premise 6 implies either Wear(tim, tshirt) or From(tim, yaleRunningClub) (but not both).  
+   - Premise 3 states Wear(tim, tshirt) → From(tim, yaleRunningClub). Thus, if MajorIn(tim, computerScience) is true, From(tim, yaleRunningClub) must be true (since Wear(tim, tshirt) would force From(tim, yaleRunningClub) via premise 3).  
+   - This creates a contradiction with premise 6 (Wear(tim, tshirt) and From(tim, yaleRunningClub) would both be true, violating the exclusive or).  
+   - Therefore, MajorIn(tim, computerScience) must be false.  
+
+2. **From(tim, yaleRunningClub) → contradiction**:  
+   - If From(tim, yaleRunningClub) were true, premise 2 implies RankedIn(tim, top1000). Premise 1 then implies FinishWithin(tim, bostonMarathon, 3Hours).  
+   - Premise 5 states that if FinishWithin(tim, ...) is true, then ¬(From(tim, yaleRunningClub) ∧ RankedIn(...)). This contradicts the assumption that both From(tim, yaleRunningClub) and RankedIn(...) are true.  
+   - Thus, From(tim, yaleRunningClub) must also be false.  
+
+Both parts of the conclusion are logically necessitated by the premises, making the conclusion **True**.",112.15658788443615,20.16656254850815,1.1653308480894689,0.45452094497523654
+"
+
+Uncertai",105.61303886750278,20.320300827007735,1.2186762697131504,0.5306817623341713
+"
+
+False",127.16345500000001,24.300302041634,1.155,0.433176253581226
+"
+
+False",130.35947377326568,25.653495408468686,1.1218274111675126,0.3928903404524961
+"
+
+True",142.50811478599223,27.181345669003857,1.093385214007782,0.31658903668183647
+"
+
+True",157.45161355932206,27.138747380380092,1.0508474576271187,0.21968612536975798
+"
+
+Uncertain
+
+The conclusion ""JanesFriend(martha) ∧ WorkIn(martha, lab)"" is not necessarily true. While JanesFriend(martha) is explicitly given, the truth of WorkIn(martha, lab) depends on the exclusive disjunction in premise 6. In one case (where LikeEngineering(martha) and related conditions hold), WorkIn(martha, lab) is guaranteed by premise 4. In the other case (where WearEveryDay(martha, scrub) holds), WorkIn(martha, lab) is not derivable from the premises. Since the conclusion could be true in one scenario and false in another, the truth value is not definitively determined by the premises. Thus, the conclusion is **Uncertain**.",114.28385805899958,20.260685701286334,1.1938862761864044,0.5016316147676091
+"
+
+Uncertai",105.42977147663102,19.665961053121684,1.2171092154271297,0.537513068582908
+"
+
+Uncertai",106.20947685067412,18.932013024434976,1.2119053675909437,0.5228152148389947
+"
+
+Uncertai",104.65941469265367,18.36475515289902,1.2440779610194903,0.5725663680274474
+"
+
+Uncertai",112.5443889940082,22.593062521243745,1.2095553453169348,0.5280676091993265
+"
+
+False",117.82099742599742,21.628351028477915,1.181896181896182,0.4790219635464053
+"
+
+Uncertai",112.91475494350283,23.187136602448284,1.2485875706214689,0.552662517410576
+"
+
+False",126.70537248028047,24.65351353165455,1.1463628396143735,0.40218226557782333
+"
+
+Uncertai",127.14879910213244,23.046493203616283,1.1346801346801347,0.42618868407245064
+"
+
+Uncertai",111.19190003224767,20.62486460474852,1.2541115769106739,0.5695033895743395
+"
+
+Uncertai",116.74563426534058,21.277573557576154,1.2092325014073935,0.5244457101150595
+"
+
+True
+
+The conclusion ""RefuseToWorkInPerson(pan) ∨ HardWorking(pan)"" is **True**. 
+
+From the premises, we deduced that **WorkRemotely(pan)** is true (via the specific premise and logical simplification). This leads to **WellCompensated(pan)** being false (to avoid contradiction with the fourth premise). Since **Scientist(pan)** would imply **WellCompensated(pan)**, and this is false, **Engineer(pan)** must be true. This triggers the second premise, leading to **HardWorking(pan)** being true. Thus, the disjunction **HardWorking(pan)** ∨ (any other) is necessarily true. 
+
+Answer: True",123.33017241379311,21.125778531281796,1.1482758620689655,0.42660643287291616
+"
+
+False
+
+**Reasoning:**
+
+1. **Premise 6** states:  
+   $ \text{Employee(pan)} \land \text{ManagedBy(pan, peter)} \land (\neg(\text{WorkRemotely(pan)} \land \text{WellCompensated(pan)}) \rightarrow \text{WorkRemotely(pan)}) $.  
+   This implies **WorkRemotely(pan)** must be **true** (as shown via logical analysis of the implication).
+
+2. **Premise 1** requires:  
+   $ \text{Engineer(pan)} \lor \text{Scientist(pan)} $.  
+   From **Premise 4** (if $ \text{WellCompensated(pan)} $ were true, it would contradict $ \text{WorkRemotely(pan)} $), we deduce $ \text{WellCompensated(pan)} $ is **false**.  
+   Thus, $ \text{Scientist(pan)} $ must be **false**, so $ \text{Engineer(pan)} $ is **true**.
+
+3. **Premise 2** (via $ \text{Engineer(pan)} $) forces $ \text{HardWorking(pan)} $ to be **true**.  
+   Therefore, $ \neg\text{HardWorking(pan)} $ is **false**.
+
+4. The conclusion $ \neg\text{RefuseToWorkInPerson(pan)} \land \neg\text{HardWorking(pan)} $ is **false** because $ \neg\text{HardWorking(pan)} $ is false.  
+   While $ \neg\text{RefuseToWorkInPerson(pan)} $ could be true or false (no contradiction), the conjunction fails due to the false component.  
+
+**Conclusion:** The conclusion contradicts the premises (via $ \neg\text{HardWorking(pan)} $), making it **False**.",118.88563547200654,21.321661512494476,1.188189619942787,0.48002123302050903
+"
+
+Uncertai",113.43873876040702,20.267107436763343,1.2170212765957447,0.51551937877211
+"
+
+False",115.3464635568513,19.088691893129067,1.2128279883381925,0.5137766185658333
+"
+
+True
+
+The conclusion ¬TakenSelfieAt(kate, basilicaSagradaFamilia) is **True**. 
+
+Assuming the conclusion is false (i.e., Kate took the selfie), it leads to a contradiction with the premises. Specifically, this assumption would imply she has visited Barcelona (via premise 4), which triggers a chain of implications (premises 3, 2, and 1) that force her to have left the USA (via contrapositive of premise 1). This makes the antecedent of premise 5 (A ⊕ B) true, but the consequent (¬(C ⊕ B)) false, violating the premise. Since premises must all hold, the assumption of the conclusion being false is invalid. Thus, the conclusion must be **True**.",118.4823985532208,18.754496453220842,1.183947640372029,0.4568052278645543
+"
+
+False",117.10804164790635,18.81340433779647,1.1859522737505628,0.4839623856234511
+"
+
+True
+
+The conclusion ¬NeverLeft(kate, uSA) is logically valid. Assuming the premise ""NeverLeft(kate, uSA)"" (B) is true leads to contradictions with the implications derived from the premises (e.g., visiting Barcelona implies being in Europe, which contradicts ""NeverLeft(kate, uSA)""). Thus, the conclusion must be true to avoid contradiction.",114.94283952551477,18.327934006551565,1.1819606087735004,0.4642708844340785
+"
+
+Uncertai",115.01513165646952,18.576275067106387,1.2161794697484705,0.5183609900340822
+"
+
+Uncertain
+
+The conclusion is not entailed by the premises, as there exist scenarios where the premises are true but the conclusion is false. However, the conclusion does not contradict any premise directly. Thus, it is neither always true nor always false, making it **Uncertain**. 
+
+**Answer:** Uncertai",103.82874783001807,18.000707975517635,1.1902350813743219,0.4818350798709575
+"
+
+False",110.96123386856972,17.645352712773438,1.207552780255724,0.510993667779461
+"
+
+True",139.84305387205387,28.287097077427457,1.138047138047138,0.4469879266067633
+"
+
+True",126.98792910052912,25.35029289208608,1.164021164021164,0.46413909561809674
+"
+
+Uncertai",121.20241104972376,24.590743712116883,1.2066298342541437,0.4866848288634328
+"
+
+Uncertain
+
+The premises establish specific facts about certain dates (e.g., December 1st, 1970 is Tuesday, and December 1st, 2021 is Wednesday) and state that ""today"" is a Thursday. However, there is no general rule or information about the relationship between the day of the week and December 1st across all years. Since the conclusion ""December1st(today)"" is not logically entailed by the premises (as the premises do not provide sufficient information to determine the day of the week for December 1st in general) and does not contradict any premise, the validity of the conclusion is **Uncertain**.",111.54397459252158,19.395994690511486,1.2612655800575263,0.5803635001985625
+"
+
+False
+
+The conclusion claims that **all** entities with thirty days remaining until the end of the year are **Wednesday**. However, the premises only specify that **specific instances** of December 1st (e.g., 1970 and 2021) have known days of the week (Tuesday and Wednesday, respectively). 
+
+For example:
+- December 1st, 1970 (a case where **ThirtyDaysRemainUntilTheEndOfTheYear** is true) is **Tuesday**, not Wednesday. This directly contradicts the conclusion's universal claim. 
+
+Since the premises do not establish a general rule that all such entities must be Wednesday, the conclusion is **False**.",110.78386431411529,19.8758946441549,1.2614314115308152,0.5633289463154317
+"
+
+Uncertai",109.71868656229616,21.49119556458186,1.24853228962818,0.5574082683222774
+"
+
+Uncertai",112.24183158263304,21.503403846979655,1.2496498599439776,0.5528762486393354
+"
+
+Uncertai",105.510893782853,19.290055880986028,1.2356353090447707,0.5514451326466691
+"
+
+Uncertai",113.39429259694477,22.058059358845743,1.2044653349001175,0.530576132849928
+"
+
+True",120.66476101141926,21.453437099089296,1.1851549755301793,0.4666441757370449
+"
+
+True
+
+The conclusion asserts that Jackie is PartTime and that there exists a y such that LessThan(y, num2) and TakesCourses(x,y). 
+
+1. **PartTime(jackie)**:  
+   - From the premises, Jackie is a student affiliated with Yale School of Management. Premise 1 states that such individuals must be either PartTime or FullTime (but not both).  
+   - Assume Jackie is FullTime. Then, Premise 2 requires that there exists a y such that ¬LessThan(y, num2) ∧ TakesCourses(x,y). However, the premises also include the disjunction (∃y(LessThan(...)) ∨ ForbesList(jackie)). If (∃y(LessThan(...))) is false (contradicting the disjunction), then ForbesList(jackie) must be true.  
+   - If ForbesList(jackie) is true, Premise 4 implies Jackie owns a startUp. Premise 3 then requires ∃y(LessThan(...)), which contradicts the assumption that (∃y(LessThan(...))) is false. Thus, the assumption that Jackie is FullTime leads to a contradiction.  
+   - Therefore, Jackie must be PartTime.  
+
+2. **∃y(LessThan(y, num2) ∧ TakesCourses(x,y))**:  
+   - This is guaranteed by the premises. If (∃y(LessThan(...))) is true, it holds. If ForbesList(jackie) is true, Premise 4 and Premise 3 ensure this disjunction is true.  
+
+Thus, the conclusion is **True**.",105.76551177504393,18.19337284964903,1.197891036906854,0.5036204062687972
+"
+
+Uncertai",106.09078740593182,20.5888346706364,1.2164674634794157,0.5335770568440276
+"
+
+Uncertain
+
+**Reasoning:**
+
+The conclusion is a conditional:  
+**¬(PartTime(jackie) ⊕ ForbesList(jackie)) → (∃y (LessThan(y, num2) ∧ TakesCourses(x,y)) ∧ ForbesList(jackie))**
+
+To evaluate its validity, we analyze the antecedent and consequent:
+
+1. **Antecedent**: ¬(PartTime(jackie) ⊕ ForbesList(jackie))  
+   This is true in two cases:  
+   - **Case 1**: Both PartTime(jackie) and ForbesList(jackie) are **true**.  
+   - **Case 2**: Both are **false**.  
+
+2. **Consequent**: (∃y (LessThan(y, num2) ∧ TakesCourses(x,y)) ∧ ForbesList(jackie))  
+   This requires **both** the existence of a course `y` (with `y < num2`) that Jackie takes **and** that Jackie is on the ForbesList.  
+
+3. **Premises**:  
+   - From the specific premises, we know:  
+     - Jackie is a student and affiliated with Yale.  
+     - Either (∃y (LessThan(y, num2) ∧ TakesCourses(x,y))) **or** ForbesList(jackie) is true.  
+   - If **ForbesList(jackie)** is **true**, then from premise 4:  
+     - Jackie owns a startup (via premise 4).  
+     - From premise 3: ∃y (LessThan(y, num2) ∧ TakesCourses(x,y)) is true.  
+     - Thus, the consequent **holds** (A ∧ B is true).  
+   - If **ForbesList(jackie)** is **false**, then the disjunction (∃y (LessThan(y, num2) ∧ TakesCourses(x,y))) must be true (since A ∨ B is true). However, the consequent requires **both** A and B to be true, which fails because B is false.  
+
+4. **Conclusion**:  
+   - In **Case 1**, the implication holds (consequent is true).  
+   - In **Case 2**, the implication fails (consequent is false).  
+   - Since the truth of the antecedent does **not** guarantee the truth of the consequent, the conclusion is **not always valid**.  
+
+5. **Final Determination**:  
+   - The conclusion is **not necessarily true** (fails in some cases) and **does not contradict any premises** (since the premises allow for both A and B to be true or false).  
+   - Therefore, the conclusion is **Uncertain**.  
+
+**Answer:**  
+Uncertai",104.42481453727989,18.117573163017607,1.2370425877357312,0.5442907542735396
+"
+
+Uncertai",112.4799702268431,20.973233596918913,1.229678638941399,0.547539685950848
+"
+
+False
+
+The conclusion asserts that James plays division 1 football and is at Yale. From premise 5, James is a student-athlete not allowed to take the seminar course. Premise 4 links the seminar course allowance to the GPA condition, which in turn depends on enrollment at Yale (via premise 3). Since James is not allowed to take the seminar course, he cannot satisfy the GPA condition, implying he is not enrolled at Yale. Premise 2 states that playing division 1 football at Yale requires enrollment at Yale. Thus, the conclusion's claim that James is at Yale contradicts the premises, making the conclusion **False**.",112.51609931034481,18.998324367794403,1.186551724137931,0.48068755256058227
+"
+
+False
+
+The conclusion claims that James exercises every day and is both playing Division 1 football and at Yale. From the premises, we know James is a StudentAthlete and not allowed to take the seminar course. This implies he does **not** have a GPA above num1 (via the contrapositive of the fourth premise). Since GPA is tied to enrollment at Yale (via the third premise), this means James is **not** enrolled at Yale. 
+
+Premise 2 states that if someone is a StudentAthlete, plays Division 1 football, and plays at Yale, they must be enrolled at Yale. Since James is **not** enrolled at Yale, he **cannot** satisfy all three conditions (playing Division 1 football, playing at Yale, and being a StudentAthlete). Thus, the conclusion's claims about James playing Division 1 football and being at Yale are **false**. 
+
+While the conclusion also asserts that James exercises every day, this does not directly contradict any premise (as the first premise only guarantees the existence of someone who does **not** exercise every day). However, since the conclusion includes **false** claims about his sports activities, the entire conclusion is **false**. 
+
+**Answer:** False",112.44129440389295,19.71357392951665,1.194647201946472,0.47550261241586467
+"
+
+False",109.28763183704262,20.051649059222495,1.2201056205205583,0.5226186748488205
+"
+
+True
+
+The conclusion is a material implication of the form:  
+**(¬ExerciseEveryDay(james) ∧ Play(james, division1Football) ∧ PlayAt(james, yaleUniversity)) → (Play(james, division1Football) ∧ PlayAt(james, yaleUniversity))**.  
+
+This is logically equivalent to **(A ∧ B ∧ C) → (B ∧ C)**, where **A**, **B**, and **C** are propositions. Since **B ∧ C** is a subset of **A ∧ B ∧ C**, the implication is always true (a tautology). Thus, the conclusion is **True** regardless of the premises.",119.48706702809267,20.919013198736522,1.1843272548053227,0.47044833890399745
+"
+
+True",128.8705051258155,25.98856035367287,1.1612301957129543,0.4414531373233379
+"
+
+True",135.60708840304184,26.086401976155635,1.1140684410646389,0.3652070966625687
+"
+
+True
+
+The conclusion ""In(uS31, alabama)"" can be derived as follows:  
+- From premise 3 (Intersect(uS31, sR287)), we infer that uS31 is in sR287 (assuming Intersect(a, b) implies In(a, b)).  
+- From premise 1 (In(sR287, alabama)), we know sR287 is in alabama.  
+- Using the transitivity rule in premise 5 (In(x, y) ∧ In(y, z) → In(x, z)), we derive In(uS31, alabama).  
+
+Thus, the conclusion is **True**.",116.01332779957743,22.045078978263287,1.2227588288560218,0.5421013056870507
+"
+
+Uncertai",111.88219737489746,21.26833411441885,1.216735028712059,0.5207259756985885
+"
+
+True",139.94190136570563,26.455069158651945,1.0971168437025796,0.33461077881244844
+"
+
+False",115.01504816886163,21.223841884794037,1.1820313909435325,0.4889783475573681
+"
+
+True",118.62652385451109,21.056425495356404,1.1459612659423712,0.4247303008353801
+"
+
+False",114.36878935562807,20.331448685260863,1.1837275693311582,0.5027375020110889
+"
+
+Uncertai",116.9575577942736,22.41295143515398,1.1876988335100742,0.48221531304206355
+"
+
+True
+
+The conclusion ¬Timpani(snareDrum) is logically valid. The premises establish that the snare drum is an instrument in the percussion section and that it is not both a timpani and tuned by sanding (¬(Timpani ⊕ TunedBySanding)). If we assume Timpani(snareDrum) is true, then TunedBySanding must also be true (from the given fact). However, TunedBySanding is only guaranteed by the idiophone category (via premise 4), which the snare drum is not (since it is a membranophone). This contradiction invalidates the assumption that Timpani(snareDrum) is true, making ¬Timpani(snareDrum) necessarily true. Thus, the conclusion is **True**.",113.14544538407328,23.657342335763012,1.191860465116279,0.48371360344372555
+"
+
+False",109.93985821230723,22.940134652704707,1.1986824374906424,0.4969360238558352
+"
+
+Uncertai",108.13490302003389,21.936001603948885,1.2298415229741853,0.555320527148218
+"
+
+True
+
+The conclusion is **True**. 
+
+From the premises, we know that the snare drum is an instrument in the percussion section and satisfies the condition ¬(Timpani(snareDrum) ⊕ TunedBySanding(snareDrum)), which implies Timpani(snareDrum) ↔ TunedBySanding(snareDrum). This means both Timpani and TunedBySanding are either true or false together.
+
+- If the snare drum is an **idiophone** (Case 1), then from premise 2, we derive TunedBySanding(snareDrum) is true. From the equivalence, Timpani(snareDrum) is also true. Premise 6 then implies TunedByTightening(snareDrum) is true. Since Xylophone(snareDrum) would contradict TunedByTightening being true (via premise 7), Xylophone(snareDrum) must be false. Thus, the conclusion (Xylophone XOR TunedByTightening) is **true**.
+
+- If the snare drum is a **membranophone** (Case 2), then from premise 3, we derive TunedBySanding(snareDrum) is false. From the equivalence, Timpani(snareDrum) is also false. Premise 5 then implies TunedByTightening(snareDrum) is true. Again, Xylophone(snareDrum) must be false to avoid contradiction with TunedByTightening being true. Thus, the conclusion remains **true**.
+
+In both cases, the conclusion holds. Therefore, the conclusion is **logically valid** and **True**.",108.54537031700286,21.732700386952406,1.2199068942584792,0.517880757537932
+"
+
+Uncertai",103.67455703548664,20.39519999163638,1.2188183807439825,0.5344846482767669
+"
+
+Uncertai",113.02608888082713,20.732515341723126,1.2251042989298022,0.5463540359849652
+"
+
+Uncertai",111.22393108446435,21.11467748301206,1.20701014626433,0.5240037463967311
+"
+
+True
+
+The conclusion ""MilitaryConstructionDesignedToDefendTerritoriesInWarfare(borjMasouda)"" can be derived as follows:  
+1. Premise 2 states that **MainFortification(borjMasouda)** is true.  
+2. Assuming **MainFortification** is a subset of **Fortification** (a reasonable inference in logical contexts where terms like ""MainFortification"" imply a specific type of Fortification), then **borjMasouda** is a **Fortification**.  
+3. From Premise 1: **Fortification(x) → MilitaryConstruction(x) ∧ DesignedtoDefendTerritoriesinWarfare(x)**.  
+4. Applying this to **borjMasouda**, we conclude **MilitaryConstruction(borjMasouda)** and **DesignedtoDefendTerritoriesInWarfare(borjMasouda)**.  
+
+Thus, the conclusion is **True**.",113.84763727017761,21.652074469035213,1.2265503272047367,0.5498797035848005
+"
+
+Uncertain
+
+The premises include the statement ""In(borjMasouda, sfaxMedina)"" as part of the second premise. However, the conclusion to evaluate is ""In(borjMasouda, medinaSfax)"". Since ""medinaSfax"" is not explicitly defined or linked to ""sfaxMedina"" in the premises, there is no logical basis to confirm or deny the conclusion. The premises do not provide information about ""medinaSfax,"" so the truth value of the conclusion cannot be determined from the given information. Thus, the conclusion is **Uncertain**.",117.25884945332211,23.067312084629364,1.208578637510513,0.5249100457444141
+"
+
+False",125.63005925925927,22.935960162983584,1.165185185185185,0.45392420945425394
+"
+
+Uncertain
+
+The conclusion ""DefensiveWall(borjMasouda)"" cannot be definitively determined from the premises. While the premises establish that ""borjMasouda"" is a MainFortification, there is no explicit logical connection provided between MainFortification and DefensiveWall. The fourth premise only states that DefensiveWall implies Fortification, but the reverse (Fortification implying DefensiveWall) is not guaranteed. Without additional information linking MainFortification to DefensiveWall or Fortification, the conclusion remains uncertain. Thus, the logical validity is **Uncertain**.",108.73102669945547,22.466709810778998,1.2086773230282803,0.530153698477011
+"
+
+False",132.59531529850747,23.192454082580433,1.1305970149253732,0.39789138470308716
+"
+
+False",126.46902941176471,20.691457767594688,1.1470588235294117,0.423502177773631
+"
+
+True",127.43075051546391,21.75413702040846,1.175257731958763,0.5099082043595754
+"
+
+False",108.04124900310146,17.284081705882514,1.1823216659282234,0.48067420273625533
+"
+
+Uncertai",108.63326552588876,21.58548079862643,1.2110930815754537,0.5309322364676473
+"
+
+Uncertain
+
+The conclusion asserts two parts: (1) that Susan is in the neighborhood and (2) that a disjunction involving her background (grew up as an only child with close family ties) and her schedule (having a packed schedule and living close to stopAndShop) is false. 
+
+- **Part (2)** is supported by the premises. Assuming Susan is in the neighborhood, the disjunction's truth would lead to contradictions via premises 1–3, forcing it to be false. Thus, this part is validly inferred.
+- **Part (1)**, however, is not directly supported by any premise. The premises only mention Susan in the context of a conditional (premise 6), which does not establish that she is in the neighborhood. Without additional information, we cannot determine the truth of this part.
+
+Since the first part of the conclusion is not derivable from the premises, the entire conclusion's validity hinges on an unsupported claim. Therefore, the conclusion is **Uncertain**. 
+
+**Answer:** Uncertai",101.0086994041708,17.373738544516467,1.2212512413108243,0.5253317138427545
+"
+
+Uncertain
+
+The conclusion ""Vegetarian(john) ↔ ¬Eat(john, meat) ∧ ¬Eat(john, fish)"" is not necessarily true or false based on the premises. The premises establish that being vegetarian or vegan implies not eating meat and fish, but they do not guarantee the converse (i.e., that not eating meat and fish implies being vegetarian). Since the premises do not provide information about John's specific status as a vegetarian or vegan, the truth value of the biconditional depends on unknown information. Thus, the conclusion is **Uncertain**.",107.70320454545454,20.222857986032064,1.2183195592286502,0.5014620724391217
+"
+
+True
+
+The conclusion **∀x (Vegan(x) → ¬Eat(x, eggs))** is logically valid.  
+Premise 2 states that for any **x** and **y**, if **x** is vegan and **y** comes from animals, then **x** does not eat **y**. Premise 4 confirms that **eggs** come from animals. Thus, for any **x**, if **x** is vegan, then **x** cannot eat **eggs** (since **eggs** are from animals). This directly implies the conclusion. There is no contradiction or ambiguity in the premises that would invalidate this inference. Therefore, the conclusion is **True**.",114.28380336006107,21.395684600126874,1.2153493699885451,0.5331840266832998
+"
+
+Uncertai",108.51058415480102,19.522825600194476,1.2389558232931728,0.566853505371116
+"
+
+Uncertain
+
+The conclusion is **Uncertain**. 
+
+- The premises establish that if an entity is a **Publication** and **published in thisLab**, then it must have an **abstract** (i.e., ¬WithoutAbstract(x)). However, the key issue is whether the specific entity **X** (provisionOfHighMeatContentFoodAndObjectPlayReducePredationOfWildAnimalsByDomesticCatsFelisCatus) is a **Publication**. 
+
+- The premises do not definitively state that all entities published in thisLab are Publications. While the last premise confirms that **X** is published in thisLab and that it is **not** a ScienceJournal XOR CellPressJournal, this does not guarantee that **X** is a Publication. 
+
+- The disjunction (ScienceJournal(X) ∨ CellPressJournal(X)) being true or false does not conclusively determine whether **X** is a Publication. Thus, the applicability of the first premise (which requires **X** to be a Publication) remains undetermined. 
+
+- Without knowing whether **X** is a Publication, we cannot definitively conclude the truth value of ¬WithoutAbstract(X). Therefore, the conclusion is **Uncertain**.",102.89783202931564,20.47770855936866,1.1908487669604833,0.49271552371506394
+"
+
+True",113.19003370278219,20.666817177842823,1.2144311241800498,0.5043845966820585
+"
+
+False",117.30974452224983,21.105647991009658,1.1877117686921166,0.4811822651658192
+"
+
+False
+
+The conclusion ¬ReleasedIn(familyPirateParty, northAmerica) directly contradicts the premises. Premise 4 establishes that Game(familyPirateParty) is true, and AvailableIn(familyPirateParty, canada) is true. Premise 2 states that if a game is available in Canada, it must be released in North America. Therefore, the conclusion that the game is **not** released in North America is false.",127.49062894930198,24.227090496331332,1.1587068332108743,0.4435175374710867
+"
+
+True",131.7261291005291,25.765345998727184,1.1396825396825396,0.4160305045311321
+"
+
+True",139.09455195681514,26.689359749073255,1.1201079622132253,0.3927658788357624
+"
+
+Uncertain
+
+The conclusion ""For(familypirateparty, wii)"" is not directly entailed by the premises. While the premises establish that the game is released in Japan (via premise 3) and that there exists at least one game released in Japan that is for Wii (via premise 5), they do not explicitly link the specific game ""familyPirateParty"" to being for Wii. The existence of such a game (from premise 5) does not guarantee that ""familyPirateParty"" is that game. Therefore, the conclusion is neither definitively true nor false based on the given premises, making it **Uncertain**.",118.37957119273628,23.33056987592101,1.2051176227816756,0.534047743130558
+"
+
+False",112.82499096687857,19.129122704510372,1.218802275008364,0.5143973701797265
+"
+
+Uncertain
+
+The conclusion ""Take(john, iELTSExam) → Use(john, paper)"" depends on whether the exam is taken on paper or computer. If the exam is taken on paper, the implication holds. If it is taken on computer, the implication does not. Since the premises only state that the exam is taken on paper or computer (but not which), the truth value of the conclusion cannot be determined definitively. Thus, the conclusion is **Uncertain**.",103.21322329816448,18.350175110426655,1.2261887556005202,0.5247198438296634
+"
+
+True
+
+The conclusion states that for any individual, if they take the iELTSExam and take the reading part, then they must use either paper or computer. 
+
+From the premises, we know that the iELTSExam is taken either on paper or computer (Premise 2). Additionally, Premises 4 and 5 specify that if the exam is taken on paper or computer, all parts of the exam (including reading) are taken, and the medium (paper or computer) is used. 
+
+Thus, if someone takes the reading part of the exam, they must be taking the entire exam (including reading) on either paper or computer. This directly implies that they use paper or computer, making the conclusion logically valid. 
+
+The potential contradiction involving the speaking part (which requires a face-to-face interview and thus excludes paper/computer use) does not affect this specific conclusion, as the conclusion only concerns the reading part and the exam's overall mode of administration. 
+
+**Answer:** True",106.33236484687083,18.451995172898588,1.2312472259209943,0.5141237316102667
+"
+
+True
+
+The conclusion is a logical tautology: ¬∃y (AppleProduct(y) ∧ Uses(chen,y)) ∨ (∃y(AppleProduct(y) ∧ Uses(chen,y))) simplifies to (¬P ∨ P), which is always true regardless of the actual truth value of P. Therefore, the conclusion is **True** because it is necessarily valid under all possible scenarios.",116.16812248003045,21.390443202932072,1.215290985165462,0.5291593562835945
+"
+
+False",107.02970670124198,17.965100537450123,1.2156407806742187,0.524191301543099
+"
+
+Uncertain
+
+The conclusion ""Uses(chen, android) ⊕ Uses(chen, appleEcoSystem)"" depends on whether Chen uses android or apple (from the first premise). If Chen uses android, the conclusion is **true** (since android is true and appleEcoSystem is false due to the second premise). If Chen uses apple, the conclusion's truth value hinges on whether appleEcoSystem is true or false, which is not determined by the premises. Thus, the conclusion could be **true** or **false** depending on unresolvable details, making its validity **uncertain**. 
+
+**Answer:** Uncertai",105.04519372900336,20.209953947124678,1.236033345775787,0.5551846800829405
+"
+
+Uncertai",106.0230963279678,19.26449684278467,1.1975603621730382,0.5190816490965969
+"
+
+False",110.77627341040461,20.729511796573583,1.215606936416185,0.5421956074286216
+"
+
+Uncertai",105.1329784134968,18.365256747791395,1.2121974221942786,0.5146191648617285
+"
+
+True",109.80669143932266,20.64963127690305,1.2122295390404516,0.5169934575759767
+"
+
+True",143.60935575221237,26.69230501349813,1.0884955752212389,0.3192225656819992
+"
+
+False",139.7379921630094,24.303746508823334,1.0940438871473355,0.30757767011323855
+"
+
+Uncertai",141.86235069444444,24.459518616550945,1.0694444444444444,0.29232729416457204
+"
+
+Uncertai",125.5108281838734,24.139247242050246,1.161266013564431,0.4472886357379262
+"
+
+Uncertai",122.8297306122449,25.635732566390157,1.165597667638484,0.46004833209813967
+"
+
+False",135.49731419457734,24.52870793060617,1.1371610845295055,0.48617923646412514
+"
+
+True",145.38577024482112,23.650244419848757,1.0527306967984935,0.23975639115389152
+"
+
+True",128.99562937062936,25.102308751054416,1.1454545454545455,0.38298190954505856
+"
+
+False",120.29065869744437,19.57363127719741,1.1714756801319044,0.43576037582384664
+"
+
+True",117.55101528213166,17.440884619561423,1.1543887147335423,0.44315184812838365
+"
+
+False",112.09471001540832,17.86249807316731,1.175346687211094,0.46585333830788433
+"
+
+True
+
+**Reasoning:**
+
+The conclusion is **Dog(bobby)**. The premises include the disjunction **Animal(bobby) ∨ Corgi(bobby)**. From **Corgi(bobby)**, we can infer **Dog(bobby)** via **∀x (Corgi(x) → Dog(x))** (premise 5). Since the disjunction allows **Corgi(bobby)** to be true, and this leads to **Dog(bobby)** via a valid inference, the conclusion is **True**. The other case (**Animal(bobby)**) does not affect the validity of the conclusion, as the inference only requires one valid path. Thus, the conclusion can be derived from the premises. 
+
+**Answer:** True",107.98561499215072,20.578544927876443,1.2527472527472527,0.5512333713432138
+"
+
+False",129.4097822374039,25.502367734409166,1.1767719897523483,0.4454995546805292
+"
+
+True
+
+The conclusion ""Animal(bobby) ⊕ Rock(bobby)"" is **True**. 
+
+**Reasoning**:
+1. From the premise **Animal(bobby) ∨ Corgi(bobby)** and the chain of implications:
+   - **Corgi(bobby) → Dog(bobby) → Mammal(bobby) → Animal(bobby)**, so **Corgi(bobby) → Animal(bobby)**.
+   - Thus, the disjunction **Animal(bobby) ∨ Corgi(bobby)** simplifies to **Animal(bobby) ∨ (Animal(bobby))**, which is equivalent to **Animal(bobby) being true** (since Corgi(bobby) implies Animal(bobby)).
+
+2. If **Animal(bobby)** is true, then from premise **∀x (Animal(x) → Breathe(x))**, **Breathe(bobby)** is true. 
+   - If **Rock(bobby)** were true, premise **∀x (Rock(x) → ¬Breathe(x))** would imply **¬Breathe(bobby)**, contradicting **Breathe(bobby)**. 
+   - Therefore, **Rock(bobby)** must be **false**.
+
+3. The conclusion **Animal(bobby) ⊕ Rock(bobby)** (exclusive OR) requires exactly one of **Animal(bobby)** or **Rock(bobby)** to be true. Since **Animal(bobby)** is true and **Rock(bobby)** is false, the conclusion holds. 
+
+Thus, the conclusion is **True**.",115.89479860708067,21.57582678849523,1.179918746372606,0.47345385630267817
+"
+
+True",141.1471858974359,26.47443713100387,1.1132478632478633,0.34280723710516026
+"
+
+Uncertain
+
+The conclusion ¬Orienteer(karl) is not entailed by the premises. While we know Karl uses a map (UseMap(karl)), we cannot determine whether he runs far (RunFar(karl)) because his fitness (Fit(karl)) is unknown. Premise 4 links MilitaryOfficer to Fit, but Karl is not a MilitaryOfficer, so we cannot infer his fitness. Without knowing RunFar(karl), we cannot determine the truth value of Orienteer(karl). Thus, the conclusion is neither provably true nor false based on the premises, making it **Uncertain**.",112.8680329199549,21.354560696489784,1.225479143179256,0.5360763665374855
+"
+
+Uncertai",107.58401927272728,16.720125100575693,1.256,0.5591474029107335
+"
+
+Uncertai",108.97205692391898,16.585406654313083,1.248768472906404,0.565102026653296
+"
+
+Uncertai",108.26379281816581,17.839598594489832,1.2268966731209294,0.5334325528036528
+"
+
+Uncertai",104.56814252214694,17.964208498080037,1.2182126107347577,0.5369967774159277
+"
+
+TRUE",132.54686385426655,22.963050742076717,1.1140939597315436,0.4239055263785691
+"
+
+False",122.06652137232845,20.815520775981142,1.1602924634420697,0.43556503514626027
+"
+
+False
+
+The premises state that JosephKmak was born in Napa. While the problem does not explicitly state that Napa is in California, it is reasonable to infer that Napa is in California (as it is a real-world fact). Thus, by premise 4, JosephKmak's nationality is American. Premise 5 then states that being American excludes German nationality. Therefore, the conclusion ""Nationality(josephKmak, german)"" directly contradicts the premises, making it **False**.",112.8899383886256,21.873457632561685,1.2448657187993681,0.563567139174371
+"
+
+True",142.54137757009346,27.52821594301208,1.0897196261682243,0.3340307723916064
+"
+
+Uncertai",133.414656424581,24.665460144989773,1.149441340782123,0.39728438608961786
+"
+
+False",142.92301221995925,27.04071558905346,1.0997963340122199,0.3669380643126989
+"
+
+True",139.3414974533107,24.94025422852462,1.1035653650254669,0.3414801317242161
+"
+
+Uncertai",123.35019926199261,24.78407476664246,1.1793357933579336,0.462163532513391
+"
+
+False",125.2975772669221,25.111717299613908,1.1634738186462323,0.4274659527467703
+"
+
+True
+
+The conclusion is **True**. 
+
+Given the premises, we know that **HonoredAt(luca, ceremony)** is true, and from the disjunction **Discharged(luca) ⊕ Veteran(luca)**, we deduce that **Discharged(luca)** is true (since **Veteran(luca)** would lead to a contradiction via Premise 2). From Premise 1, this implies **¬ActivelyServingIn(luca, military)**. 
+
+Now, the third premise (assuming it is an implication that requires the disjunction **ActivelyServingIn(luca, military) ∨ ActivelyServingIn(luca, marines)** to hold) forces **ActivelyServingIn(luca, marines)** to be true (since **ActivelyServingIn(luca, military)** is false). Thus, via Premises 4 and 5, we derive **CapableOf(luca, groundCombat)** and **CapableOf(luca, navalCombat)**. Therefore, the conclusion is valid. 
+
+**Answer:** True",107.07006727702912,23.832552477030543,1.1636662894763914,0.4630806320579259
+"
+
+False",118.0405560766721,24.35569856894097,1.1555872756933117,0.4520857293224542
+"
+
+True
+
+The conclusion ""CapableOf(luca, navalCombat) ∨ CapableOf(luca, groundCombat)"" is **True**. 
+
+**Reasoning**:  
+1. From the premise **HonoredAt(luca, ceremony) ∧ (Discharged(luca) ⊕ Veteran(luca))**, we know luca is honored and either discharged or a veteran (but not both).  
+2. **Case 1**: If **Discharged(luca)** is true, then from the first premise:  
+   - **HonoredAt(luca, ceremony) ∧ Discharged(luca)** implies **¬ActivelyServingIn(luca, military)**.  
+   - From the third premise (assuming it is an implication: **HonoredAt(x, ceremony) → (ActivelyServingIn(x, military) ∨ ActivelyServingIn(x, marines))**), since **ActivelyServingIn(luca, military)** is false, **ActivelyServingIn(luca, marines)** must be true.  
+   - From the fourth and fifth premises: **ActivelyServingIn(luca, marines)** implies **CapableOf(luca, groundCombat)** and **CapableOf(luca, navalCombat)**.  
+   - Thus, the disjunction **CapableOf(luca, navalCombat) ∨ CapableOf(luca, groundCombat)** is true.  
+
+3. **Case 2**: If **Veteran(luca)** is true, the second premise implies **Discharged(luca)** must also be true (contradicting the exclusive or). This case is invalid.  
+
+Since only **Case 1** is valid, the conclusion is necessarily true.",124.56276491677338,24.502811727884144,1.138796414852753,0.429027528866061
+"
+
+False",122.65180993334766,25.592442783517225,1.153300365512793,0.4466114660773652
+"
+
+Uncertai",114.63006647218171,23.952274748599155,1.1960825171910814,0.5161461271908627
+"
+
+Uncertai",114.19260821029889,20.114565941224406,1.2023766654663306,0.49928444080468226
+"
+
+False",131.778085106383,27.26454604608593,1.155015197568389,0.44480870832648556
+"
+
+True
+
+The conclusion ""InvitedToAttend(jack, conference) ∨ PresentedAt(jack, conference)"" is **True**. 
+
+From the premises, Jack is a student and either in China or registered for the conference (but not both). If Jack is in China, premise 4 and 3 imply he attends in person, which via premise 2 requires him to be registered—contradicting the XOR condition. Thus, Jack must be registered for the conference. Premise 1 then ensures he is invited to attend. Since the conclusion is an OR statement, the truth of ""InvitedToAttend"" alone makes the entire disjunction true. No contradictions arise, and the premises definitively support this.",122.78196345338984,24.638020205668198,1.1710805084745763,0.4531790927752019
+"
+
+Uncertai",110.2983123209169,19.919099389371,1.2091690544412608,0.5046980591640301
+"
+
+Uncertai",111.94052260075706,20.16260446187242,1.1999554664885326,0.48638556478762623
+"
+
+Uncertai",112.26610142224295,16.41628432369036,1.218465842853812,0.5320893032536674
+"
+
+Uncertai",113.94287670892368,19.072798788258943,1.2122793934874472,0.5221214774136994
+"
+
+Uncertai",106.09187355608,18.31494960404731,1.1905353372251894,0.49437511670538054
+"
+
+False",139.69725624999998,26.246497055935915,1.1208333333333333,0.36226045725263595
+"
+
+Uncertain
+
+The premises establish that *tangentOnline* is an *OnlineMagazine* (Premise 1) and that it has a *PrintIssue* (Premise 2). However, the conclusion *PrintMagazine(tangentOnline)* is not directly supported or contradicted by the premises. 
+
+- **PrintMagazine** is not explicitly defined in the premises, and there is no logical rule provided that connects *PrintIssue* to *PrintMagazine*. 
+- While *PrintIssue* (Premise 2) suggests the magazine has a print component, this does not necessarily imply it is classified as a *PrintMagazine*. 
+- The premises also do not state that *OnlineMagazine* and *PrintMagazine* are mutually exclusive, so the conclusion could theoretically be true or false without contradiction. 
+
+Since the premises do not provide sufficient information to determine the truth value of *PrintMagazine(tangentOnline)*, the conclusion is **Uncertain**.",115.19094465832531,21.737924353324857,1.2256977863330125,0.527924613556296
+"
+
+True",123.60658863636363,22.082851810055487,1.165340909090909,0.44650523987467067
+"
+
+True
+
+**Reasoning:**
+1. From premise 4, `DirectedBy(theWindIsWatching, faraj)` is true. Applying premise 5 (`∀x (DirectedBy(x, faraj) → Have(x, smallBudget))`), we conclude `Have(theWindIsWatching, smallBudget)`.
+2. Premise 2 states `ProducedIn(theWindIsWatching, ohio)`.
+3. Premise 6: `∀x ∀y(ProducedIn(x, ohio) ∧ Have(x, smallBudget) ∧ CopyOf(y, x) → HardToAccess(y))`. 
+   - Here, `x = theWindIsWatching` satisfies `ProducedIn(x, ohio)` and `Have(x, smallBudget)`.
+   - If `CopyOf(y, x)` holds (i.e., `CopyOf(theWindIsWatching, theWindIsWatching)`), then `HardToAccess(theWindIsWatching)` follows.
+4. While the reflexivity of `CopyOf` is not explicitly stated, in formal logic, such relations are often assumed to be reflexive unless otherwise specified. Thus, the conclusion is valid. 
+
+**Answer:** True",112.97775664115262,20.512556719377404,1.219495722647456,0.5255711651351377
+"
+
+True",132.23959223300972,24.020790074933366,1.1262135922330097,0.38615886992915227
+"
+
+Uncertai",117.91604803749269,22.82642542575751,1.2073813708260106,0.5068869545827568
+"
+
+Uncertain
+
+The premises only establish relationships involving flowers (they are plants and not animals), but they do not provide any information about the existence or properties of non-flower entities. The conclusion asserts the existence of two distinct entities that are both plants and animals, which is not logically entailed by the premises. Since the premises do not confirm or deny the existence of such entities, the conclusion's validity cannot be determined from the given information. Thus, the conclusion is **Uncertain**.",113.25449928400955,18.81726251446541,1.2673031026252983,0.5748550766956696
+"
+
+True
+
+The conclusion ""Anagram(pots, tops)"" is logically valid. From the premises, we know that ""pots"" is an anagram of ""stop"" (Premise 2). Additionally, ""stop"" is an anagram of ""tops"" because both contain the same letters (s, t, o, p). Using the transitivity of anagram relations (Premise 1), we infer that ""pots"" is an anagram of ""tops"". Thus, the conclusion follows directly from the premises.",119.7253506392871,23.184191103948187,1.1948857032158078,0.5136541271075639
+"
+
+True
+
+The conclusion ""Anagram(stop, post)"" is **True**. 
+
+From the premises:
+- **Anagram(pots, stop)** (Premise 2) and **Anagram(tops, post)** (Premise 4) are explicitly given.
+- Since ""pots"" and ""tops"" are anagrams (they contain the same letters), **Anagram(pots, tops)** holds.
+- Using transitivity (Premise 1: **∀x ∀y ∀z ((Anagram(x, y) ∧ Anagram(y, z)) → Anagram(x, z))**), we derive **Anagram(stop, post)** via the chain:
+  - **Anagram(pots, stop)** (Premise 2) and **Anagram(pots, tops)** (via equality of letters) imply **Anagram(stop, tops)**.
+  - Then, **Anagram(tops, post)** (Premise 4) and **Anagram(stop, tops)** imply **Anagram(stop, post)**.
+
+Thus, the conclusion is logically valid.",118.52320255681816,22.616188962453226,1.1826704545454545,0.4813401325652944
+"
+
+True
+
+The conclusion ""Anagram(post, stop)"" can be derived using the transitivity of anagram relations. From the premises, we know that ""post"" is an anagram of ""tops"" and ""stop"" is an anagram of ""pots"". Since ""tops"" and ""pots"" are permutations of the same letters (all contain the letters p, o, t, s), ""post"" and ""stop"" are also permutations of the same letters. Therefore, ""post"" and ""stop"" are anagrams, making the conclusion **True**.",126.34507832054906,26.180885987497703,1.1816713766653208,0.48980229692078403
+"
+
+Uncertai",114.33638975694446,21.830744620764722,1.2486979166666667,0.5321667309960226
+"
+
+True
+
+The conclusion states that for all $ x $ and $ y $, if $ x $ is a Roof and Concrete, and $ y $ is a Roof and Seagrass, then $ Stronger(x, y) $. This directly follows from **Premise 5**, which asserts that for any $ x $ and $ y $, if $ x $ is Concrete and $ y $ is Seagrass, then $ Stronger(x, y) $. The conclusion’s antecedent includes the conditions $ Concrete(x) $ and $ Seagrass(y) $, which are exactly the conditions required for Premise 5 to apply. Since Premise 5 is universally quantified, the conclusion is a valid inference. Thus, the conclusion is **True**.",121.3998300057045,21.944744757944964,1.1483171705647461,0.5185863973196537
+"
+
+False",119.63331960784315,21.390618262609298,1.1813725490196079,0.45314378797438787
+"
+
+False",143.1559894736842,24.10816980894094,1.0842105263157895,0.30480909969621595
+"
+
+False
+
+The conclusion states that for all $ x $, $ x $ is a symptom of cOVID-19 and tom has $ x $. From premise 5, we know $ \neg\text{Have}(tom, \text{fever}) $, meaning tom does not have fever. If fever is a symptom of cOVID-19 (as implied by premise 2), then the conclusion fails for $ x = \text{fever} $, since $ \text{Have}(tom, \text{fever}) $ is false. Thus, the conclusion is **False**.",108.74375602949972,18.111988696562975,1.1979270480366753,0.49402619148699073
+"
+
+True
+
+The conclusion ¬GoTo(tom, parties) ∧ ¬Have(tom, fever) is **True**.  
+- **¬Have(tom, fever)** is directly given by premise 5.  
+- **¬GoTo(tom, parties)** is derived via:  
+  - Premise 6: ¬Tested(tom, negative) → ¬ParticipateIn(tom, socialEvents).  
+  - Premise 3: ¬ParticipateIn(tom, socialEvents) → ¬GoTo(tom, parties).  
+  Thus, ¬GoTo(tom, parties) follows logically.  
+Both parts of the conclusion are supported by the premises, making the conclusion valid.",131.04823693693695,24.08541448544643,1.136036036036036,0.4009656795523547
+"
+
+False",121.38949067661162,23.36869724735218,1.1854022376132125,0.48497951080229135
+"
+
+True",130.98666666666665,23.82509537619841,1.1125175808720114,0.369358347205157
+"
+
+True",131.71868697478993,21.813265224176103,1.0924369747899159,0.3334715952691508
+"
+
+Uncertai",108.23570958712386,20.22413307058174,1.301259622113366,0.5996311746502623
+"
+
+TRUE",137.01915193370166,24.308389529281918,1.0966850828729282,0.35498043716795785
+"
+
+Uncertai",126.06663461538461,24.844202376616483,1.173878205128205,0.4730462768459383
+"
+
+Uncertai",118.77451564310543,25.431338290576754,1.2369640787949014,0.5284938325456141
+"
+
+True",141.29830647709323,28.120459509372104,1.0932069510268563,0.32167803978309967
+"
+
+True",145.0803768115942,27.42771943460439,1.0905797101449275,0.3443935398827328
+"
+
+True
+
+The conclusion ""Explore(john, personalInterest)"" is **True**. 
+
+From premise 2, we know **TeenagerStudent(john)** and **InCollege(john)**. Premise 4 then guarantees **MoreFreedomRegardingLifestyle(john)** (since **TeenagerStudent(john) ∧ InCollege(john)** implies this). Premise 3 then directly applies: **TeenagerStudent(john) ∧ InCollege(john) ∧ MoreFreedomRegardingLifestyle(john)** → **Explore(john, personalInterest)**. All conditions are satisfied, so the conclusion logically follows.",137.14277211538462,25.612630015005653,1.114423076923077,0.37388765003951524
+"
+
+True",122.4320426742532,21.701060559320986,1.162162162162162,0.4422776840468569
+"
+
+Uncertai",114.68491627665105,22.73510779043285,1.2223088923556942,0.5340525645617646
+"
+
+Uncertai",106.1264967698062,19.6533083732489,1.2351241074464467,0.5620043790163808
+"
+
+Uncertai",105.15194819323922,19.3502355318441,1.1929801839140008,0.47885742433563644
+"
+
+Uncertain
+
+The conclusion ""HumbleAbout(mary, theirKnowledge) ⊕ ConfidentAbout(mary, theirKnowledge)"" is neither necessarily true nor false based on the premises. While the fourth premise ensures that at least one of ""Humble"" or ""Confident"" must be true if mary is in bookCity, the premises do not definitively establish whether mary is in bookCity. Without knowing this, we cannot determine the exact truth value of the exclusive or statement. Thus, the conclusion's validity remains uncertain.",105.69225305216426,18.89870325360788,1.238762486126526,0.5542302459833301
+"
+
+True",138.87145263157896,21.572058904136753,1.0842105263157895,0.32161297089373025
+"
+
+Uncertai",128.52381384615384,21.398048109275884,1.14,0.3966397319017308
+"
+
+True",136.03923993558774,24.514978922430863,1.1352657004830917,0.4065440560380531
+"
+
+True
+
+**Reasoning:**
+
+The conclusion ""Dessert(cake)"" can be inferred in at least one valid way from the premises. Specifically, if **Cookie(cake)** is true (as per the exclusive or in premise 5), then by **premise 4** (Cookie(x) → Dessert(x)), we can directly infer **Dessert(cake)**. Since this inference is valid, the conclusion is **True** according to the problem's definition. While there exists a model where **Dessert(cake)** is false (e.g., when **Cookie(cake)** is false and **Sweet(cake)** is true), this does not invalidate the conclusion's validity in other models. The problem defines a ""True"" conclusion as one that can be obtained via a valid inference procedure, not as one that must be true in all models. Thus, the conclusion is **True**. 
+
+**Answer:** True",105.4009282580339,21.667893148214972,1.2249496027510969,0.5301611687833307
+"
+
+Uncertain
+
+The conclusion ""Vegetable(cake)"" cannot be definitively determined from the premises. While the premises establish that ""Sweet(cake)"" is true (from the exclusive or in premise 5 and the implications of premises 4 and 2), this does not guarantee that ""Vegetable(cake)"" is true. The truth of ""Sweet(cake)"" could arise from either ""Vegetable(cake)"" (via premise 1) or ""Dessert(cake)"" (via premise 2). Since ""Dessert(cake)"" is not directly determined by the premises, and there is no contradiction in assuming ""Vegetable(cake)"" is false, the conclusion is **Uncertain**.",122.9077181494662,23.98546202930005,1.1715302491103203,0.46028090600217936
+"
+
+Uncertai",113.41518436344428,22.78578882734226,1.2260961436872688,0.5440116539285376
+"
+
+Uncertai",114.21360816757614,21.710396470731467,1.1953881358915683,0.5012076893758907
+"
+
+Uncertai",113.4718956436131,20.733957953674654,1.1976372138813685,0.50600560566473
+"
+
+Uncertain
+
+The conclusion ""Play(riley, competitiveEquestrianPolo) ⊕ Nominated(riley, cRAAward)"" is **Uncertain**. 
+
+- **Reasoning**: The premises establish that **Play(riley, competitiveEquestrianPolo)** and **Nominated(riley, cRAAward)** are mutually exclusive (if one is true, the other must be false). However, it is also possible for **both** to be **false** without contradiction. For example, if **Nominated(riley, cRAAward)** is false, the premises do not force **Play(riley, competitiveEquestrianPolo)** to be true, and vice versa. Thus, the conclusion can be **true** in some scenarios (e.g., when exactly one is true) and **false** in others (e.g., when both are false). Since the truth value depends on unknown conditions, the conclusion is **not always true** or **always false**, making it **Uncertain**. 
+
+Answer: **Uncertain**",101.70475734597154,17.97700713711787,1.2015510555794915,0.5063638172968462
+"
+
+False",142.40667600700525,24.425364288846122,1.0893169877408055,0.33595104728779074
+"
+
+Uncertai",123.40313841807911,24.640889357609392,1.1567796610169492,0.42118587229553894
+"
+
+Uncertai",115.18282756580894,21.20549600868622,1.1928423543330375,0.49315539479120674
+"
+
+Uncertai",117.59676569343067,21.830415157214514,1.1908759124087591,0.5029736021465583
+"
+
+UNCERTAIN",113.51134915800789,21.60541337251434,1.1728771049802937,0.4694488550014825
+"
+
+Uncertain
+
+The conclusion ¬Baby(murphy) ∧ ¬Have(murphy, curlyHair) cannot be definitively inferred from the premises. While the premises establish relationships between properties (e.g., Sheep ↔ Boy, Pig ⊕ Sheep), there is no direct contradiction or logical necessity to derive the specific negations in the conclusion. Both ¬Baby(murphy) and ¬Have(murphy, curlyHair) remain unproven, and their truth values are not determined by the given information. Thus, the conclusion is **Uncertain**.",113.31701370127364,21.39988951954815,1.181397143959861,0.4874904990074038
+"
+
+False",134.5881052631579,24.212136133257072,1.105263157894737,0.33539448659805204
+"
+
+True",136.00156073211315,26.686011560149037,1.076539101497504,0.3010773813643971
+"
+
+True
+
+The conclusion ∃x (GramPositive(x) ∧ Studied(x)) can be inferred as follows:  
+- From the third premise, there exists an x (EnterococcusDurans) and a y (AntiInflammatoryAgent) such that x produces y.  
+- Premise 2 states that EnterococcusDurans(x) → GramPositive(x), so x is GramPositive.  
+- Premise 4 states that AntiInflammatoryAgent(y) → Studied(y), so y is Studied.  
+- Since x (EnterococcusDurans) is GramPositive and y (AntiInflammatoryAgent) is Studied, and the premises do not exclude the possibility that x and y are the same entity (e.g., if x is both EnterococcusDurans and AntiInflammatoryAgent), the existence of an entity that satisfies both properties is logically valid. Thus, the conclusion is **True**.",103.4829703379224,19.345296508052723,1.1966207759699625,0.48894010179963093
+"
+
+False
+
+The conclusion claims that for all $ x $ and $ y $, if $ x $ is $ \text{EnterococcusDurans} $ and $ x $ produces $ y $, then $ y $ is not studied. However, **Premise 3** asserts the existence of an $ x $ and $ y $ such that $ x $ is $ \text{EnterococcusDurans} $, $ y $ is an $ \text{AntiInflammatoryAgent} $, and $ x $ produces $ y $. **Premise 4** then states that all $ \text{AntiInflammatoryAgent} $ instances are studied. This directly contradicts the conclusion's claim that $ \neg \text{Studied}(y) $ in this case. Since the conclusion fails for at least one case (where $ y $ is an $ \text{AntiInflammatoryAgent} $), it is **False**.",122.3685765275257,21.996401933560133,1.159709618874773,0.4534179269341376
+"
+
+Uncertai",104.71209176930009,18.56029272173882,1.2099729648543105,0.5065592287165522
+"
+
+False
+
+The conclusion ""Guard(john) ∧ ¬Play(john, pointPosition)"" leads to a contradiction with the premises. Assuming the conclusion is true implies that Guard(john) is true and ¬Play(john, pointPosition) is true. From premise 4, this implies Play(john, twoPosition). Premise 3 then implies ShootingGuard(john) is true. Premise 5 (via its antecedent being false) forces Top75BasketballCenter(john) and ShootingGuard(john) to be equivalent. Since ShootingGuard(john) is true, Top75BasketballCenter(john) must also be true. However, premise 2 (Top75BasketballCenter → TallerThan) and premise 1 (ShootingGuard → ¬TallerThan) create a contradiction (TallerThan ∧ ¬TallerThan). Thus, the conclusion contradicts the premises, making it **False**.",117.24858510310865,20.18478648658423,1.167436134195137,0.4717030509077902
+"
+
+True",117.46378288387452,19.781711804346152,1.1541001651073197,0.44626003718346136
+"
+
+Uncertain
+
+The conclusion is a universal statement: ∀x (Song(x) ∧ ¬HasMelody(x) → ¬Hit(x)). To assess its validity, we analyze the premises:
+
+1. **Premise 3** states that if a song is a hit, it is popular (Song(x) ∧ Hit(x) → Popular(x)).  
+2. **Premise 2** (contrapositive) implies that if a song is popular, it must have either melody or rhythm (Popular(x) → HasMelody(x) ∨ HasRhythm(x)).  
+
+If a song lacks melody (¬HasMelody(x)), it could still be a hit **if it has rhythm** (HasRhythm(x)). This scenario is consistent with the premises, as the premises do not prohibit a song from having rhythm. Thus, the conclusion that ""¬HasMelody(x) → ¬Hit(x)"" is not necessarily true.  
+
+Since the premises do not rule out the possibility of a song being a hit without melody (as long as it has rhythm), the conclusion is **not entailed** by the premises. It also does not directly contradict any premise. Therefore, the conclusion is **Uncertain**.  
+
+**Answer:** Uncertai",116.03014098972922,20.80732609462221,1.2038593215063804,0.4938060622794041
+"
+
+Uncertain
+
+The conclusion states that all catchy songs are hits (i.e., ∀x (Song(x) ∧ Catchy(x) → Hit(x))). The premises only establish that being a hit implies being catchy (from premise 1) and that being a hit implies being popular (from premise 3). However, the converse (that being catchy implies being a hit) is not logically entailed by the premises. The premises do not provide sufficient information to determine whether a song being catchy necessarily makes it a hit. Thus, the conclusion is **not necessarily true** nor **directly contradicted**, making its validity **Uncertain**.",108.2935017622557,16.965891297884628,1.2306952899711632,0.547019945377739
+"
+
+Uncertai",110.70131657894736,18.501047832602655,1.2547368421052632,0.5599376696613804
+"
+
+Uncertai",126.82718419033,27.008661381134075,1.202609363008442,0.5096995700415248
+"
+
+False",124.59596557971014,24.395592246745466,1.1769323671497585,0.45121870428573235
+"
+
+True",113.32804291707004,22.961347035166344,1.2416908680219425,0.5454418293814374
+"
+
+False",115.39787940308868,23.04356770007503,1.1893111226791602,0.4883621422835688
+"
+
+False",118.06117137681159,20.446232720517784,1.181159420289855,0.49468929271240714
+"
+
+True",121.60512343864804,22.95864333323329,1.1506245407788391,0.44052767865958276
+"
+
+True",144.48607826086953,24.87995995834113,1.0934782608695652,0.3195800055732411
+"
+
+Uncertai",115.47962893982807,23.493761262703437,1.2117478510028654,0.5240678279415246
+"
+
+Uncertain
+
+The conclusion ""Pest(ceruravinula)"" is not necessarily entailed by the premises. While the premises state that there exists at least one Moth that is a Pest (Premise 4), this does not guarantee that ceruravinula, a specific Moth, is that Pest. The existence of a single instance does not logically entail that a particular instance (ceruravinula) must satisfy the property. Thus, the conclusion is neither derivable from the premises nor contradicted by them, making it **Uncertain**.",120.83963859649123,25.920000827249066,1.2023391812865498,0.5129838427940502
+"
+
+True",138.12850690335304,23.80700053171364,1.1025641025641026,0.3785852066726513
+"
+
+Uncertai",113.38599343375819,21.724038225039322,1.2441096948628814,0.5501931515353422
+"
+
+False
+
+The conclusion states that for all x and y, if x is located in Vienna and y is an artist, then y did not make a painting of x. However, the premises explicitly include **MadePaintingOf(balthasarwigand, schmelz)**, and **In(schmelz, vienna)** is also given. This directly contradicts the conclusion, as the antecedent (LocatedIn(schmelz, vienna) ∧ Artist(balthasarwigand)) is true, but the consequent (¬MadePaintingOf(balthasarwigand, schmelz)) is false. Since the conclusion is a universal statement and there exists at least one counterexample, the conclusion is **False**.",124.00033333333333,22.080639120162736,1.1493055555555556,0.43732084074156996
+"
+
+Uncertai",109.36704619354839,18.98142558542162,1.2143225806451612,0.5263397888826971
+"
+
+False",113.70023209169054,18.51622558916802,1.2156638013371537,0.5225599261943561
+"
+
+False",121.22647643979057,20.38374287287507,1.1478434305659437,0.41695816649746087
+"
+
+True
+
+The conclusion is a conditional statement: (E ∨ M) → (Measures(...) ∧ Uses(...)). To determine its validity, we analyze all possible scenarios where the premises are true. 
+
+1. **Case 1**: E is true, M is false.  
+   - Premise 4 (¬(E ∧ M)) holds.  
+   - Premise 5 (E XOR M → Measures(...) ∧ M) requires Measures(...) ∧ M to be true. Since M is false, this leads to a contradiction (Measures(...) ∧ false = false), violating premise 5. Thus, this case is invalid.  
+
+2. **Case 2**: E is false, M is true.  
+   - Premise 4 holds (¬(E ∧ M)).  
+   - Premise 2 (E ⊕ FMRI) implies FMRI is true (since E is false).  
+   - Premise 3 (FMRI → ¬Measures(...)) forces Measures(...) to be false.  
+   - Premise 5 (E XOR M → Measures(...) ∧ M) requires Measures(...) ∧ M to be true. Since Measures(...) is false (from premise 3), this contradicts premise 5. Thus, this case is also invalid.  
+
+3. **Case 3**: E is false, M is false.  
+   - Premise 4 holds (¬(E ∧ M)).  
+   - E ∨ M is false, making the antecedent of the conclusion false. A conditional with a false antecedent is **vacuously true**.  
+
+Since all scenarios where E ∨ M is true lead to contradictions with the premises, the antecedent of the conclusion is **always false**. Therefore, the conditional statement is **vacuously true**, and the conclusion is logically valid.  
+
+**Answer:** True",104.19766283732524,17.14840808907944,1.1969220765145767,0.4965681058101939
+"
+
+True
+
+The conclusion is a conditional statement: (Measures(nearInfraredSpectroscopy, voltageChange) ⊕ Uses(nearInfraredSpectroscopy, electrode)) → (Uses(nearInfraredSpectroscopy, electrode) ∧ FMRI(nearInfraredSpectroscopy)). 
+
+To determine its validity, we analyze the premises and the logical structure of the conclusion. 
+
+1. **Premise Analysis**:
+   - Premise 4: ¬(Electroencephalogram(nearInfraredSpectroscopy) ∧ Magnetoencephalography(nearInfraredSpectroscopy)) ensures that Electroencephalogram and Magnetoencephalography cannot both be true.
+   - Premise 5: (Electroencephalogram(nearInfraredSpectroscopy) ⊕ Magnetoencephalography(nearInfraredSpectroscopy)) → (Measures(nearInfraredSpectroscopy, voltageChange) ∧ Magnetoencephalography(nearInfraredSpectroscopy)) implies that if exactly one of Electroencephalogram or Magnetoencephalography is true, then Measures(nearInfraredSpectroscopy, voltageChange) must be true and Magnetoencephalography(nearInfraredSpectroscopy) must be true.
+   - Premise 2: Electroencephalogram(nearInfraredSpectroscopy) ⊕ FMRI(nearInfraredSpectroscopy) ensures that exactly one of Electroencephalogram or FMRI is true.
+   - Premise 3: FMRI(nearInfraredSpectroscopy) → ¬Measures(nearInfraredSpectroscopy, voltageChange) implies that if FMRI is true, then Measures must be false.
+
+2. **Conclusion Evaluation**:
+   - The conclusion is a conditional: (M ⊕ U) → (U ∧ F), where M = Measures, U = Uses, F = FMRI.
+   - We analyze the antecedent (M ⊕ U) and the consequent (U ∧ F).
+   - If M is true and U is false, this leads to a contradiction with Premise 5 (since M being true and U being false would require F to be false, which contradicts Premise 2 and Premise 5).
+   - If M is false and U is true, then from Premise 2 and Premise 5, F must be true, making the consequent (U ∧ F) true.
+   - Therefore, the only valid scenario where the antecedent (M ⊕ U) is true is when M is false and U is true, and in this case, the consequent (U ∧ F) is also true.
+
+Since the conclusion holds in all valid scenarios derived from the premises, it is always true. Thus, the conclusion is logically valid. 
+
+**Answer:** True",103.07055832262212,17.218075284462504,1.1958547557840618,0.4823779353135698
+"
+
+True",133.17041732283468,24.84691709675052,1.1214848143982001,0.37778532903126977
+"
+
+True",132.1582849557522,25.71198717299553,1.1238938053097345,0.3931435226868839
+"
+
+Uncertai",122.04326268922529,24.353729514178795,1.1727515583259127,0.4390613700035127
+"
+
+True
+
+The premises establish that AtHome(hugo) is true (via Reading(hugo, novel) and premise 5). February(presentMoment) is true (premise 3), and premise 4 (February(presentMoment) → InWinter(now)) implies InWinter(now). Assuming ""now"" refers to the same time as ""presentMoment,"" this leads to InWinter(presentMoment). Premise 2 then ensures Cold(hugosApartment, presentMoment). With both AtHome(hugo) and Cold(...) true, the antecedent of premise 1's implication is satisfied. Thus, the consequent ∃x (Sweater(x) ∧ Wear(hugo, x, presentMoment)) must hold, making the conclusion **True**.",121.89177391304348,22.932115230354494,1.1893719806763285,0.4883998241199773
+"
+
+Uncertai",111.46193090481785,20.649727072634867,1.2296122209165687,0.5272077657250304
+"
+
+True",136.58487387387387,26.394530180049305,1.1111111111111112,0.36304058331238737
+"
+
+True
+
+The conclusion ""FavoredBy(jamaicablue, localResidents)"" is **True**. 
+
+**Reasoning**:
+1. From premise 5: **Expensive(jamaicaBlue)** and **Coffee(jamaicaBlue)** are both true.
+2. Premise 6: **∀x ((Expensive(x) ∧ Coffee(x)) → HighPrice(x))**. Applying this to **jamaicaBlue**, we derive **HighPrice(jamaicaBlue)**.
+3. Premise 3: **∀x ((Coffee(x) ∧ HighPrice(x)) → FavoredBy(x, localResidents))**. Since **Coffee(jamaicaBlue)** and **HighPrice(jamaicaBlue)** are true, this directly implies **FavoredBy(jamaicaBlue, localResidents)**.
+
+No contradictions or missing information prevent this inference. Thus, the conclusion is **True**.",132.04990496215308,24.945455294950634,1.1160639192598822,0.386899842238816
+"
+
+False",136.08700796812752,24.570026074847004,1.1294820717131475,0.3696225741051786
+"
+
+True
+
+The conclusion ∃x (TShirt(x) ∧ Buy(adam, x)) is directly supported by premise 5. Since GoDowntown(adam) and OnFoot(adam) are both true (from premise 1), the implication in premise 5 simplifies to requiring the existence of an x such that TShirt(x) ∧ Buy(adam, x). Thus, the conclusion is entailed by the premises.",125.73618411764706,19.979578374155995,1.121764705882353,0.3786933462830198
+"
+
+True
+
+The conclusion is **True**. 
+
+**Reasoning**:  
+- From premise 1, `GoDowntown(adam)` and `OnFoot(adam)` are both true.  
+- Premise 4 states `GoDowntown(adam) → (ByBike(adam) ⊕ OnFoot(adam))`. Since `OnFoot(adam)` is true, the exclusive or (⊕) requires `ByBike(adam)` to be **false** (as only one of the two can hold).  
+- The conclusion's antecedent is `GoDowntown(adam) ∧ ByBike(adam) ∧ TShirt(x)`. Since `ByBike(adam)` is false, the entire antecedent is **false** for all `x`.  
+- A universal implication with a **false** antecedent is **vacuously true**. Thus, the conclusion holds.  
+
+**Answer**: True",119.77946540252827,19.996435953030563,1.1699933466400532,0.4563929712436164
+"
+
+True",127.14487353433837,21.862543580876288,1.11892797319933,0.4104091881035458
+"
+
+False",115.27311090225562,16.468858770239414,1.1804511278195489,0.49788404100573636
+"
+
+Uncertai",107.47229508413939,19.483744303046482,1.2200874519676692,0.5188170773051123
+"
+
+Uncertai",107.9399182529335,14.869359382839239,1.2169491525423728,0.5400512567022173
