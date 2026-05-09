@@ -1,0 +1,204 @@
+,Retranslation
+0,    Bonnie is in this club and performs in the school talent show.
+1,"    If either Bonnie is a young child or a teenager, and she wishes to pursue an academic career, or neither Bonnie is a young child nor a teenager, nor she wishes to pursue an academic career, then x is a student and attends school, or either Bonnie is a young child or a teenager, and she wishes to pursue an academic career."
+2,"    If Bonnie chaperones the high school dance or performs in the school talent show, then Bonnie is either a young child or a teenager, wishes to further her academic career, and is inactive, disinterested, and a member of the community."
+3,    James has lunch at the company.
+4,    James does not have lunch at the company.
+5,"    If James is a manager, then James does not work from home."
+6,    There exists an animal.
+7,    All humans do not have the flu.
+8,    There exists an x such that x is a symptom of the monkeypox virus and x is coughing.
+9,    Tom is an Ocellated Wild Turkey.
+10,    Tom is an Eastern wild turkey.
+11,    Joey is a wild turkey.
+12,    The Legend of Zelda is in the top 10.
+13,    There exists a Japanese video game company that created FIFA 22.
+14,    The Legend of Zelda is not in the top 10.
+15,    All squares are shapes.
+16,    Rocky is a turtle.
+17,    Rocky is not a turtle.
+18,    Rockie is a turtle or Rockie is cute.
+19,"    If rockie is not a turtle and not a squirrel, then rockie is cute or skittish."
+20,"    If the rockie is cute and calm, then the rockie is a turtle and skittish."
+21,    Karen shares with strangerThings and lisa.
+22,    Black Mirror is popular.
+23,    Karen shares blackMirror with Lisa.
+24,    Beijing hosted both the summer and winter Olympics.
+25,    Beijing is located in southern China.
+26,    Beijing is the second largest Chinese city.
+27,    Marvin is an alien.
+28,    Marvin is not a human and Marvin is not from Mars.
+29,"    If Marvin is not from Mars, then Marvin is human."
+30,    Djokovic is a Grand Slam champion.
+31,    Djokovic lives in a tax haven.
+32,    Djokovic does not live in a tax haven.
+33,    There exists an x such that roderickstrong leads x and x is a professional wrestling stable.
+34,    Roderick Strong is a member of the Creed Brothers.
+35,"    If x is a professional wrestling stable that includes ivynile, then imperium does not feud with x."
+36,    Beethoven is a composer.
+37,    There exists an orchestra and a music piece that was premiered by that orchestra.
+38,    Beethoven is not a conductor.
+39,"    There exists an x such that x is designed, created by Max, and is a Brutalist Building."
+40,"    There exists an object that is designed, made by Max, evocative, and dreamy."
+41,"    There exists an object that is designed, made by Max, and either evocative or dreamy."
+42,    Coco Gauff is the most active player in major tennis.
+43,    Coco Gauff lost to Swiatek on Sunday and was at Roland Garros in 2022.
+44,"    Coco Gauff either did not lose to Swiatek and was at Roland Garros 2022, or Coco Gauff is not the most active player in major tennis."
+45,    All pets are not cats.
+46,    James's favorite season is summer.
+47,    Mia's favorite season is spring.
+48,    y1984 is printed.
+49,    y1984 is a streaming service.
+50,    Y1984 is not a streaming service.
+51,    Basque is a Romance language.
+52,    German is a Romance language.
+53,    French is an Indo-European language.
+54,    Robert Lewandowski is a soccer player.
+55,    Robert Lewandowski plays for Bayern Munich.
+56,    Robert Lewandowski is a soccer star.
+57,    There exists an entity that is in Butte and St. Pierre.
+58,    There exists a city that contains both Pierre and Bismarck.
+59,    Missoula is a city and is located in Montana.
+60,    Mike has a F1 visa.
+61,    Mike has a J1 visa.
+62,    Ted is a pet.
+63,    Ted is a pet and a Brown Swiss Cattle.
+64,"    If Ted is a Brown Swiss Cattle, then Ted is not a pet."
+65,    There exists a university that is a private Ivy League research university and has moved to New Haven.
+66,    Yale has the largest university endowment of any educational institution.
+67,    Pierson College is a residential college and is located at Yale.
+68,"    There exists an x such that Andrew Collins uses x as a script editor, x is a series, and x is the working title of the Secret Dude Society."
+69,"    For all people x and all things y, if x is a member of Pappys and y stars in x, then y does not pilot on bBCTwo or bBCThree."
+70,    kO is a stock.
+71,    kO is not a growth stock.
+72,"    If kO is a growth stock or kO was bought to earn profit from rapid price appreciation, then kO is not a stock and kO was not bought to earn profit from rapid price appreciation."
+73,    There exists a thing that Joe owns and begins with the number 34.
+74,    There exists a vehicle that Tom owns and has a vehicle registration plate in Istanbul.
+75,    Hannah needs to earn money to help pay for college tuition.
+76,"    Hannah is not a picky eater, spends a lot of time eating, and spends a lot of time catching up with friends in the dining hall."
+77,    Hannah is a picky eater or Hannah spends a lot of time eating and spends a lot of time catching up with friends in the dining hall.
+78,    Dried Thai chili is a product and was baked by Melissa.
+79,    It is not the case that the dried Thai chili is produced by Melissa.
+80,    Dried Thai chili is a mala hotpot.
+81,"    If dried Thai chili is not made by Melissa or is not baked sweet, then dried Thai chili is not made by Melissa and is not baked sweet."
+82,"    Dried Thai chili is a cupcake, a product, and was baked by Melissa."
+83,"    There exists a place that provides takeout service, has negative reviews, receives the reviews, and is popular among local residents, but does not provide takeout service."
+84,"    There exists a place that provides takeout service, or there exists a place that has a negative review and does not receive the review."
+85,    Hamden Plaza Subway does not offer take-out service.
+86,    Sir Digby's Nemesis did not win.
+87,    Harry gains knowledge.
+88,    Harry is smarter.
+89,    All people who are smarter gain knowledge.
+90,    The machine translation task is a language generation task.
+91,    The machine translation task requires language understanding.
+92,    Tom rents an apartment in Olive Garden.
+93,    Tom is allowed to move in with olive garden and fluffy.
+94,"    All x such that x has a security deposit for olive garden, either x has a security deposit greater than uSD2000 or x has a security deposit equal to uSD2000."
+95,    Harvard Weekly Book Club has a legal obligation.
+96,    Harvard Weekly Book Club is a legal obligation and a private company.
+97,"    If Harvard Weekly Book Club is a private company, then Harvard Weekly Book Club is subject to a legal obligation or was created under the law."
+98,    Harry is the Queen Bee.
+99,    Harry is an invertebrate or Harry is a queen bee.
+100,"    If Harry is either an invertebrate or has a backbone, or neither is an invertebrate nor has a backbone, then Harry is not an invertebrate and is not a queen bee."
+101,    Luke spends time playing with his siblings.
+102,    Luke complains about annoying siblings often.
+103,    Luke is not born in a multiple birth or complains about often annoying siblings.
+104,    eTS provides financial aid to Tom.
+105,    The cost of gRE is x and x is cheaper than 300.
+106,    It is not the case that there exists an applicant with a GRE score and a student who receives financial aid from that applicant.
+107,    Peter is notably tidy.
+108,"    Peter is clumsy, or there exists a family member of Peter who prioritizes ordering and prioritizes spotlessness."
+109,"    If Peter is not clumsy and either he is clumsy and his family member prioritizes the order and prioritizes spotlessness, or he is not clumsy and his family member does not prioritize the order and does not prioritize spotlessness, then it is true."
+110,"    There exists an object x and an object y such that x and y are evergreen, neither are objects of worship, and x is not equal to y."
+111,"    There exists an x such that Juan De Onate visited x, x is a mountain range, and x is in New Mexico."
+112,"    There exists a place that Juan De Onate visited, is a mountain range, and is in Texas."
+113,"    For all x, if x is Harding Pegmatite Mine, then x is not a mountain range and x is in New Mexico."
+114,    There exists a man who is in the same class as Michael and is not taller than Peter.
+115,    Windy is a great shooter.
+116,    Peter can block the wind.
+117,    All places located in Antarctica are named after Barutin Cove.
+118,"    There exists an object x and an object y such that x is a cove, x is located in Antarctica, x's name comes after y's name, and y is located in Bulgaria."
+119,    Barutin Cove is not located in Antarctica.
+120,    There exists an individual who is affectionate and positive.
+121,    Johns car is a Tesla Model 3.
+122,    John's car is an electric vehicle and a car.
+123,    John's car is not an electric vehicle and is a car.
+124,    Rock is a monkey.
+125,"    There exists a person y and a person z such that y and z are not the same person, y and z both have wings, y and z both have rock, and y and z both have rock."
+126,"    It is not the case that there exists y and z such that y and z are not equal, y has wings, z has wings, y has rock, and z has rock."
+127,    John has a large family.
+128,    John does not have a large family.
+129,    John is engaged.
+130,"    John does not have a large family, and John is not invited to any wedding."
+131,    The platypus is a mammal and does not have teeth.
+132,    Platypus is a reptile.
+133,    Humans are mammals.
+134,    Space sucks.
+135,    Space is a vampire.
+136,    All household items suck.
+137,    There exists an algorithm that is a supervised learning algorithm and was trained with the state-of-the-art text summarization model.
+138,    There exists an unsupervised learning algorithm that is trained with the state-of-the-art text summarization model.
+139,    x is rated for a general audience.
+140,"    The content x contains excessive erotic content and excessive violent content, or the content excessiveViolentContent is frozen."
+141,"    If x contains excessive erotic content and excessive violent content, or x does not contain excessive erotic content and excessive violent content, then excessive violent content is not frozen."
+142,"    There exists an animal x and an animal y such that x is a Heck cattle, x has undergone artificial selection, x is not equal to y, y is a Heck cattle, and y has undergone artificial selection."
+143,    All Aurochs are dead.
+144,    Vladimir is Russian and a federation official.
+145,    Vladimir is not Russian and a federation official.
+146,    Ekaterina can participate in the 2024 United States election or Ekaterina is a manager at Gazprom.
+147,"    Ekaterina can participate in the 2024 United States Election, or Vladimir is a manager at Gazprom, but not both."
+148,"    Ekaterina can register to vote in the United States, and Vladimir can participate in the 2024 United States election."
+149,    The neapolitanChronicles is a book and it is in English.
+150,    Harry Potter published newVesselPress.
+151,    The palace of flies is from Italy.
+152,    The mixture contains carbon.
+153,    The mixture contains alkane and carbon.
+154,"    For all x and y, if x and y are both contained in the mixture and x is equal to y, or the mixture contains carbon, then the mixture is not a chemical, is not a compound, and is not an alkane."
+155,    There exists a Greek person and another Greek person such that both are mortal and they are not the same person.
+156,"    There exists a job that is part-time, James has that job, and the job is offered by the university."
+157,    There does not exist a job that James has and is offered by a university.
+158,    James takes the database course or James has a part-time job and is offered by the university.
+159,    James takes the database course.
+160,"    If George likes music and has access to the program, then George will compose."
+161,"    If George does not want to compose, then George will not compose."
+162,    All birds can swim.
+163,"    All x, if x is Monday at 8 PM and is an episode of breaking bad."
+164,"    For all x and y, if x is at 8 PM on Monday, y is a rose, y is given out on television, television is on x, and y is from breaking bad, then..."
+165,"    If a rose is given out on TV, the TV is on, and it is from Breaking Bad, then it is Monday at 8 PM."
+166,    Heinrich Schmidt is German or Heinrich Schmidt is Russian.
+167,"    There exists a person who is German, a politician, a member of the Prussian State Parliament, and a member of the Nazi Reichstag."
+168,    All politicians are not members of the Nazi Reichstag.
+169,    Colorectal cancer is severe.
+170,"    If colorectal cancer does not have bile duct cancer or cholangiocarcinoma, then colorectal cancer has bile duct cancer and mild flu."
+171,    Colorectal cancer is Cholangiocarcinoma and either has mild flu or is Bile Duct Cancer.
+172,    Taylor regularly eats salad.
+173,    Taylor visits the gym daily.
+174,    Taylor did not grow up in a health-conscious childhood home and did not visit the gym daily.
+175,    The Champs are a sporting event.
+176,    Tokyo did not host the last Summer Olympics.
+177,    There exists an athlete who participated in the last Summer Olympics and won the most medals.
+178,    There exists a human and a horse such that they are not the same individual.
+179,    Susan flies from lgaAirport.
+180,    John flies to the LGA airport.
+181,    Tom is grumpy.
+182,    Tom is not grumpy and mean to animals.
+183,"    If Tom is not grumpy and not mean to animals, then Tom is not grumpy and not an animal lover."
+184,    Dani Shapiro writes a novel.
+185,    Family Secrets is a novel.
+186,    Dani Shapiro was born in Boston.
+187,    Yuri is an American national.
+188,"    Yuri is not an American national, a professional, and a basketball player."
+189,"    Yuri is an American national, a professional, and a basketball player."
+190,"    If Yuri does not leap straight into the air, then Yuri is American, professional, and a basketball player."
+191,"    If Yuri is not an American national, a professional, and a basketball player, then Yuri is a professional and a basketball player."
+192,    All events are sad.
+193,    Steinhauer did not win the duMaurier Classic in 1992.
+194,    Descampe has a six-way tie.
+195,    Kiki is terricolous.
+196,    Kiki is a dog.
+197,    Kiki is not a dog and Kiki does not bark.
+198,    All players who play for Nautico are not Brazilian.
+199,"    For all clubs, if Ailton Silva plays for the club, then the club does not play football."
+200,"    For all clubs, if a player is loaned to that club, then that club is not a football club."
+201,    Ailton Silva plays for Fluminense.
+202,    There exists a football club that loaned Ailton Silva.

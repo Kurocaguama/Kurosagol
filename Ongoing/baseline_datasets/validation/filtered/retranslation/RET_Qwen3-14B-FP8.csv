@@ -1,0 +1,227 @@
+,Retranslation
+0,    Stephen Curry is an athlete.
+1,"    Stephen Curry is an athlete, a professional, and a center back."
+2,"    If Stephen Curry is a professional and a center back, then he is not an athlete."
+3,    Tyler joined the student government in high school.
+4,"Okay, let's tackle this translation. The premise is a bit complex, so I need to break it down step by step."
+5,    Tim is majoring in computer science.
+6,    Tim is not majoring in computer science and is not from the Yale Running Club.
+7,    Tim finishes the Boston Marathon within 3 hours.
+8,    There exist two distinct roses that are noisy.
+9,"    Murphy does not study light generation, light transmission, or light detection."
+10,    Murphy studies science.
+11,    There exists someone who studies engineering.
+12,    Martha is a friend of Jane and works in the lab.
+13,"    Martha is a friend of Jane, and Martha either wears a casual outfit to work regularly or is inclined towards an analytical career."
+14,"    Martha is a friend of Jane, and Martha does not either wear casual outfit to work regularly or be inclined towards an analytical career, but not both."
+15,    Jack is human.
+16,    Jack can vote and can get married.
+17,"    Jack can vote or can get married, but not both."
+18,    The University of Oxford is ranked among prestigious universities.
+19,    The University of Edinburgh is older than the University of Oxford.
+20,    The University of Oxford is made up of thirty-nine colleges.
+21,    Every brick floats on water.
+22,    Pan refuses to work in person.
+23,    Pan refuses to work in person or is hardworking.
+24,    Pan does not refuse to work in person and is not hardworking.
+25,    Kate has traveled to the Iberian Peninsula.
+26,    Kate took a selfie at the Sagrada Família.
+27,    Kate did not take a selfie at the basilica of the Sagrada Família.
+28,    Kate has never left the USA.
+29,    Kate has left the USA at least once.
+30,    Either Kate took a selfie at the Basilica de la Sagrada Família or she never left the USA.
+31,"    If Kate has not both taken a selfie at the Sagrada Família and been to Europe, then Kate has not never left the USA."
+32,"    If Kate has not both taken a selfie at the Sagrada Família and been to Europe, then she has taken a selfie at the Sagrada Família."
+33,    Pulp is in the English band.
+34,    James Cocker is a documentary feature.
+35,    Pulp is the best band.
+36,    Today is December 1st.
+37,"    For all x, if x is thirty days away from the end of the year, then x is a Wednesday."
+38,"    For all x and y, if x is a plane and y is riding a bike, then x is faster than y."
+39,"    For all x and y, if x is a plane and y is walking, then x is faster than y."
+40,    There exists a scarf made of alpaca that is not bought by an experienced shopper.
+41,    Jackie owns a start-up.
+42,"    Jackie is either a full-time student or a part-time student, but not both."
+43,    Jackie is enrolled as part-time in the current semester and there exists a number y such that y is less than two and Jackie takes y courses in the current semester.
+44,    Jackie is enrolled as part-time in the current semester if and only if there exists a number y less than two such that Jackie takes y courses in the current semester.
+45,"    If Jackie either enrolls as part-time in the current semester and is listed in the Forbes 30 Under 30, or neither enrolls as part-time in the current semester nor is listed in the Forbes 30 Under 30, then Jackie takes less than two courses in the current semester and listed in the Forbes 30 Under 30."
+46,    James exercises every day.
+47,"    James does not exercise every day, plays division 1 football, and plays at Yale University."
+48,"    James exercises every day, plays division 1 football, and plays at Yale University."
+49,"    If there is no student with GPA above 3.5, then James exercises every day, plays division 1 football, and plays at Yale University."
+50,"    If James does not exercise every day and plays division 1 football and plays at Yale University, then James plays division 1 football and plays at Yale University."
+51,    Simon is a member of the Northern Premier League.
+52,    Simon Hackney plays at Wincham Park.
+53,    uS31 is in Alabama.
+54,    cR47 is not in Alabama.
+55,    sR287 is in the United States.
+56,    Andres can propel a boat forward.
+57,    Andres coaches the crew when the coach is not present and is in command of the boat.
+58,    It is not the case that Andres coaches the crew when the coach is not present or Andres is in command of the boat.
+59,    A snare drum is a timpani.
+60,    A snare drum is not a timpani.
+61,    A snare drum is a xylophone.
+62,    A snare drum is a xylophone or it is tuned by tightening.
+63,"    A snare drum is either an xylophone or is tuned by tightening, but not both."
+64,    The banana needs to be washed.
+65,    The banana is unripened and served in a bowl.
+66,"    A banana is unripened or served in a bowl, but not both."
+67,    Borj Masouda is a military construction designed to defend territories in warfare.
+68,    Borj Masouda is in Medina Sfax.
+69,    Borj Masouda is not in Tunisia.
+70,    Borj Masouda is a defensive wall.
+71,    Every rower is not from Sydney.
+72,    Every Australian is not represented in New South Wales.
+73,    There exists an Australian athlete who competes in sweep oared events and represents New South Wales.
+74,    Susan is in this neighborhood and grew up as an only child and has a close-knit relationship with her family.
+75,    Susan is in this neighborhood and is trying to start a new diet.
+76,"    Susan is in this neighborhood, but she is not an only child who has a close-knit relationship with her family and has a packed schedule and lives close to Stop and Shop."
+77,    John is a vegetarian if and only if he does not eat meat and does not eat fish.
+78,    All vegans do not eat eggs.
+79,"    For all x, if x does not eat eggs, then x is good for health."
+80,    The provision of high meat content food and object play reduce predation of wild animals by domestic cats (Felis catus) does not have an abstract.
+81,"    If the provision of high meat content food and object play reduces predation of wild animals by domestic cats (Felis catus) is either easily accepted or without abstract, then it is prominent, published, and requires peer review."
+82,"Okay, let's tackle this translation. The premise is a bit complex with several logical components. First, I need to parse the structure of the formula. The main structure seems to be a disjunction (A ∨ B) leading to an implication (→) of another expression."
+83,    The movie Family Pirate Party is not released in North America.
+84,    The movie Family Pirate Party was released in Japan.
+85,    The movie Family Pirate Party is released in North America and Japan.
+86,    The family pirate party is for the Wii.
+87,"    John takes the IELTS exam, which is taken on a computer, and John does not take the speaking section and use a computer."
+88,"    If John takes the IELTS exam, then he uses paper."
+89,"    For all students x, if x takes the iELTS exam and the reading test, then x uses either paper or computer."
+90,"    Either Chen does not use any Apple products, or Chen uses some Apple products."
+91,"    Chen uses the Apple ecosystem or cares about extreme customization, but not both."
+92,"    Chen uses Android or Apple ecosystem, but not both."
+93,"    Chen uses Apple products or the Apple ecosystem, but not both."
+94,"    If Chen uses Apple products or the Apple ecosystem, but not both, then Chen does not use Apple products and does not use the Apple ecosystem."
+95,"Okay, let's tackle this translation. The premise is a bit complex, so I need to break it down step by step."
+96,"Okay, let's tackle this translation. The premise is a bit complex, so I need to break it down step by step."
+97,    Jan Jelinek is an electronic musician.
+98,    Jan Jelinek is not a signed musician.
+99,    Jan Jelinek is German.
+100,    Amy is a Pasifika New Zealander.
+101,    Amy is an Asian New Zealander.
+102,    Joe is an Asian New Zealander.
+103,    Joe speaks Samoan.
+104,    Every snake does not have at least two different feathers.
+105,    There exist two distinct protein bars that Lily eats.
+106,    Either Lily's workouts focus on endurance or there exist two distinct protein bars that Lily eats.
+107,"    If Lily eats at least two different protein bars or prefers running, then Lily's workouts do not focus on building muscle or endurance, but not both."
+108,    Bobby is a dog.
+109,    Bobby is a rock.
+110,"    Bobby is either an animal or a rock, but not both."
+111,    Hailee orients.
+112,    Karl does not orienteer.
+113,    The bald eagle is endangered.
+114,    Mickey is in a national park and is sold in a public marketplace.
+115,"    If Mickey is not both in a national park and sold in a public marketplace, then Mickey is endangered and sold in a public marketplace."
+116,"    If Mickey is not in a national park and is not sold in a public marketplace, then either humans are not hunting Mickey for profit or Mickey is in a national park."
+117,    Navarre can access etb2.
+118,    The French Casque Country cannot access ETB2.
+119,    Joseph Kmak is German.
+120,    Joseph Kmak plays in the MLB.
+121,    Joseph Kmak is a catcher.
+122,    Andrew Wilson was born in Eastern Europe.
+123,    Andrew Wilson specializes in Poland.
+124,    Andrew Wilson specializes in Britain.
+125,    Every British person is not a political scientist.
+126,    Luca is capable of naval combat and ground combat.
+127,    Luca is not capable of both naval combat and ground combat.
+128,    Luca is capable of naval combat or ground combat.
+129,    Luca is not capable of naval combat and is not capable of ground combat.
+130,    Spencer is discharged.
+131,    James is a student and is in China.
+132,    James is not a student and is in China.
+133,    Jack is invited to attend the conference or presents at the conference.
+134,    Jack is invited to attend the conference if and only if he is not presented at the conference.
+135,    Jack is not registered for the conference or James is not invited to attend the conference.
+136,    Sustainible energy sources are selected for the in-course hall of fame.
+137,    Sustainble Energy Sources is selected for the Hall of Fame.
+138,    The course Sustainable Energy Sources is unfinished.
+139,    Tangent Online is not an online magazine.
+140,    Tangent Online is a print magazine.
+141,"    There exists an online magazine that is a website, launched in 1997, that covers a review."
+142,    The Wind is Watching is hard to access.
+143,"    The movie ""The Wind Is Watching"" has a small budget."
+144,    The Wind Is Watching is a dystopian novel.
+145,    There exist two distinct entities that are both plants and animals.
+146,    Pots is an anagram of tops.
+147,"    ""stop"" is an anagram of ""post""."
+148,"    ""post"" is an anagram of ""stop""."
+149,    Every x that does not have a roof does not protect.
+150,"    For any x and y, if x is a roof made of concrete and y is a roof made of seagrass, then x is stronger than y."
+151,    Every roof made of concrete does not block sunlight.
+152,    AyZor is not a popular musician.
+153,"    For all x, if x is a symptom of cOVID-19 and Tom has x, then ..."
+154,    Tom does not go to parties and does not have a fever.
+155,"    If Tom does not have a fever, then he goes to parties."
+156,    There exists someone who is in the Indian Armed Forces and is recruited for a special operation group.
+157,    There exists someone in the Indian Armed Forces who is trained in engaging in warfare.
+158,    The special operation group specializes in neutralizing.
+159,"    There exists someone who is in the central paramilitary forces, recruited for a special operation group, and the special operation group operates under the Odisha police."
+160,    The special operation group specializes in naval warfare.
+161,    Bob is an extrovert.
+162,    Bob handles money.
+163,    Bob is a business person and makes money at Microsoft.
+164,    John explores personal interest.
+165,"Okay, let's tackle this problem. The user wants me to translate the given first-order logic premise into natural language. The premise is ""TeenagerStudent(catherine) ∧ InHighSchool(catherine)"". "
+166,    Catherine graduated from high school.
+167,    x has time for reading.
+168,    Mary is either humble about their knowledge or confident about their knowledge.
+169,"    Mary is either humble about their knowledge or confident about their knowledge, but not both."
+170,    Kevin Parker wrote The Less I Know The Better.
+171,    The origin of Tame Impala is in San Francisco.
+172,    Jay Watson is a member of Tame Impala.
+173,    Cake is a dessert.
+174,    Cake is a vegetable.
+175,    Cake is not a vegetable.
+176,    x is a world class at horse riding and x is a world class at polo.
+177,    Riley is nominated for the CRA Award.
+178,"    Riley either plays competitive equestrian polo or is nominated for the C.R.A. Award, but not both."
+179,    Riel was filmed after 1979.
+180,    Alexander Mackenzie is the second prime minister of Canada.
+181,    Waldo is cute.
+182,    Waldo is not cute.
+183,    Murphy is a baby or Murphy has curly hair.
+184,    Murphy is not a baby and Murphy does not have curly hair.
+185,    There exist two distinct chairs that are not objects.
+186,    All Enterococcus durans are catalase negative.
+187,    There exists a person who is Gram-positive and has been studied.
+188,"    For all x and y, if x is Enterococcus durans and x produces y, then y is not studied."
+189,    John is a top 75 basketball center.
+190,    John is a guard and does not play in the point position.
+191,    It is not the case that John is a guard and does not play at the point position.
+192,    Every song that does not have a melody is not a hit.
+193,    Every song that is catchy is a hit.
+194,    There exists a song that lacks rhythm and is a hit.
+195,    The analytic-DPM is a survey.
+196,"    If analytic-DPM is a best paper candidate, then it has been surveyed and rejected."
+197,"    If the analytic-DPM paper is either surveyed or presented at iCLR but not both, then the analytic-DPM paper is not rejected."
+198,    Paul is a graduate student.
+199,    Paul is a PhD student and took an applied linguistics course.
+200,    Paul is not both a PhD student and has taken an applied linguistics course.
+201,    Ceruravinula emerges from a cocoon.
+202,    Ceruravinula does not have thin antennae.
+203,    Ceruravinula is a pest.
+204,    There exists a place that was a former parade ground that Balthasar Wigand made a painting of.
+205,    Schmelz is used by the military.
+206,"    For all x and y, if x is located in Vienna and y is an artist, then y did not make a painting of x."
+207,    Near-infrared spectroscopy uses an electrode.
+208,    Near-infrared spectroscopy measures voltage change and uses an electrode.
+209,    Near-infrared spectroscopy uses an electrode and is a magnetoencephalography.
+210,"    If near-infrared spectroscopy is used in electroencephalogram or magnetoencephalography, then it measures voltage change and uses an electrode."
+211,"    If near-infrared spectroscopy either measures voltage change or uses an electrode, but not both, then near-infrared spectroscopy uses an electrode and is a form of fMRI."
+212,"    There exists a food and entertainment festival that is the largest, held in western Canada, and not run in the year 2020."
+213,    There exists an outdoor festival that is not held in the year 2020.
+214,    Taste of Edmonton went on hiatus in 2021.
+215,    There exists a sweater that Hugo is currently wearing.
+216,    Civet coffee comes from France.
+217,    Jamaica Blue is from Colombia.
+218,    Jamaicablue is favored by local residents.
+219,"    For all x, if x is elation, then x is not positive."
+220,    Adam buys a t-shirt.
+221,"    For all x, if Adam goes downtown by bike and x is a T-shirt, then Adam does not buy x."
+222,"    If Adam shops, then he either rides a bike or walks, but not both."
+223,    The place visited by Max is a flight destination and is from Tweed Airport.
+224,    The place visited by Max has many Estonian street signs.
+225,    The place visited by Max does not have many Estonian street signs and is not a Baltic country.
