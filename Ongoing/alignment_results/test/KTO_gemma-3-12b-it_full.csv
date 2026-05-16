@@ -1,0 +1,1627 @@
+,Full
+0,"∀x (SoccerPlayer(x) ∧ Professional(x) → ¬BasketballPlayer(x))
+∀x (SoccerDefender(x) → SoccerPlayer(x) ∧ Professional(x))
+∀x (Centerback(x) → SoccerDefender(x))
+∃x (Athlete(x) ∧ Centerback(x))
+∀x (BasketballPlayer(x) ∧ Name(x, stephen) ∧ Name(x, curry) → Professional(x))"
+1,"∀x (SoccerPlayer(x) ∧ Professional(x) → ¬BasketballPlayer(x))
+∀x (SoccerDefender(x) → SoccerPlayer(x) ∧ Professional(x))
+∀x (Centerback(x) → SoccerDefender(x))
+∃x (Athlete(x) ∧ Centerback(x))
+∀x (BasketballPlayer(x) ∧ Name(x, stephen) ∧ Name(x, curry) → Professional(x))"
+2,"∀x (SoccerPlayer(x) → ¬BasketballPlayer(x))
+∀x (SoccerDefender(x) → SoccerPlayer(x))
+∀x (Centerback(x) → SoccerDefender(x))
+∃x (Athlete(x) ∧ Centerback(x))
+BasketballPlayer(stephenCurry)"
+3,"∀x (JoinStudentGovernment(x) → HaveManyOpportunitiesToImprove(x, communicationSkills))
+∀x (StayAloneInHighSchool(x) → HaveManyOpportunitiesToImprove(x, communicationSkills))
+∀x (WantToGainLeadershipSkills(x) → JoinStudentGovernment(x))
+∀x (WellAdjustedAndEngagedWithinTheirCommunities(x) → RespectedBy(x, residents))
+∀x (CareAboutCreatingCommunity(x) → WellAdjustedAndEngagedWithinTheirCommunities(x))
+¬StayAloneInHighSchool(tyler) → HaveManyOpportunitiesToImprove(tyler, communicationSkills)"
+4,"∀x (JoinStudentGovernment(x) → HaveManyOpportunitiesToImprove(x, communicationSkills))
+∀x (StayAloneInHighSchool(x) → HaveManyOpportunitiesToImprove(x, communicationSkills))
+∀x (WantToGainLeadershipSkills(x) → JoinStudentGovernment(x))
+∀x (WellAdjustedAndEngagedWithinTheirCommunities(x) → RespectedBy(x, residents))
+∀x (CareAboutCreatingCommunity(x) → WellAdjustedAndEngagedWithinTheirCommunities(x))
+¬StayAloneInHighSchool(tyler) → HaveManyOpportunitiesToImprove(tyler, communicationSkills)"
+5,"∀x ((Runner(x) ∧ RankedInTop1000InBostonMarathon(x)) → FinishedWithin3Hours(x))
+∀x ((Runner(x) ∧ FromYaleRunningClub(x)) → RankedInTop1000InBostonMarathon(x))
+∀x ((Runner(x) ∧ WearingTShirtWithBulldogLogo(x)) → FromYaleRunningClub(x))
+∃x (Runner(x) ∧ WearingTShirtWithBulldogLogo(x) ∧ MajoringInComputerScience(x))
+Runner(tim) ∧ (FinishedWithin3Hours(tim) → ¬(FromYaleRunningClub(tim) ∧ RankedInTop1000InBostonMarathon(tim)))
+Runner(tim) ∧ (MajoringInComputerScience(tim) → (WearingTShirtWithBulldogLogo(tim) ∨ FromYaleRunningClub(tim)))"
+6,"∀x ((Runner(x) ∧ RankedInTop1000InBostonMarathon(x)) → FinishedWithin3Hours(x))
+∀x ((Runner(x) ∧ FromYaleRunningClub(x)) → RankedInTop1000InBostonMarathon(x))
+∀x ((Runner(x) ∧ WearingTShirtWithBulldogLogo(x)) → FromYaleRunningClub(x))
+∃x (Runner(x) ∧ WearingTShirtWithBulldogLogo(x) ∧ MajoringInComputerScience(x))
+Runner(tim) ∧ (FinishedWithin3Hours(tim) → ¬(FromYaleRunningClub(tim) ∧ RankedInTop1000InBostonMarathon(tim)))
+Runner(tim) ∧ (MajoringInComputerScience(tim) → (WearingTShirtWithBulldogLogo(tim) ∨ FromYaleRunningClub(tim)))"
+7,"∀x ((Runner(x) ∧ RankedInTop1000InBostonMarathon(x)) → FinishedWithin3Hours(x))
+∀x ((Runner(x) ∧ FromYaleRunningClub(x)) → RankedInTop1000InBostonMarathon(x))
+∀x ((Runner(x) ∧ WearingTShirtWithBulldogLogo(x)) → FromYaleRunningClub(x))
+∃x (Runner(x) ∧ WearingTShirtWithBulldogLogo(x) ∧ MajoringInComputerScience(x))
+Runner(tim) ∧ (FinishedWithin3Hours(tim) → ¬(FromYaleRunningClub(tim) ∧ RankedInTop1000InBostonMarathon(tim)))
+Runner(tim) ∧ (MajoringInComputerScience(tim) → (WearingTShirtWithBulldogLogo(tim) ∨ FromYaleRunningClub(tim)))"
+8,"∀x (Flower(x) → ¬Noisy(x))
+∀x (Rose(x) → Flower(x))"
+9,"∀x (Studies(x, science) ∧ Studies(x, engineering) → OpticalEngineer(x))
+∀x (Studies(x, opticalEngineering) → OpticalEngineer(x))
+∀x (OpticalEngineer(x) → (Studies(x, generation) ∨ Studies(x, transmission) ∨ Studies(x, detection)))
+OpticalEngineer(murphy)"
+10,"∀x (Studies(x, science) ∧ Studies(x, engineering) → OpticalEngineer(x))
+∀x (Studies(x, opticalEngineering) → OpticalEngineer(x))
+∀x (OpticalEngineer(x) → (Studies(x, generation) ∨ Studies(x, transmission) ∨ Studies(x, detection)))
+OpticalEngineer(murphy)"
+11,"∀x (Studies(x, science) ∧ Studies(x, engineering) → OpticalEngineer(x))
+∀x (Studies(x, opticalEngineering) → OpticalEngineer(x))
+∀x (OpticalEngineer(x) → (Studies(x, generation) ∨ Studies(x, transmission) ∨ Studies(x, detection)))
+OpticalEngineer(murphy)"
+12,"∀x (Friend(jane, x) ∧ Wear(x, scrubs) ∧ EveryDay(wear(x, scrubs)) → WorkIn(x, hospitalSetting))
+∀x (Friend(jane, x) ∧ Wear(x, casualOutfit) ∧ Regularly(wear(x, casualOutfit)) → ¬WorkIn(x, hospitalSetting))
+∀x (Friend(jane, x) ∧ WorkIn(x, laboratory) → Wear(x, scrubs) ∧ EveryDay(wear(x, scrubs)))
+∀x (Friend(jane, x) ∧ Enjoy(x, engineering) ∧ WorkIn(x, relatedProfession) → WorkIn(x, laboratory))
+∀x (Friend(jane, x) ∧ InclinedTowards(x, analyticalCareerPath) → Enjoy(x, engineering) ∧ WorkIn(x, relatedProfession))
+Friend(jane, martha) ∧ (Enjoy(martha, engineering) ∧ WorkIn(martha, relatedProfession) ⊕ Wear(martha, scrubs) ∧ EveryDay(wear(martha, scrubs)))"
+13,"∀x (Friend(jane, x) ∧ Wear(x, scrubs) ∧ EveryDay(wear(x, scrubs)) → WorkIn(x, hospitalSetting))
+∀x (Friend(jane, x) ∧ Often(x, wearCasualOutfits) ∧ Regularly(wearCasualOutfits) → ¬WorkIn(x, hospitalSetting))
+∀x (Friend(jane, x) ∧ WorkIn(x, laboratory) → Wear(x, scrubs) ∧ EveryDay(wear(x, scrubs)))
+∀x (Friend(jane, x) ∧ Enjoy(x, engineering) ∧ WorkIn(x, relatedProfession) → WorkIn(x, laboratory))
+∀x (Friend(jane, x) ∧ InclinedTowards(x, analyticalCareerPaths) → Enjoy(x, engineering) ∧ WorkIn(x, relatedProfession))
+Friend(jane, martha) ∧ (Enjoy(martha, engineering) ∧ WorkIn(martha, relatedProfession) ⊕ Wear(martha, scrubs) ∧ EveryDay(wear(martha, scrubs)))"
+14,"∀x (Friend(jane, x) ∧ Wear(x, scrubs) ∧ EveryDay(wear(x, scrubs)) → WorkIn(x, hospitalSetting))
+∀x (Friend(jane, x) ∧ Often(x, wearCasualOutfits) ∧ Regularly(wearCasualOutfits) → ¬WorkIn(x, hospitalSetting))
+∀x (Friend(jane, x) ∧ WorkIn(x, laboratory) → Wear(x, scrubs) ∧ EveryDay(wear(x, scrubs)))
+∀x (Friend(jane, x) ∧ Enjoy(x, engineering) ∧ WorkIn(x, relatedProfession) → WorkIn(x, laboratory))
+∀x (Friend(jane, x) ∧ InclinedTowards(x, analyticalCareerPaths) → Enjoy(x, engineering) ∧ WorkIn(x, relatedProfession))
+Friend(jane, martha) ∧ (Enjoy(martha, engineering) ∧ WorkIn(martha, relatedProfession) ⊕ Wear(martha, scrubs) ∧ EveryDay(wear(martha, scrubs)))"
+15,"∀x (Child(x) → Human(x))
+∀x (Underage(x) → Child(x))
+∀x (OfAge(x) ⊕ ¬OfAge(x))
+∀x (OfAge(x) → CanVote(x))
+∀x (OfAge(x) → CanMarry(x))
+(Child(jack) ∧ Human(jack)) → (¬CanVote(jack) ∧ ¬CanMarry(jack))"
+16,"∀x (Child(x) → Human(x))
+∀x (Underage(x) → Child(x))
+∀x (OfAge(x) ⊕ ¬OfAge(x))
+∀x (OfAge(x) → CanVote(x))
+∀x (OfAge(x) → CanMarry(x))
+(Child(jack) ∧ Human(jack)) → (¬CanVote(jack) ∧ ¬CanMarry(jack))"
+17,"∀x (Child(x) → Human(x))
+∀x (Underage(x) → Child(x))
+∀x (OfAge(x) ⊕ ¬OfAge(x))
+∀x (OfAge(x) → CanVote(x))
+∀x (OfAge(x) → CanMarry(x))
+(Child(jack) ∧ Human(jack)) → (¬CanVote(jack) ∧ ¬CanMarry(jack))"
+18,"∀x (CollegiateResearchUniversity(x) → ¬OlderThanAll(x, england))
+∀x (CollegiateResearchUniversity(x) → ¬OlderThan(x, oxford))"
+19,"∀x (CollegiateResearchUniversity(x) → CollegiateResearchUniversity(x))
+∀x (CollegiateResearchUniversity(x) ∧ OfficiallyOpenedIn(x, england) ∧ OfficiallyOpenedIn(x, 1583))
+∀x (CollegiateResearchUniversity(x) ∧ In(x, england) → OlderThanAll(x, collegiateResearchUniversityInEngland))
+∀x ∀y ((CollegiateResearchUniversity(x) ∧ CollegiateResearchUniversity(y)) → ¬(OlderThan(x, y) ∧ OlderThan(y, x)))
+∀x (Oxford(x) → Educated(x, notableAlumsIncludingPrimeMinistersOfTheUnitedKingdomAndHeadsOfStateAndGovernment))
+∀x (Oxford(x) → StudiedAt(x, nobelPrizeLaureatesFieldsMedalistsAndTuringAwardWinners))"
+20,"∀x (CollegiateResearchUniversity(x) → CollegiateResearchUniversity(x))
+∀x (CollegiateResearchUniversity(x) ∧ OfficiallyOpenedIn(x, england) ∧ OfficiallyOpenedIn(x, 1583))
+∀x (CollegiateResearchUniversity(x) ∧ LocatedIn(x, england) → ∀y (CollegiateResearchUniversity(y) ∧ LocatedIn(y, england) ∧ OlderThan(x, y) → ¬OlderThan(y, x)))
+∀x (OlderThan(x, y) → ¬OlderThan(y, x))
+∀x (LocatedIn(x, oxford) → Educated(x, notableAlum))
+∀x (LocatedIn(x, oxford) → StudiedAt(x, nobelPrizeLaureate) ∨ StudiedAt(x, fieldsMedalist) ∨ StudiedAt(x, turingAwardWinner))"
+21,"∀x (Boat(x) → FloatsOn(x, water))
+∀x (Brick(x) → On(x, boat))"
+22,"∀x (Under(x, peter) → (Engineer(x) ∨ Scientist(x)))
+∀x ((Under(x, peter) ∧ Engineer(x)) → Hardworking(x))
+∀x ((Under(x, peter) ∧ Scientist(x)) → Wellcompensated(x))
+∀x ((Under(x, peter) ∧ Wellcompensated(x)) → ¬Workremotely(x))
+∀x ((Under(x, peter) ∧ Refuseto(x, workinperson)) → Workremotely(x))
+Under(pan, peter) ∧ ¬(Workremotely(pan) ∧ Wellcompensated(pan)) → Workremotely(pan)"
+23,"∀x (Under(x, peter) → (Engineer(x) ∨ Scientist(x)))
+∀x ((Under(x, peter) ∧ Engineer(x)) → Hardworking(x))
+∀x ((Under(x, peter) ∧ Scientist(x)) → Wellcompensated(x))
+∀x ((Under(x, peter) ∧ Wellcompensated(x)) → ¬Workremotely(x))
+∀x ((Under(x, peter) ∧ Refuseto(x, workinperson)) → Workremotely(x))
+Under(pan, peter) ∧ ¬(Workremotely(pan) ∧ Wellcompensated(pan)) → Workremotely(pan)"
+24,"∀x (Under(x, peter) → (Engineer(x) ∨ Scientist(x)))
+∀x ((Under(x, peter) ∧ Engineer(x)) → Hardworking(x))
+∀x ((Under(x, peter) ∧ Scientist(x)) → Wellcompensated(x))
+∀x ((Under(x, peter) ∧ Wellcompensated(x)) → ¬Workremotely(x))
+∀x ((Under(x, peter) ∧ Refuseto(x, workinperson)) → Workremotely(x))
+Under(pan, peter) ∧ ¬(Workremotely(pan) ∧ Wellcompensated(pan)) → Workremotely(pan)"
+25,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+26,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+27,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+28,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+29,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+30,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+31,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+32,"∀x (NeverLeft(x, unitedStates) → ¬BeenTo(x, europe))
+∀x (TraveledTo(x, iberianPeninsula) → BeenTo(x, europe))
+∀x (Visited(x, barcelona) → TraveledTo(x, iberianPeninsula))
+∀x (TookSelfie(x, basilicaFamiliaSagrada) → Visited(x, madrid))
+(TookSelfie(kate, basilicaFamiliaSagrada) ∨ NeverLeft(kate, unitedStates)) → ¬(Visited(kate, barcelona) ∨ NeverLeft(kate, unitedStates))"
+33,"Band(pulp) ∧ EnglishBand(pulp)
+MemberOf(jarvisCocker, pulp)
+ReleasedIn(documentaryAbout(pulp), 2014)
+∀x (DocumentaryAbout(x) ∧ Band(x)) → Feature(x, memberOf(x))
+∃x (Album(x) ∧ ReleasedBy(x, pulp) ∧ TopOne(x, ukAlbumsChart))"
+34,"Band(pulp) ∧ EnglishBand(pulp)
+MemberOf(jarvisCocker, pulp)
+∃x (Documentary(x) ∧ About(x, pulp) ∧ ReleasedIn(x, 2014))
+∀x (Documentary(x) ∧ About(x, band) → Feature(x, memberOf(band)))
+∃x (Album(x) ∧ ReleasedBy(x, pulp) ∧ ReachedNumberOneSpotIn(x, ukAlbumsChart))"
+35,"Band(pulp) ∧ EnglishBand(pulp)
+MemberOf(jarvisCocker, pulp)
+∃x (Documentary(x) ∧ About(x, pulp) ∧ ReleasedIn(x, 2014))
+∀x (Documentary(x) ∧ About(x, band) → Feature(x, memberOf(band)))
+∃x (Album(x) ∧ ReleasedBy(x, pulp) ∧ ReachedNumberOne(x, ukAlbumsChart))"
+36,"∀x (December1(x) → RemainDaysUntilEndOfYear(x, 30))
+December1(1970) → Tuesday(1970)
+December1(2021) → Wednesday(2021)
+Thursday(today)"
+37,"∀x (December1(x) → RemainDaysUntilEndOfYear(x, 30))
+December1(1970) → Tuesday(1970)
+December1(2021) → Wednesday(2021)
+Thursday(today)"
+38,"∀x ∀y (Plane(x) ∧ Car(y) → FasterThan(x, y))
+∀x ∀y (Car(x) ∧ Walking(y) → FasterThan(x, y))
+∀x ∀y (BikeRiding(x) ∧ Walking(y) → FasterThan(x, y))"
+39,"∀x ∀y (Plane(x) ∧ Car(y) → FasterThan(x, y))
+∀x ∀y (Car(x) ∧ Walking(y) → FasterThan(x, y))
+∀x ∀y (BikeRiding(x) ∧ Walking(y) → FasterThan(x, y))"
+40,"∀x (HighQualityScarf(x) → (MadeOf(x, wool) ∨ MadeOf(x, cashmere) ∨ MadeOf(x, alpaca)))
+∀x (HighQualityScarf(x) → Expensive(x))
+∃x (Expensive(x) ∧ ¬WorthTheirPrice(x))
+∀x (ExperiencedShopper(x) → ∀y (Product(y) ∧ ¬WorthTheirPrice(y) → ¬Buy(x, y)))
+∀x (Scarf(x) → Product(x))"
+41,"∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) → (PartTime(x) ∨ FullTime(x)))
+∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ FullTime(x) → ¬(LessThanTwoCourses(x)))
+∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ Owns(x, startUp) → LessThanTwoCourses(x))
+∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ ListedIn(x, forbes30Under30) → Owns(x, startUp))
+(Student(jackie) ∧ At(jackie, yaleSchoolOfManagement) ∧ LessThanTwoCourses(jackie)) ∨ ListedIn(jackie, forbes30Under30)"
+42,"∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement)) → (PartTime(x) ⊕ FullTime(x)))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ FullTime(x)) → ¬(LessThanTwoCourses(x)))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ Owns(x, startUp)) → LessThanTwoCourses(x))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ ListedIn(x, forbes30Under30)) → Owns(x, startUp))
+(Student(jackie) ∧ At(jackie, yaleSchoolOfManagement) ∧ LessThanTwoCourses(jackie)) ⊕ ListedIn(jackie, forbes30Under30)"
+43,"∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement)) → (PartTime(x) ⊕ FullTime(x)))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ FullTime(x)) → ¬(LessThanTwoCourses(x)))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ Owns(x, startUp)) → LessThanTwoCourses(x))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ ListedIn(x, forbes30Under30)) → Owns(x, startUp))
+(Student(jackie) ∧ At(jackie, yaleSchoolOfManagement) ∧ LessThanTwoCourses(jackie)) ∨ ListedIn(jackie, forbes30Under30)"
+44,"∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) → (PartTime(x) ∨ FullTime(x)))
+∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ FullTime(x) → ¬(LessThanTwoCourses(x)))
+∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ Owns(x, startUp) → LessThanTwoCourses(x))
+∀x (Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ ListedIn(x, forbes30Under30) → Owns(x, startUp))
+(Student(jackie) ∧ At(jackie, yaleSchoolOfManagement) ∧ LessThanTwoCourses(jackie)) ∨ ListedIn(jackie, forbes30Under30)"
+45,"∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement)) → (PartTime(x) ⊕ FullTime(x)))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ FullTime(x)) → ¬(LessThanTwoCourses(x)))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ Owns(x, startUp)) → LessThanTwoCourses(x))
+∀x ((Student(x) ∧ At(x, yaleSchoolOfManagement) ∧ ListedIn(x, forbes30Under30)) → Owns(x, startUp))
+(Student(jackie) ∧ At(jackie, yaleSchoolOfManagement) ∧ LessThanTwoCourses(jackie)) ⊕ ListedIn(jackie, forbes30Under30)"
+46,"∃x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) ∧ ¬ExerciseEveryDay(x))
+∀x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) → EnrolledAt(x, yaleUniversity))
+∀x (StudentAthlete(x) ∧ EnrolledAt(x, yaleUniversity) → GpaAbove(x, 1.0))
+∀x (StudentAthlete(x) ∧ GpaAbove(x, 1.0) → AllowedToTake(x, seminarCourses))
+StudentAthlete(james) ∧ ¬AllowedToTake(james, seminarCourses)"
+47,"∃x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) ∧ ¬ExerciseEveryDay(x))
+∀x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) → EnrolledAt(x, yaleUniversity))
+∀x (StudentAthlete(x) ∧ EnrolledAt(x, yaleUniversity) → GpaAbove(x, 1.0))
+∀x (StudentAthlete(x) ∧ GpaAbove(x, 1.0) → AllowedToTake(x, seminarCourses))
+StudentAthlete(james) ∧ ¬AllowedToTake(james, seminarCourses)"
+48,"∃x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) ∧ ¬ExerciseEveryDay(x))
+∀x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) → EnrolledAt(x, yaleUniversity))
+∀x (StudentAthlete(x) ∧ EnrolledAt(x, yaleUniversity) → GpaAbove(x, 1.0))
+∀x (StudentAthlete(x) ∧ GpaAbove(x, 1.0) → AllowedToTake(x, seminarCourses))
+StudentAthlete(james) ∧ ¬AllowedToTake(james, seminarCourses)"
+49,"∃x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) ∧ ¬ExerciseEveryDay(x))
+∀x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) → EnrolledAt(x, yaleUniversity))
+∀x (StudentAthlete(x) ∧ EnrolledAt(x, yaleUniversity) → GpaAbove(x, 1.0))
+∀x (StudentAthlete(x) ∧ GpaAbove(x, 1.0) → AllowedToTake(x, seminarCourses))
+StudentAthlete(james) ∧ ¬AllowedToTake(james, seminarCourses)"
+50,"∃x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) ∧ ¬ExerciseEveryDay(x))
+∀x (StudentAthlete(x) ∧ Play(x, ""Division 1 football"") ∧ At(x, yale) → EnrolledAt(x, yaleUniversity))
+∀x (StudentAthlete(x) ∧ EnrolledAt(x, yaleUniversity) → GpaAbove(x, 1.0))
+∀x (StudentAthlete(x) ∧ GpaAbove(x, 1.0) → AllowedToTake(x, seminarCourses))
+StudentAthlete(james) ∧ ¬AllowedToTake(james, seminarCourses)"
+51,"FootballClub(northwichVictoriaFC) ∧ PlaysAt(northwichVictoriaFC, winchamPark)
+MemberOf(simonHackney, northwichVictoriaFC)
+PartOf(northwichVictoriaFC, northernPremierLeague)
+∀x∀y ((MemberOf(x, y) ∧ PartOf(y, z)) → MemberOf(x, z))
+∀x∀y ((MemberOf(x, y) ∧ PlaysAt(y, z)) → PlaysAt(x, z))"
+52,"FootballClub(northwichVictoriaFC) ∧ PlaysAt(northwichVictoriaFC, winchamPark)
+MemberOf(simonHackney, northwichVictoriaFC)
+PartOf(northwichVictoriaFC, northernPremierLeague)
+∀x∀y∀z (MemberOf(x, y) ∧ PartOf(y, z) → MemberOf(x, z))
+∀x∀y∀z (MemberOf(x, y) ∧ PlaysAt(y, z) → PlaysAt(x, z))"
+53,"In(sr287, alabama)
+In(alabama, usa)
+Intersects(us31, sr287)
+Intersects(cr47, sr287)
+∀x∀y∀z (In(x, y) ∧ In(y, z) → In(x, z))"
+54,"In(sr287, alabama)
+In(alabama, usa)
+Intersects(us31, sr287)
+Intersects(cr47, sr287)
+∀x∀y∀z (In(x, y) ∧ In(y, z) → In(x, z))"
+55,"In(sr287, alabama)
+In(alabama, unitedStates)
+Intersects(us31, sr287)
+Intersects(cr47, sr287)
+∀x∀y∀z (In(x, y) ∧ In(y, z) → In(x, z))"
+56,"∀x (OnCrewTeam(x) ∧ Sits(x, boat) ∧ Facing(x, stern) → CanPropel(x, boat, forward))
+∀x (OnCrewTeam(x) ∧ Rows(x) → Sits(x, boat) ∧ Facing(x, stern))
+∀x (OnCrewTeam(x) → Rows(x) ⊕ Steers(x, boat))
+∀x (OnCrewTeam(x) ∧ Steers(x, boat) → InCommand(x, boat))
+∀x (OnCrewTeam(x) ∧ Steers(x, boat) → Coaches(x, crew) ∧ ¬Present(coach))
+OnCrewTeam(andres)
+(Rows(andres) ∨ Sits(andres, boat) ∧ Facing(andres, stern)) → ¬CanPropel(andres, boat, forward) ∧ Sits(andres, boat) ∧ Facing(andres, stern)"
+57,"∀x (OnCrewTeam(x) ∧ Sit(x, boat) ∧ Facing(x, stern) → Propel(x, boat, forward))
+∀x (OnCrewTeam(x) ∧ Row(x) → Sit(x, boat) ∧ Facing(x, stern))
+∀x (OnCrewTeam(x) → Row(x) ⊕ Steer(x, boat))
+∀x (OnCrewTeam(x) ∧ Steer(x, boat) → InCommand(x, boat))
+∀x (OnCrewTeam(x) ∧ Steer(x, boat) → Coach(x, crew) ∧ ¬Present(coach))
+OnCrewTeam(andres)
+(Row(andres) ∨ Sit(andres, boat) ∧ Facing(andres, stern)) → ¬Propel(andres, boat, forward) ∧ Sit(andres, boat) ∧ Facing(andres, stern)"
+58,"∀x (OnCrewTeam(x) ∧ Sit(x, boat) ∧ Facing(x, stern) → CanPropel(x, boat, forward))
+∀x (OnCrewTeam(x) ∧ Row(x) → Sit(x, boat) ∧ Facing(x, stern))
+∀x (OnCrewTeam(x) → Row(x) ⊕ Steer(x, boat))
+∀x (OnCrewTeam(x) ∧ Steer(x, boat) → InCommand(x, boat))
+∀x (OnCrewTeam(x) ∧ Steer(x, boat) → Coach(x, crew) ↔ ¬Present(coach))
+OnCrewTeam(andres)
+(Row(andres) ∨ Sit(andres, boat) ∧ Facing(andres, stern)) → ¬CanPropel(andres, boat, forward) ∧ Sit(andres, boat) ∧ Facing(andres, stern)"
+59,"∀x (In(x, percussionSection) → (Idiophone(x) ⊕ Membranophone(x)))
+∀x (Idiophone(x) ∧ In(x, percussionSection) → Vibrates(x, primaryBody))
+∀x (Membranophone(x) ∧ In(x, percussionSection) → Vibrates(x, stretchedMembrane))
+∀x (Vibrates(x, primaryBody) ∧ In(x, percussionSection) → TunesBy(x, sanding))
+∀x (Vibrates(x, stretchedMembrane) ∧ In(x, percussionSection) → TunesBy(x, tightening))
+∀x (Timpani(x) ∧ In(x, percussionSection) → TunesBy(x, tightening))
+∀x (Xylophone(x) ∧ In(x, percussionSection) → ¬TunesBy(x, tightening))
+In(snareDrum, percussionSection) ∧ (Timpani(snareDrum) ∧ TunesBy(snareDrum, sanding)) ⊕ ¬(Timpani(snareDrum) ∨ TunesBy(snareDrum, sanding))"
+60,"∀x (In(x, percussionSection) → (Idiophone(x) ⊕ Membranophone(x)))
+∀x (Idiophone(x) ∧ In(x, percussionSection) → Vibrates(x, primaryBody))
+∀x (Membranophone(x) ∧ In(x, percussionSection) → Vibrates(x, stretchedMembrane))
+∀x (Vibrates(x, primaryBody) ∧ In(x, percussionSection) → Tunes(x, sanding))
+∀x (Vibrates(x, stretchedMembrane) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Timpani(x) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Xylophone(x) ∧ In(x, percussionSection) → ¬Tunes(x, tightening))
+(In(snareDrum, percussionSection) ∧ (Timpani(snareDrum) ∧ Tunes(snareDrum, sanding)) ⊕ ¬(Timpani(snareDrum) ∨ Tunes(snareDrum, sanding)))"
+61,"∀x (In(x, percussionSection) → (Idiophone(x) ⊕ Membranophone(x)))
+∀x (Idiophone(x) ∧ In(x, percussionSection) → Vibrates(x, primaryBody))
+∀x (Membranophone(x) ∧ In(x, percussionSection) → Vibrates(x, stretchedMembrane))
+∀x (Vibrates(x, primaryBody) ∧ In(x, percussionSection) → Tunes(x, sanding))
+∀x (Vibrates(x, stretchedMembrane) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Timpani(x) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Xylophone(x) ∧ In(x, percussionSection) → ¬Tunes(x, tightening))
+(In(snareDrum, percussionSection) ∧ (Timpani(snareDrum) ∧ Tunes(snareDrum, sanding)) ⊕ ¬(Timpani(snareDrum) ∨ Tunes(snareDrum, sanding)))"
+62,"∀x (In(x, percussionSection) → (Idiophone(x) ⊕ Membranophone(x)))
+∀x (Idiophone(x) ∧ In(x, percussionSection) → Vibrates(x, primaryBody))
+∀x (Membranophone(x) ∧ In(x, percussionSection) → Vibrates(x, stretchedMembrane))
+∀x (Vibrates(x, primaryBody) ∧ In(x, percussionSection) → Tunes(x, sanding))
+∀x (Vibrates(x, stretchedMembrane) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Timpani(x) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Xylophone(x) ∧ In(x, percussionSection) → ¬Tunes(x, tightening))
+(In(snareDrum, percussionSection) ∧ (Timpani(snareDrum) ∧ Tunes(snareDrum, sanding)) ⊕ ¬(Timpani(snareDrum) ∨ Tunes(snareDrum, sanding)))"
+63,"∀x (In(x, percussionSection) → (Idiophone(x) ⊕ Membranophone(x)))
+∀x (Idiophone(x) ∧ In(x, percussionSection) → Vibrates(x, primaryBody))
+∀x (Membranophone(x) ∧ In(x, percussionSection) → Vibrates(x, stretchedMembrane))
+∀x (Vibrates(x, primaryBody) ∧ In(x, percussionSection) → Tunes(x, sanding))
+∀x (Vibrates(x, stretchedMembrane) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Timpani(x) ∧ In(x, percussionSection) → Tunes(x, tightening))
+∀x (Xylophone(x) ∧ In(x, percussionSection) → ¬Tunes(x, tightening))
+(In(snareDrum, percussionSection) ∧ (Timpani(snareDrum) ∧ Tunes(snareDrum, sanding)) ⊕ ¬(Timpani(snareDrum) ∨ Tunes(snareDrum, sanding)))"
+64,"∀x (On(x, maryTable) ∧ Unpeeled(x) ∧ Fruit(x) → NeedToWash(x))
+∃x (On(x, maryTable) ∧ Unripened(x) ∧ Fruit(x))
+∀x (On(x, maryTable) ∧ Fruit(x) → (Unpeeled(x) ∨ ServedInABowl(x)))
+On(banana, maryTable)
+Sliced(banana) ⊕ Unpeeled(banana)
+¬(Sliced(banana) ∧ Unripened(banana)) → (¬Sliced(banana) ∧ ¬NeedToWash(banana))"
+65,"∀x (On(x, maryTable) ∧ Unpeeled(x) ∧ Fruit(x) → NeedToWash(x))
+∃x (On(x, maryTable) ∧ Unripened(x) ∧ Fruit(x))
+∀x (On(x, maryTable) ∧ Fruit(x) → (Unpeeled(x) ∨ ServedInABowl(x)))
+On(banana, maryTable)
+(Sliced(banana) ⊕ Unpeeled(banana))
+¬(Sliced(banana) ∧ Unripened(banana)) → (¬Sliced(banana) ∧ ¬NeedToWash(banana))"
+66,"∀x (On(x, maryTable) ∧ Unpeeled(x) ∧ Fruit(x) → NeedToWash(x))
+∃x (On(x, maryTable) ∧ Unripened(x) ∧ Fruit(x))
+∀x (On(x, maryTable) ∧ Fruit(x) → (Unpeeled(x) ∨ ServedInABowl(x)))
+On(banana, maryTable)
+Sliced(banana) ⊕ Unpeeled(banana)
+¬(Sliced(banana) ∧ Unripened(banana)) → (¬Sliced(banana) ∧ ¬NeedToWash(banana))"
+67,"∀x (Fortification(x) → (MilitaryConstruction(x) ∧ DesignedTo(x, defendTerritoriesInWarfare)))
+Fortification(borjMasouda) ∧ OneOf(borjMasouda, fourMainFortificationsOf(medinaOfSfax))
+In(medinaOfSfax, tunisia)
+∀x (DefensiveWall(x) → Fortification(x))"
+68,"∀x (Fortification(x) → (MilitaryConstruction(x) ∧ DesignedTo(x, defendTerritoriesInWarfare)))
+Fortification(borjMasouda) ∧ OneOf(borjMasouda, fourMainFortificationsOf(medinaOfSfax))
+In(medinaOfSfax, tunisia)
+∀x (DefensiveWall(x) → Fortification(x))"
+69,"∀x (Fortification(x) → (MilitaryConstruction(x) ∧ DesignedTo(x, DefendTerritoriesInWarfare)))
+Fortification(borjMasouda) ∧ OneOf(borjMasouda, FourMainFortificationsOf(medinaOfSfax))
+In(medinaOfSfax, tunisia)
+∀x (DefensiveWall(x) → Fortification(x))"
+70,"∀x (Fortification(x) → (MilitaryConstruction(x) ∧ DesignedTo(x, DefendTerritoriesInWarfare)))
+Fortification(borjMasouda) ∧ OneOf(borjMasouda, FourMainFortificationsOf(medinaOfSfax))
+In(medinaOfSfax, tunisia)
+∀x (DefensiveWall(x) → Fortification(x))"
+71,"Australian(virginiaLee) ∧ Rower(virginiaLee)
+CompetedIn(virginiaLee, sweepOaredEvents) ∧ CompetedIn(virginiaLee, scullingEvents)
+HomeCity(virginiaLee, sydney)
+RepresentedBy(virginiaLee, newSouthWales)"
+72,"Australian(virginiaLee) ∧ Rower(virginiaLee)
+CompetedIn(virginiaLee, sweepOaredEvents) ∧ CompetedIn(virginiaLee, scullingEvents)
+HomeCity(virginiaLee, sydney)
+RepresentedBy(virginiaLee, newSouthWales)"
+73,"Australian(virginiaLee) ∧ Rower(virginiaLee)
+CompetedIn(virginiaLee, sweepOaredEvents) ∧ CompetedIn(virginiaLee, scullingEvents)
+HomeCity(virginiaLee, sydney)
+RepresentedBy(virginiaLee, newSouthWales)"
+74,"∀x (In(x, neighborhood) ∧ ShopAt(x, wholeFoods) → ¬ShopAt(x, stopAndShop))
+∀x (In(x, neighborhood) ∧ TryingTo(x, startNewDiet) → ShopAt(x, wholeFoods))
+∀x (In(x, neighborhood) ∧ ConstantlyHave(x, packedSchedule) ∧ LiveCloseTo(x, stopAndShopLocation) → ShopAt(x, stopAndShop))
+∀x (In(x, neighborhood) ∧ Have(x, atLeastOneChild) ∧ LiveIn(x, smallTown) → ConstantlyHave(x, packedSchedule) ∧ LiveCloseTo(x, stopAndShopLocation))
+∀x (In(x, neighborhood) ∧ GrewUpAs(x, onlyChild) ∧ Had(x, closeKnitFamily) → Have(x, atLeastOneChild) ∧ LiveIn(x, smallTown))
+In(susan, neighborhood) ∧ (ConstantlyHave(susan, packedSchedule) ∧ LiveCloseTo(susan, stopAndShopLocation)) → (ConstantlyHave(susan, packedSchedule) ∧ LiveCloseTo(susan, stopAndShopLocation) ∧ TryingTo(susan, startNewDiet))"
+75,"∀x (InNeighborhood(x) ∧ ShopAt(x, wholeFoods) ∧ Regularly(x)) → ¬(ShopAt(x, stopAndShop) ∧ Regularly(x))
+∀x (InNeighborhood(x) ∧ TryingToStart(x, newDiets)) → (ShopAt(x, wholeFoods) ∧ Regularly(x))
+∀x (InNeighborhood(x) ∧ ConstantlyHave(x, packedSchedules) ∧ LiveCloseTo(x, stopAndShopLocation)) → ShopAt(x, stopAndShop) ∧ Regularly(x)
+∀x (InNeighborhood(x) ∧ Have(x, atLeastOneChild) ∧ LiveIn(x, smallTowns)) → (ConstantlyHave(x, packedSchedules) ∧ LiveCloseTo(x, stopAndShopLocation))
+∀x (InNeighborhood(x) ∧ GrewUpAs(x, onlyChild) ∧ Had(x, closeKnitFamily)) → (Have(x, atLeastOneChild) ∧ LiveIn(x, smallTowns))
+InNeighborhood(susan) ∧ (ConstantlyHave(susan, packedSchedules) ∧ LiveCloseTo(susan, stopAndShopLocation)) → (ConstantlyHave(susan, packedSchedules) ∧ LiveCloseTo(susan, stopAndShopLocation) ∧ TryingToStart(susan, newDiets))"
+76,"∀x (In(x, neighborhood) ∧ ShopAt(x, wholeFoods) → ¬ShopAt(x, stopAndShop))
+∀x (In(x, neighborhood) ∧ TryingTo(x, startNewDiet) → ShopAt(x, wholeFoods))
+∀x (In(x, neighborhood) ∧ ConstantlyHave(x, packedSchedule) ∧ LiveCloseTo(x, stopAndShopLocation) → ShopAt(x, stopAndShop))
+∀x (In(x, neighborhood) ∧ Have(x, atLeastOneChild) ∧ LiveIn(x, smallTown) → ConstantlyHave(x, packedSchedule) ∧ LiveCloseTo(x, stopAndShopLocation))
+∀x (In(x, neighborhood) ∧ GrewUpAs(x, onlyChild) ∧ Had(x, closeKnitFamily) → Have(x, atLeastOneChild) ∧ LiveIn(x, smallTown))
+In(susan, neighborhood) ∧ (ConstantlyHave(susan, packedSchedule) ∧ LiveCloseTo(susan, stopAndShopLocation)) → (ConstantlyHave(susan, packedSchedule) ∧ LiveCloseTo(susan, stopAndShopLocation) ∧ TryingTo(susan, startNewDiet))"
+77,"∀x (Vegan(x) ∨ Vegetarian(x) → ¬(Eat(x, meat) ∨ Eat(x, fish)))
+∀x (Vegan(x) → ∀y (Product(y) ∧ From(y, animal) → ¬Eat(x, y)))
+∃x (Vegetarian(x) ∧ Eat(x, egg))
+∃x (Product(x) ∧ From(x, animal) ∧ (x = egg ∨ x = milk ∨ x = honey))
+∃x (Person(x) ∧ Vegan(x) ∧ GoodFor(x, health))"
+78,"∀x (Vegan(x) ∨ Vegetarian(x) → ¬(Eat(x, meat) ∨ Eat(x, fish)))
+∀x (Vegan(x) → ∀y (Product(y) ∧ From(y, animal) → ¬Eat(x, y)))
+∃x (Vegetarian(x) ∧ Eat(x, egg))
+∃x (Product(x) ∧ From(x, animal) ∧ (x = egg ∨ x = milk ∨ x = honey))
+∃x (Person(x) ∧ Vegan(x) ∧ GoodFor(x, health))"
+79,"∀x (Vegan(x) ∨ Vegetarian(x) → ¬(Eat(x, meat) ∨ Eat(x, fish)))
+∀x (Vegan(x) → ∀y (Product(y) ∧ From(y, animal) → ¬Eat(x, y)))
+∃x (Vegetarian(x) ∧ Eat(x, egg))
+∃x (Product(x) ∧ From(x, animal) ∧ (x = egg ∨ x = milk ∨ x = honey))
+∃x (Person(x) ∧ Vegan(x) ∧ GoodFor(x, health))"
+80,"∀x (PublishedIn(x, thisLab) → ¬WithoutAbstract(x))
+∀x (PublishedIn(x, thisLab) → (ScienceJournal(x) ∨ CellPressJournal(x)))
+∀x (PublishedIn(x, thisLab) ∧ ScienceJournal(x) → ProminentPublication(x))
+∀x (PublishedIn(x, thisLab) ∧ ScienceJournal(x) → RequirePeerReview(x))
+∀x (PublishedIn(x, thisLab) ∧ ProminentPublication(x) → ¬EasilyAccepted(x))
+(ScienceJournal(""Provision of High Meat Content Food and Object Play Reduce Predation of Wild Animals by Domestic Cats Felis catus"") ∨ CellPressJournal(""Provision of High Meat Content Food and Object Play Reduce Predation of Wild Animals by Domestic Cats Felis catus""))"
+81,"∀x (PublishedIn(x, thisLab) → ¬WithoutAbstract(x))
+∀x (PublishedIn(x, thisLab) → (ScienceJournal(x) ∨ CellPressJournal(x)))
+∀x (PublishedIn(x, thisLab) ∧ ScienceJournal(x) → ProminentPublication(x))
+∀x (PublishedIn(x, thisLab) ∧ ScienceJournal(x) → RequirePeerReview(x))
+∀x (PublishedIn(x, thisLab) ∧ ProminentPublication(x) → ¬EasilyAccepted(x))
+(ScienceJournal(""Provision of High Meat Content Food and Object Play Reduce Predation of Wild Animals by Domestic Cats Felis catus"") ∨ CellPressJournal(""Provision of High Meat Content Food and Object Play Reduce Predation of Wild Animals by Domestic Cats Felis catus""))"
+82,"∀x (PublishedIn(x, thisLab) → ¬WithoutAbstract(x))
+∀x (PublishedIn(x, thisLab) → (ScienceJournal(x) ∨ CellPressJournal(x)))
+∀x (PublishedIn(x, thisLab) ∧ ScienceJournal(x) → ProminentPublication(x))
+∀x (PublishedIn(x, thisLab) ∧ ScienceJournal(x) → RequirePeerReview(x))
+∀x (PublishedIn(x, thisLab) ∧ ProminentPublication(x) → ¬EasilyAccepted(x))
+(ScienceJournal(""Provision of High Meat Content Food and Object Play Reduce Predation of Wild Animals by Domestic Cats Felis catus"") ∨ CellPressJournal(""Provision of High Meat Content Food and Object Play Reduce Predation of Wild Animals by Domestic Cats Felis catus""))"
+83,"∀x (AvailableIn(x, canada) → ReleasedIn(x, northAmerica))
+∀x (CanBuy(x, japan) → ReleasedIn(x, japan))
+∃x (Game(x) ∧ ReleasedIn(x, japan) ∧ For(x, wii))
+Game(familyPirateParty) ∧ AvailableIn(familyPirateParty, canada) ∧ CanBuy(familyPirateParty, japan)"
+84,"∀x (AvailableIn(x, canada) → ReleasedIn(x, northAmerica))
+∀x (CanBuy(x, japan) → ReleasedIn(x, japan))
+∃x (Game(x) ∧ ReleasedIn(x, japan) ∧ For(x, wii))
+Game(familyPirateParty) ∧ AvailableIn(familyPirateParty, canada) ∧ CanBuy(familyPirateParty, japan)"
+85,"∀x (AvailableIn(x, canada) → ReleasedIn(x, northAmerica))
+∀x (CanBuy(x, japan) → ReleasedIn(x, japan))
+∃x (Game(x) ∧ ReleasedIn(x, japan) ∧ For(x, wii))
+Game(familyPirateParty) ∧ AvailableIn(familyPirateParty, canada) ∧ CanBuy(familyPirateParty, japan)"
+86,"∀x (AvailableIn(x, canada) → ReleasedIn(x, northAmerica))
+∀x (CanBuy(x, japan) → ReleasedIn(x, japan))
+∃x (Game(x) ∧ ReleasedIn(x, japan) ∧ For(x, wii))
+Game(familyPirateParty) ∧ AvailableIn(familyPirateParty, canada) ∧ CanBuy(familyPirateParty, japan)"
+87,"∀x (IELTSExam(x) → (Partof(x, reading) ∧ Partof(x, listening) ∧ Partof(x, writing) ∧ Partof(x, speaking)))
+∀x (IELTSExam(x) → (TakenOn(x, paper) ∨ TakenOn(x, computer)))
+∀x (SpeakingPart(x) → FaceToFaceInterview(x))
+∀x (TakenOn(x, computer) → (Partof(x, reading) ∧ Partof(x, listening) ∧ Partof(x, writing) ∧ Using(x, computer)))
+∀x (IELTSExam(x) → (Partof(x, reading) ∧ Partof(x, listening) ∧ Partof(x, writing) ∧ On(x, paper)))
+∀x (FaceToFaceInterview(x) → ¬(Using(x, computer) ∨ Using(x, paper)))"
+88,"∀x (IELTSexam(x) → (Partof(x, reading) ∧ Partof(x, listening) ∧ Partof(x, writing) ∧ Partof(x, speaking)))
+∀x (IELTSexam(x) → (TakenOn(x, paper) ∨ TakenOn(x, computer)))
+∀x (SpeakingPart(x) → FaceToFaceInterview(x))
+∀x (TakenOn(x, computer) → (ReadingPart(x) ∧ ListeningPart(x) ∧ WritingPart(x) ∧ Using(x, computer)))
+∀x (IELTSexam(x) → (ReadingPart(x) ∧ ListeningPart(x) ∧ WritingPart(x) ∧ On(x, paper)))
+∀x (FaceToFaceInterview(x) → ¬(Using(x, computer) ∨ Using(x, paper)))"
+89,"∀x (IELTSExam(x) → (Part(x, reading) ∧ Part(x, listening) ∧ Part(x, writing) ∧ Part(x, speaking)))
+∀x (IELTSExam(x) → (TakenOn(x, paper) ∨ TakenOn(x, computer)))
+∀x (SpeakingPart(x) → FaceToFaceInterview(x))
+∀x (TakenOn(x, computer) → (ReadingPart(x) ∧ ListeningPart(x) ∧ WritingPart(x)) ∧ Using(x, computer))
+∀x (IELTSExam(x) → (ReadingPart(x) ∧ ListeningPart(x) ∧ WritingPart(x)) ∧ Using(x, paper))
+∀x (FaceToFaceInterview(x) → ¬(Using(x, computer) ∨ Using(x, paper)))"
+90,"∀x (In(x, cellphoneCity) → (AndroidUser(x) ⊕ AppleUser(x)))
+∀x (AndroidUser(x) ∧ In(x, cellphoneCity) → ¬Use(x, appleEcosystem))
+∀x (In(x, cellphoneCity) → (Use(x, appleEcosystem) ⊕ ¬Use(x, manyAppleProducts)))
+¬Use(x, manyAppleProducts) → Care(x, extremeCustomization)
+In(chen, cellphoneCity) → (AppleUser(chen) ⊕ Care(chen, extremeCustomization))"
+91,"∀x (In(x, cellphoneCity) → (AndroidUser(x) ⊕ AppleUser(x)))
+∀x (AndroidUser(x) ∧ In(x, cellphoneCity) → ¬Use(x, appleEcosystem))
+∀x (In(x, cellphoneCity) → (Use(x, appleEcosystem) ⊕ ¬Use(x, manyAppleProducts)))
+¬Use(x, manyAppleProducts) → Care(x, extremeCustomization)
+In(chen, cellphoneCity) → (AppleUser(chen) ⊕ Care(chen, extremeCustomization))"
+92,"∀x (In(x, cellphoneCity) → (AndroidUser(x) ⊕ AppleUser(x)))
+∀x (AndroidUser(x) ∧ In(x, cellphoneCity) → ¬Use(x, appleEcosystem))
+∀x (In(x, cellphoneCity) → (Use(x, appleEcosystem) ⊕ ¬Use(x, manyAppleProducts)))
+¬Use(x, manyAppleProducts) → Care(x, extremeCustomization)
+In(chen, cellphoneCity) → (AppleUser(chen) ⊕ Care(chen, extremeCustomization))"
+93,"∀x (In(x, cellphoneCity) → (AndroidUser(x) ⊕ AppleUser(x)))
+∀x (AndroidUser(x) ∧ In(x, cellphoneCity) → ¬Use(x, appleEcosystem))
+∀x (In(x, cellphoneCity) → (Use(x, appleEcosystem) ⊕ ¬Use(x, manyAppleProducts)))
+¬Use(x, manyAppleProducts) → Care(x, extremeCustomization)
+In(chen, cellphoneCity) → (AppleUser(chen) ⊕ Care(chen, extremeCustomization))"
+94,"∀x (In(x, cellphoneCity) → (AndroidUser(x) ⊕ AppleUser(x)))
+∀x (AndroidUser(x) ∧ In(x, cellphoneCity) → ¬Use(x, appleEcosystem))
+∀x (In(x, cellphoneCity) → (Use(x, appleEcosystem) ⊕ ¬Use(x, manyAppleProducts)))
+¬Use(x, manyAppleProducts) → Care(x, extremeCustomization)
+In(chen, cellphoneCity) → (AppleUser(chen) ⊕ Care(chen, extremeCustomization))"
+95,"∀x (In(x, cellphoneCity) → (AndroidUser(x) ⊕ AppleUser(x)))
+∀x (AndroidUser(x) ∧ In(x, cellphoneCity) → ¬Use(x, appleEcosystem))
+∀x (In(x, cellphoneCity) → (Use(x, appleEcosystem) ⊕ ¬Use(x, manyAppleProducts)))
+¬Use(x, manyAppleProducts) → Care(x, extremeCustomization)
+In(chen, cellphoneCity) → (AppleUser(chen) ⊕ Care(chen, extremeCustomization))"
+96,"∀x (In(x, cellphoneCity) → (AndroidUser(x) ⊕ AppleUser(x)))
+∀x (AndroidUser(x) ∧ In(x, cellphoneCity) → ¬Use(x, appleEcosystem))
+∀x (In(x, cellphoneCity) → (Use(x, appleEcosystem) ⊕ ¬Use(x, manyAppleProducts)))
+¬Use(x, manyAppleProducts) → Care(x, extremeCustomization)
+In(chen, cellphoneCity) → (AppleUser(chen) ⊕ Care(chen, extremeCustomization))"
+97,"∀x (Makes(x, glitch) ∧ Makes(x, minimalTechno) ∧ Makes(x, microhouse) → ElectronicMusician(x))
+∀x (Makes(x, glitch) ∨ Makes(x, minimalTechno) ∨ Makes(x, microhouse) → ElectronicMusician(x))
+∀x (Publishes(x, faitiche) → SignedMusician(x))"
+98,"Makes(janJelinek, glitchTechnoMusic) ∧ Makes(janJelinek, minimalTechnoMusic)
+∀x (Makes(x, glitchTechnoMusic) ∨ Makes(x, minimalTechnoMusic) ∨ Makes(x, microhouseMusic) → ElectronicMusician(x))
+Publishes(janJelinek, throughFaiticheLabel)
+∀x (Musician(x) ∧ Releases(x, throughLabel) → SignedMusician(x))"
+99,"∀x (Makes(x, glitch) ∧ Makes(x, minimalTechno) ∧ Makes(x, microhouse) → ElectronicMusician(x))
+∀x (Makes(x, glitch) ∨ Makes(x, minimalTechno) ∨ Makes(x, microhouse) → ElectronicMusician(x))
+∀x (Publishes(x, faitiche) → SignedMusician(x))"
+100,"∀x (PanEthnicGroup(x) ∧ NewZealander(x) → PasifikaNewZealander(x))
+∀x (PanEthnicGroup(x) ∧ NewZealander(x) → AsianNewZealander(x))
+¬(∀x (PasifikaNewZealander(x) → AsianNewZealander(x)))
+∀x (PasifikaNewZealander(x) → Speak(x, samoan))
+PasifikaNewZealander(joe)
+Speak(amy, samoan)"
+101,"∀x (PanEthnicGroup(x) ∧ NewZealander(x) → PasifikaNewZealander(x))
+∀x (PanEthnicGroup(x) ∧ NewZealander(x) → AsianNewZealander(x))
+¬(PasifikaNewZealander(pasifikaNewZealanders) ∧ AsianNewZealander(asianNewZealanders))
+∀x (PasifikaNewZealander(x) → Speak(x, samoan))
+PasifikaNewZealander(joe)
+Speak(amy, samoan)"
+102,"∀x (PanEthnicGroup(x) ∧ NewZealander(x))
+∀x (PanEthnicGroup(x) ∧ NewZealander(x))
+¬(∀x (PanEthnicGroup(x) ∧ NewZealander(x) ∧ PasifikaNewZealander(x) → AsianNewZealander(x)))
+∀x (PasifikaNewZealander(x) → Speak(x, samoan))
+PasifikaNewZealander(joe)
+Speak(amy, samoan)"
+103,"∀x (PanEthnicGroup(x) ∧ NewZealander(x))
+∀x (PanEthnicGroup(x) ∧ NewZealander(x))
+¬(∀x (PanEthnicGroup(x) ∧ NewZealander(x) ∧ PasifikaNewZealander(x) → AsianNewZealander(x)))
+∀x (PasifikaNewZealander(x) → Speak(x, samoan))
+PasifikaNewZealander(joe)
+Speak(amy, samoan)"
+104,"∀x (Snake(x) → Reptile(x))
+∀x (Reptile(x) → ¬Has(x, feather))"
+105,"∃x (Person(x) ∧ Eat(x, proteinBar) ∧ AtLeastTwiceADay(x))
+∀x (Person(x) ∧ Prefer(x, running) ⊕ Prefer(x, weightlifting))
+∀x (Prefer(x, running) → FocusOn(x, endurance))
+∀x (FocusOn(x, buildingMuscle) → ¬Inactive(x))
+∀x (Prefer(x, weightlifting) → FocusOn(x, buildingMuscle))
+¬(FocusOn(lily, buildingMuscle) ∨ Active(lily))"
+106,"∃x (Person(x) ∧ Eat(x, proteinBar) ∧ AtLeastTwiceADay(x))
+∀x (Person(x) ∧ Prefer(x, running) ⊕ Prefer(x, weightlifting))
+∀x (Prefer(x, running) → FocusOn(x, endurance))
+∀x (FocusOn(x, buildingMuscle) → ¬Inactive(x))
+∀x (Prefer(x, weightlifting) → FocusOn(x, buildingMuscle))
+¬(FocusOn(lily, buildingMuscle) ∨ Active(lily))"
+107,"∃x (Person(x) ∧ Eat(x, proteinBar) ∧ AtLeastTwiceADay(x))
+∀x (Person(x) ∧ Prefer(x, running) ⊕ Prefer(x, weightlifting))
+∀x (Prefer(x, running) → FocusOn(x, endurance))
+∀x (FocusOn(x, buildingMuscle) → ¬Inactive(x))
+∀x (Prefer(x, weightlifting) → FocusOn(x, buildingMuscle))
+¬(FocusOn(lily, buildingMuscle) ∨ Active(lily))"
+108,"∀x (Animal(x) → CanBreathe(x))
+∀x (Rock(x) → ¬CanBreathe(x))
+∀x (Mammal(x) → Animal(x))
+∀x (Dog(x) → Mammal(x))
+∀x (Corgi(x) → Dog(x))
+Animal(bobby) ⊕ Corgi(bobby)"
+109,"∀x (Animal(x) → CanBreathe(x))
+∀x (Rock(x) → ¬CanBreathe(x))
+∀x (Mammal(x) → Animal(x))
+∀x (Dog(x) → Mammal(x))
+∀x (Corgi(x) → Dog(x))
+Animal(bobby) ⊕ Corgi(bobby)"
+110,"∀x (Animal(x) → CanBreathe(x))
+∀x (Rock(x) → ¬CanBreathe(x))
+∀x (Mammal(x) → Animal(x))
+∀x (Dog(x) → Mammal(x))
+∀x (Corgi(x) → Dog(x))
+Animal(bobby) ⊕ Corgi(bobby)"
+111,"∀x ((CanRunFar(x) ∧ CanNavigateUsingAMap(x)) → CanParticipateInOrienteering(x))
+∀x (Fit(x) → CanRunFar(x))
+∀x (HaveAGoodSenseOfDirection(x) → CanUseAMap(x))
+∀x (MilitaryOfficer(x) → Fit(x))
+MilitaryOfficer(hailee) ∧ HaveAGoodSenseOfDirection(hailee)
+¬MilitaryOfficer(karl) ∧ CanUseAMap(karl)"
+112,"∀x ((CanRunFar(x) ∧ CanNavigateUsingAMap(x)) → CanParticipateInOrienteering(x))
+∀x (Fit(x) → CanRunFar(x))
+∀x (HaveAGoodSenseOfDirection(x) → CanUseAMap(x))
+∀x (MilitaryOfficer(x) → Fit(x))
+MilitaryOfficer(hailee) ∧ HaveAGoodSenseOfDirection(hailee)
+¬MilitaryOfficer(karl) ∧ CanUseAMap(karl)"
+113,"∃x (Animal(x) ∧ In(x, nationalPark) ∧ OriginatedFrom(x, northAmerica))
+∀x (EndangeredAnimal(x) → ProtectedBy(x, theEndangeredSpeciesActOf1973))
+∀x (ProtectedBy(x, theEndangeredSpeciesActOf1973) → ¬AllowedToBeHuntedBy(x, human, forProfit))
+CanBeSoldIn(x, publicMarketplace) → ¬AllowedToBeHuntedBy(x, human, forProfit)
+EndangeredAnimal(baldEagle) ⊕ ¬AllowedToBeHuntedBy(baldEagle, human, forProfit)"
+114,"∃x (Animal(x) ∧ In(x, nationalPark) ∧ OriginatedFrom(x, northAmerica))
+∀x (EndangeredAnimal(x) → ProtectedBy(x, theEndangeredSpeciesActOf1973))
+∀x (ProtectedBy(x, theEndangeredSpeciesActOf1973) → ¬AllowedToBeHuntedBy(x, human, forProfit))
+CanBeSoldIn(x, publicMarketplace) → ¬AllowedToBeHuntedBy(x, human, forProfit)
+EndangeredAnimal(baldEagle) ∨ ¬AllowedToBeHuntedBy(baldEagle, human, forProfit)"
+115,"∃x (Animal(x) ∧ In(x, nationalPark) ∧ OriginatedFrom(x, northAmerica))
+∀x (EndangeredAnimal(x) → ProtectedBy(x, theEndangeredSpeciesActOf1973))
+∀x (ProtectedBy(x, theEndangeredSpeciesActOf1973) → ¬AllowedToBeHuntedBy(x, human, forProfit))
+CanBeSoldIn(x, publicMarketplace) → ¬AllowedToBeHuntedBy(x, human, forProfit)
+EndangeredAnimal(baldEagle) ⊕ ¬AllowedToBeHuntedBy(baldEagle, human, forProfit)"
+116,"∃x (Animal(x) ∧ In(x, nationalPark) ∧ OriginatedFrom(x, northAmerica))
+∀x (EndangeredAnimal(x) → ProtectedBy(x, theEndangeredSpeciesActOf1973))
+∀x (ProtectedBy(x, theEndangeredSpeciesActOf1973) → ¬AllowedToBeHuntedBy(x, human, forProfit))
+CanBeSoldIn(x, publicMarketplace) → ¬AllowedToBeHuntedBy(x, human, forProfit)
+EndangeredAnimal(baldEagle) ⊕ ¬AllowedToBeHuntedBy(baldEagle, human, forProfit)"
+117,"TelevisionChannel(etb2) ∧ From(etb2, euskalIrratiTelebista)
+LocatedIn(etb2, basqueAutonomousCommunity) ∧ LocatedIn(etb2, navarre) ∧ LocatedIn(etb2, frenchBasqueCountry)
+BroadcastsIn(etb2, spanish)
+∀x (TelevisionChannel(x) ∧ HasReceptionArea(x) → CanBeAccessedFrom(x, receptionArea(x)))
+HasReceptionArea(etb2) ∧ ReceptionArea(etb2) ≡ basqueCountry
+∀x (BasqueCountry(x) → (IncludedIn(x, basqueAutonomousCommunity) ∨ IncludedIn(x, navarre) ∨ IncludedIn(x, frenchBasqueCountry)))"
+118,"TelevisionChannel(etb2) ∧ From(etb2, euskalIrratiTelebista)
+LocatedIn(etb2, basqueAutonomousCommunity) ∧ LocatedIn(etb2, navarre) ∧ LocatedIn(etb2, frenchBasqueCountry)
+BroadcastsIn(etb2, spanish)
+∀x (TelevisionChannel(x) ∧ HasReceptionArea(x) → CanBeAccessedFrom(x, receptionArea(x)))
+HasReceptionArea(etb2) ∧ ReceptionArea(etb2) ≡ basqueCountry
+∀x (BasqueCountry(x) → (Includes(x, basqueAutonomousCommunity) ∨ Includes(x, navarre) ∨ Includes(x, frenchBasqueCountry)))"
+119,"∀x (BornIn(x, napa) ∧ ProfessionalBaseballPlayer(x) → American(x))
+∀x (ProfessionalBaseballPlayer(x) → PlayIn(x, mlb))
+∀x (BornIn(x, california) → American(x))
+∀x (American(x) → ¬German(x))"
+120,"∀x (BornIn(x, napa) ∧ ProfessionalBaseballPlayer(x) → American(x))
+∀x (ProfessionalBaseballPlayer(x) → PlayIn(x, mlb))
+∀x (BornIn(x, california) → American(x))
+∀x (American(x) → ¬German(x))"
+121,"∀x (BornIn(x, napa) ∧ ProfessionalBaseballPlayer(x) → American(x))
+∀x (ProfessionalBaseballPlayer(x) → PlayIn(x, mlb))
+∀x (BornIn(x, california) → American(x))
+∀x (American(x) → ¬German(x))"
+122,"British(andrewWilson) ∧ Historian(andrewWilson) ∧ PoliticalScientist(andrewWilson)
+∀x (In(x, easternEurope) → SpecializesIn(andrewWilson, x))
+In(poland, easternEurope)
+BornIn(andrewWilson, britain)
+¬(In(britain, easternEurope))"
+123,"British(andrewWilson) ∧ Historian(andrewWilson) ∧ PoliticalScientist(andrewWilson)
+∀x (In(x, easternEurope) → SpecializesIn(andrewWilson, x))
+In(poland, easternEurope)
+BornIn(andrewWilson, britain)
+¬(In(britain, easternEurope))"
+124,"British(andrewWilson) ∧ Historian(andrewWilson) ∧ PoliticalScientist(andrewWilson)
+∀x (In(x, easternEurope) → SpecializesIn(andrewWilson, x))
+In(poland, easternEurope)
+BornIn(andrewWilson, britain)
+¬(In(britain, easternEurope))"
+125,"British(andrewWilson) ∧ Historian(andrewWilson) ∧ PoliticalScientist(andrewWilson)
+∀x (In(x, easternEurope) → SpecializesIn(andrewWilson, x))
+In(poland, easternEurope)
+BornIn(andrewWilson, britain)
+¬(In(britain, easternEurope))"
+126,"∀x (Honored(x, ceremony) ∧ Discharged(x) → ¬ActivelyServingInMilitary(x))
+∀x (Honored(x, ceremony) ∧ Veteran(x) → Discharged(x))
+∀x (Honored(x, ceremony) → ActivelyServingInMilitary(x) ∨ ActivelyServingInMarines(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfGroundCombat(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfNavalCombat(x))
+Honored(luca, ceremony) ∧ (Discharged(luca) ∨ Veteran(luca))
+(Discharged(spencer) ∧ Veteran(spencer)) ⊕ ¬(Discharged(spencer) ∨ Veteran(spencer))"
+127,"∀x (Honored(x, ceremony) ∧ Discharged(x) → ¬ActivelyServingInMilitary(x))
+∀x (Honored(x, ceremony) ∧ Veteran(x) → Discharged(x))
+∀x (Honored(x, ceremony) → ActivelyServingInMilitary(x) ∨ ActivelyServingInMarines(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfGroundCombat(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfNavalCombat(x))
+Honored(luca, ceremony) ∧ (Discharged(luca) ∨ Veteran(luca))
+(Discharged(spencer) ∧ Veteran(spencer)) ⊕ ¬(Discharged(spencer) ∨ Veteran(spencer))"
+128,"∀x (Honored(x, ceremony) ∧ Discharged(x) → ¬ActivelyServingInMilitary(x))
+∀x (Honored(x, ceremony) ∧ Veteran(x) → Discharged(x))
+∀x (Honored(x, ceremony) → ActivelyServingInMilitary(x) ∨ ActivelyServingInMarines(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfGroundCombat(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfNavalCombat(x))
+Honored(luca, ceremony) ∧ (Discharged(luca) ∨ Veteran(luca))
+(Discharged(spencer) ∧ Veteran(spencer)) ⊕ ¬(Discharged(spencer) ∨ Veteran(spencer))"
+129,"∀x (Honored(x, ceremony) ∧ Discharged(x) → ¬ActivelyServingInMilitary(x))
+∀x (Honored(x, ceremony) ∧ Veteran(x) → Discharged(x))
+∀x (Honored(x, ceremony) → ActivelyServingInMilitary(x) ∨ ActivelyServingInMarines(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfGroundCombat(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfNavalCombat(x))
+Honored(luca, ceremony) ∧ (Discharged(luca) ∨ Veteran(luca))
+(Discharged(spencer) ∧ Veteran(spencer)) ⊕ ¬(Discharged(spencer) ∨ Veteran(spencer))"
+130,"∀x (Honored(x, ceremony) ∧ Discharged(x) → ¬ActivelyServingInMilitary(x))
+∀x (Honored(x, ceremony) ∧ Veteran(x) → Discharged(x))
+∀x (Honored(x, ceremony) → ActivelyServingInMilitary(x) ∨ ActivelyServingInMarines(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfGroundCombat(x))
+∀x (Honored(x, ceremony) ∧ ActivelyServingInMarines(x) → CapableOfNavalCombat(x))
+Honored(luca, ceremony) ∧ (Discharged(luca) ∨ Veteran(luca))
+(Discharged(spencer) ∧ Veteran(spencer)) ⊕ ¬(Discharged(spencer) ∨ Veteran(spencer))"
+131,"∀x (Student(x) ∧ RegisteredFor(x, conference) → InvitedTo(x, attendConference))
+∀x (AttendInPerson(x) ∧ Student(x) → RegisteredFor(x, conference))
+∀x (Student(x) → AttendInPerson(x) ⊕ AttendRemotely(x))
+∀x (Student(x) ∧ InChina(x) → ¬AttendRemotely(x))
+¬(AttendRemotely(james) ⊕ PresentedAt(james, conference))
+Student(jack) ∧ (InChina(jack) ⊕ RegisteredFor(jack, conference))"
+132,"∀x (Student(x) ∧ RegisteredFor(x, conference) → InvitedTo(x, conference))
+∀x (Student(x) ∧ AttendInPerson(x, conference) → RegisteredFor(x, conference))
+∀x (Student(x) ∧ Attend(x, conference) → AttendInPerson(x, conference) ⊕ AttendRemotely(x, conference))
+∀x (Student(x) ∧ InChina(x) → ¬AttendRemotely(x, conference))
+¬(AttendRemotely(james, conference) ⊕ PresentedAt(james, conference))
+Student(jack) ∧ (InChina(jack) ⊕ RegisteredFor(jack, conference))"
+133,"∀x (Student(x) ∧ RegisteredFor(x, conference) → InvitedTo(x, conference))
+∀x (Student(x) ∧ AttendInPerson(x, conference) → RegisteredFor(x, conference))
+∀x (Student(x) ∧ Attend(x, conference) → AttendInPerson(x, conference) ⊕ AttendRemotely(x, conference))
+∀x (Student(x) ∧ InChina(x) → ¬AttendRemotely(x, conference))
+¬(AttendRemotely(james, conference) ⊕ PresentedAt(james, conference))
+Student(jack) ∧ (InChina(jack) ⊕ RegisteredFor(jack, conference))"
+134,"∀x (Student(x) ∧ RegisteredFor(x, conference) → InvitedTo(x, conference))
+∀x (Student(x) ∧ AttendInPerson(x, conference) → RegisteredFor(x, conference))
+∀x (Student(x) ∧ Attend(x, conference) → AttendInPerson(x, conference) ⊕ AttendRemotely(x, conference))
+∀x (Student(x) ∧ InChina(x) → ¬AttendRemotely(x, conference))
+¬(AttendRemotely(james, conference) ⊕ PresentedAt(james, conference))
+Student(jack) ∧ (InChina(jack) ⊕ RegisteredFor(jack, conference))"
+135,"∀x (Student(x) ∧ RegisteredFor(x, conference) → InvitedTo(x, conference))
+∀x (Student(x) ∧ AttendInPerson(x, conference) → RegisteredFor(x, conference))
+∀x (Student(x) ∧ Attend(x, conference) → AttendInPerson(x, conference) ⊕ AttendRemotely(x, conference))
+∀x (Student(x) ∧ InChina(x) → ¬AttendRemotely(x, conference))
+¬(AttendRemotely(james, conference) ⊕ PresentedAt(james, conference))
+Student(jack) ∧ (InChina(jack) ⊕ RegisteredFor(jack, conference))"
+136,"∀x ((SelectedFor(x, hallOfFame) ∧ In(x, course)) → ¬(LedBy(x, teamWithTwoMembers)))
+∀x ((Unfinished(x, course) ∧ In(x, course)) → LedBy(x, teamWithTwoMembers))
+∀x ((NotPresentedIn(x, finalPresentation) ∧ In(x, course)) → Unfinished(x, course))
+∀x ((NotReceiveFinalGrade(x, course) ∧ In(x, course)) → ¬PresentedIn(x, finalPresentation))
+¬(ReceiveFinalGrade(sustainableEnergySources, course) ∨ SelectedFor(sustainableEnergySources, hallOfFame))"
+137,"∀x ((SelectedFor(x, hallOfFame) ∧ In(x, course)) → ¬(LedBy(x, teamWithTwoMembers)))
+∀x ((Unfinished(x, course) ∧ In(x, course)) → LedBy(x, teamWithTwoMembers))
+∀x ((NotPresentedIn(x, finalPresentation) ∧ In(x, course)) → Unfinished(x, course))
+∀x ((NotReceiveFinalGrade(x, course) ∧ In(x, course)) → ¬PresentedIn(x, finalPresentation))
+¬(ReceiveFinalGrade(sustainableEnergySources, course) ∨ SelectedFor(sustainableEnergySources, hallOfFame))"
+138,"∀x ((SelectedFor(x, hallOfFame) ∧ In(x, course)) → ¬(LedBy(x, teamWithTwoMembers)))
+∀x ((Unfinished(x, course) ∧ In(x, course)) → LedBy(x, teamWithTwoMembers))
+∀x ((NotPresentedIn(x, finalPresentation) ∧ In(x, course)) → Unfinished(x, course))
+∀x ((NotReceiveFinalGrade(x, course) ∧ In(x, course)) → ¬PresentedIn(x, finalPresentation))
+¬(ReceiveFinalGrade(sustainableEnergySources, course) ∨ SelectedFor(sustainableEnergySources, hallOfFame))"
+139,"OnlineMagazine(tangentOnline) ∧ LaunchedOn(tangentOnline, web) ∧ LaunchedIn(tangentOnline, 1997)
+FirstIssue(tangentOnline, issue) ∧ PrintIssue(issue) ∧ LaunchedIn(issue, 1993)
+OnlineMagazine(tangentOnline) ∧ Covers(tangentOnline, reviewsOf(scienceFictionAndFantasyShortFiction))
+OnlineMagazine(tangentOnline) ∧ Provides(tangentOnline, classicInterviews) ∧ Provides(tangentOnline, articles) ∧ Provides(tangentOnline, editorials)"
+140,"OnlineMagazine(tangentOnline) ∧ LaunchedOn(tangentOnline, web) ∧ LaunchedIn(tangentOnline, 1997)
+FirstIssue(tangentOnline, issue) ∧ PrintIssue(issue) ∧ LaunchedIn(issue, 1993)
+OnlineMagazine(tangentOnline) ∧ Covers(tangentOnline, reviewsOf(scienceFictionAndFantasyShortFiction))
+OnlineMagazine(tangentOnline) ∧ Provides(tangentOnline, classicInterviews) ∧ Provides(tangentOnline, articles) ∧ Provides(tangentOnline, editorials)"
+141,"OnlineMagazine(tangentOnline) ∧ LaunchedOn(tangentOnline, web) ∧ LaunchedIn(tangentOnline, 1997)
+FirstIssue(tangentOnline, issue) ∧ PrintIssue(issue) ∧ LaunchedIn(issue, 1993)
+OnlineMagazine(tangentOnline) ∧ Covers(tangentOnline, reviewsOf(scienceFictionAndFantasyShortFiction))
+OnlineMagazine(tangentOnline) ∧ Provides(tangentOnline, classicInterviews) ∧ Provides(tangentOnline, articles) ∧ Provides(tangentOnline, editorials)"
+142,"∀x (AmericanFilm(x) → American(x))
+∀x (AmericanFilm(x) → ProducedIn(x, ohio))
+∃x (AmericanFilm(x) ∧ Dystopian(x))
+∃x (DirectedBy(x, faraj) ∧ DirectedBy(x, cook) ∧ Film(x) ∧ Is(x, ""The Wind is Watching""))
+∀x (DirectedBy(x, faraj) → SmallBudget(x))
+∀x (ProducedIn(x, ohio) ∧ SmallBudget(x) → HardToGetAccessTo(x))"
+143,"∀x (AmericanFilm(x) → American(x))
+∀x (AmericanFilm(x) → ProducedIn(x, ohio))
+∃x (AmericanFilm(x) ∧ Dystopian(x))
+∃x (DirectedBy(x, faraj) ∧ DirectedBy(x, cook) ∧ Film(x) ∧ Is(x, ""The Wind is Watching""))
+∀x (DirectedBy(x, faraj) → HasSmallBudget(x))
+∀x (ProducedIn(x, ohio) ∧ HasSmallBudget(x) → HardToGetAccessToCopies(x))"
+144,"∀x (AmericanFilm(x) → American(x))
+∀x (AmericanFilm(x) → ProducedIn(x, ohio))
+∃x (AmericanFilm(x) ∧ Dystopian(x))
+∃x (DirectedBy(x, faraj) ∧ DirectedBy(x, cook) ∧ Film(x) ∧ Is(x, ""The Wind is Watching""))
+∀x (DirectedBy(x, faraj) → HasSmallBudget(x))
+∀x (ProducedIn(x, ohio) ∧ HasSmallBudget(x) → HardToGetAccessToCopies(x))"
+145,"∀x (Flower(x) → ¬Animal(x))
+∀x (Flower(x) → Plant(x))"
+146,"∀x∀y∀z ((Anagram(x, y) ∧ Anagram(y, z)) → Anagram(x, z))
+Anagram(pots, stop)
+¬(Anagram(pots, sport) ∧ Anagram(pots, spot))
+Anagram(tops, post) ∧ Anagram(spot, opts)
+∀x (Contains(x, s) ∧ Contains(x, p) ∧ Contains(x, o) ∧ Contains(x, t) → Anagram(x, tops))
+Contains(opts, s) ∧ Contains(opts, p) ∧ Contains(opts, o) ∧ Contains(opts, t)
+Contains(sport, s) ∧ Contains(sport, p) ∧ Contains(sport, o) ∧ Contains(sport, t)"
+147,"∀x∀y∀z ((Anagram(x, y) ∧ Anagram(y, z)) → Anagram(x, z))
+Anagram(pots, stop)
+¬(Anagram(pots, sport) ∧ Anagram(pots, spot))
+Anagram(tops, post) ∧ Anagram(spot, opts)
+∀x (Contains(x, s) ∧ Contains(x, p) ∧ Contains(x, o) ∧ Contains(x, t) → Anagram(x, tops))
+Contains(opts, s) ∧ Contains(opts, p) ∧ Contains(opts, o) ∧ Contains(opts, t)
+Contains(sport, s) ∧ Contains(sport, p) ∧ Contains(sport, o) ∧ Contains(sport, t)"
+148,"∀x∀y∀z ((Anagram(x, y) ∧ Anagram(y, z)) → Anagram(x, z))
+Anagram(pots, stop)
+¬(Anagram(pots, sport) ∧ Anagram(pots, spot))
+Anagram(tops, post) ∧ Anagram(spot, opts)
+∀x (Contains(x, s) ∧ Contains(x, p) ∧ Contains(x, o) ∧ Contains(x, t) → Anagram(x, tops))
+Contains(opts, s) ∧ Contains(opts, p) ∧ Contains(opts, o) ∧ Contains(opts, t)
+Contains(sport, s) ∧ Contains(sport, p) ∧ Contains(sport, o) ∧ Contains(sport, t)"
+149,"∀x (HasTopCover(x) → HasRoof(x))
+∀x (Roof(x) → Protects(x, person) ∧ Blocks(x, sunlight))
+∃x (Roof(x) ∧ BuiltOutOf(x, concrete))
+∃x (Roof(x) ∧ BuiltOutOf(x, seagrass))
+∀x ∀y ((Concrete(x) ∧ StrongerThan(x, y) ∧ Seagrass(y)) → StrongerThan(x, seagrass))"
+150,"∀x (HasTopCover(x) → HasRoof(x))
+∀x (Roof(x) → Protects(x, person) ∧ Blocks(x, sunlight))
+∃x (Roof(x) ∧ BuiltOutOf(x, concrete))
+∃x (Roof(x) ∧ BuiltOutOf(x, seagrass))
+∀x ∀y ((Concrete(x) ∧ StrongerThan(x, y) ∧ Seagrass(y)) → StrongerThan(x, seagrass))"
+151,"∀x (HasTopCover(x) → HasRoof(x))
+∀x (Roof(x) → Protects(x, person) ∧ Blocks(x, sunlight))
+∃x (Roof(x) ∧ BuiltOutOf(x, concrete))
+∃x (Roof(x) ∧ BuiltOutOf(x, seagrass))
+∀x ∀y ((Concrete(x) ∧ StrongerThan(x, y) ∧ Seagrass(y)) → StrongerThan(x, seagrass))"
+152,"Sold(ayZor, overAMillionCopies)
+∀x (Have(x, overAMillionCopies) → PopularMusician(x))"
+153,"∀x (SymptomOfCovid19(x) → ¬ParticipateInSocialEvents(x))
+SymptomOfCovid19(fever)
+¬ParticipateInSocialEvents(x) → ¬GoToParties(x)
+¬TestNegative(x) → GoToParties(x)
+¬(TestNegative(tom) ∨ SymptomOfCovid19(fever))
+¬TestNegative(tom) → ¬ParticipateInSocialEvents(tom)"
+154,"∀x (SymptomOfCovid19(x) → ¬ParticipateInSocialEvents(x))
+SymptomOfCovid19(fever)
+¬ParticipateInSocialEvents(x) → ¬GoToParties(x)
+¬TestNegative(x) → ParticipateInSocialEvents(x)
+¬(TestNegative(tom) ∨ SymptomOfCovid19(feverTom))
+¬TestNegative(tom) → ¬ParticipateInSocialEvents(tom)"
+155,"∀x (SymptomOfCovid19(x) → ¬ParticipateInSocialEvents(x))
+SymptomOfCovid19(fever)
+¬ParticipateInSocialEvents(x) → ¬GoToParties(x)
+¬TestNegative(x) → ParticipateInSocialEvents(x)
+¬(TestNegative(tom) ∨ SymptomOfCovid19(feverTom))
+¬TestNegative(tom) → ¬ParticipateInSocialEvents(tom)"
+156,"∀x (SpecialOperationGroup(x) → IndianEliteParamilitaryUnit(x) ∧ OperatesUnder(x, odishaPolice))
+∀x (SpecialOperationGroup(x) → SpecializesIn(x, neutralizingTerrorists) ∧ SpecializesIn(x, neutralizingInsurgents) ∧ SpecializesIn(x, neutralizingExtremists))
+∀x (RecruitedFor(x, specialOperationGroup) → HighlyTrainedIn(x, skillsInvolvedInAccomplishingSpecialOperationsGroupSpecialties))
+∀x (NeutralizingTerrorists(x) ∧ NeutralizingInsurgents(x) ∧ NeutralizingExtremists(x) → InvolveSkillsSuchAs(x, executingRapidActionUnderAnyCircumstance) ∧ InvolveSkillsSuchAs(x, engagingInFieldCraftAndJungleWarfare))
+∀x (Recruits(x, specialOperationGroup) → From(x, indianArmedForces) ∨ From(x, centralParamilitaryForces))"
+157,"∀x (SpecialOperationGroup(x) → IndianEliteParamilitaryUnit(x) ∧ OperatesUnder(x, odishaPolice))
+∀x (SpecialOperationGroup(x) → SpecializesIn(x, neutralizingTerrorists) ∧ SpecializesIn(x, neutralizingInsurgents) ∧ SpecializesIn(x, neutralizingExtremists))
+∀x (RecruitedFor(x, specialOperationGroup) → HighlyTrainedIn(x, skillsInvolvedInAccomplishingSpecialOperationsGroupSpecialties))
+∀x (NeutralizingTerrorists(x) ∧ NeutralizingInsurgents(x) ∧ NeutralizingExtremists(x) → InvolveSkillsSuchAs(x, executingRapidActionUnderAnyCircumstance) ∧ InvolveSkillsSuchAs(x, engagingInFieldCraftAndJungleWarfare))
+∀x (Recruits(x, specialOperationGroup) → From(x, indianArmedForces) ∨ From(x, centralParamilitaryForces))"
+158,"∀x (SpecialOperationGroup(x) → IndianEliteParamilitaryUnit(x) ∧ OperatesUnder(x, odishaPolice))
+∀x (SpecialOperationGroup(x) → SpecializesIn(x, neutralizingTerrorists) ∧ SpecializesIn(x, neutralizingInsurgents) ∧ SpecializesIn(x, neutralizingExtremists))
+∀x (RecruitedFor(x, specialOperationGroup) → HighlyTrainedIn(x, skillsInvolvedInAccomplishing(x, specialOperationGroupSpecialties)))
+∀x (NeutralizingTerrorists(x) ∧ NeutralizingInsurgents(x) ∧ NeutralizingExtremists(x) → InvolveSkillsSuchAs(x, executingRapidActionUnderAnyCircumstance) ∧ InvolveSkillsSuchAs(x, engagingInFieldCraftAndJungleWarfare))
+∀x (Recruits(x, specialOperationGroup) → From(x, indianArmedForces) ∨ From(x, centralParamilitaryForces))"
+159,"SpecialOperationGroup(x) → IndianEliteParamilitaryUnit(x) ∧ OperatesUnder(x, odishaPolice)
+SpecialOperationGroup(x) → SpecializesIn(x, neutralizeTerrorists) ∧ SpecializesIn(x, neutralizeInsurgents) ∧ SpecializesIn(x, neutralizeExtremists)
+∀x (RecruitedFor(x, specialOperationGroup) → HighlyTrainedIn(x, skillInvolvedIn(x, specialOperationGroupSpecialties)))
+∀x (NeutralizeTerrorists(x) ∧ NeutralizeInsurgents(x) ∧ NeutralizeExtremists(x) → InvolveSkillsSuchAs(x, executeRapidActionUnderAnyCircumstance) ∧ InvolveSkillsSuchAs(x, engageInFieldCraftAndJungleWarfare))
+∀x (RecruitedFor(x, specialOperationGroup) → RecruitedFrom(x, indianArmedForces) ∨ RecruitedFrom(x, centralParamilitaryForces))"
+160,"SpecialOperationGroup(x) → IndianEliteParamilitaryUnit(x) ∧ OperatesUnder(x, odishaPolice)
+SpecialOperationGroup(x) → SpecializesIn(x, neutralizeTerrorists) ∧ SpecializesIn(x, neutralizeInsurgents) ∧ SpecializesIn(x, neutralizeExtremists)
+∀x (RecruitedFor(x, specialOperationGroup) → HighlyTrainedIn(x, skillInvolvedIn(x, specialOperationGroupSpecialties)))
+∀x (NeutralizeTerrorists(x) ∧ NeutralizeInsurgents(x) ∧ NeutralizeExtremists(x) → InvolveSkillsSuchAs(x, executeRapidActionUnderAnyCircumstance) ∧ InvolveSkillsSuchAs(x, engageInFieldCraftAndJungleWarfare))
+∀x (RecruitedFor(x, specialOperationGroup) → RecruitedFrom(x, indianArmedForces) ∨ RecruitedFrom(x, centralParamilitaryForces))"
+161,"∀x (Businessperson(x) → (∃y (Company(y) ∧ Owns(x, y))))
+∀x (Owns(x, y) → MakeMoneyFrom(x, y))
+∀x (Businessperson(x) → (Businessman(x) ⊕ Businesswoman(x)))
+∃x (Businessperson(x) ∧ Extroverted(x))
+∀x (Businessperson(x) → HandleMoneyWell(x))
+Businessman(bob) ∧ Owns(bob, microsoft)"
+162,"∀x (Businessperson(x) → (∃y (Company(y) ∧ Owns(x, y))))
+∀x (Owns(x, y) → MakeMoneyFrom(x, y))
+∀x (Businessperson(x) → (Businessman(x) ⊕ Businesswoman(x)))
+∃x (Businessperson(x) ∧ Extroverted(x))
+∀x (Businessperson(x) → HandleMoneyWell(x))
+Businessman(bob) ∧ Businessperson(bob) ∧ Owns(bob, microsoft)"
+163,"∀x (Businessperson(x) → (∃y (Company(y) ∧ Owns(x, y))))
+∀x (Owns(x, y) → MakeMoneyFrom(x, y))
+∀x (Businessperson(x) → (Businessman(x) ⊕ Businesswoman(x)))
+∃x (Businessperson(x) ∧ Extroverted(x))
+∀x (Businessperson(x) → HandleMoneyWell(x))
+Businessman(bob) ∧ Businessperson(bob) ∧ Owns(bob, microsoft)"
+164,"∀x (TeenagerStudent(x) → (InCollege(x) ∨ InHighSchool(x)))
+InCollege(john) ∧ TeenagerStudent(john)
+∀x (TeenagerStudent(x) ∧ InCollege(x) → MoreFreedomRegardingLifestyle(x) → ExplorePersonalInterests(x))
+∀x (TeenagerStudent(x) ∧ InCollege(x) → MoreFreedomRegardingLifestyle(x) ∧ GraduatedFromHighSchool(x))
+¬MoreFreedomRegardingLifestyle(catherine)
+TeenagerStudent(catherine)"
+165,"∀x (TeenagerStudent(x) → (InCollege(x) ∨ InHighSchool(x)))
+InCollege(john) ∧ TeenagerStudent(john)
+∀x (TeenagerStudent(x) ∧ InCollege(x) → HasMoreFreedomRegardingLifestyle(x) → ExplorePersonalInterests(x))
+∀x (TeenagerStudent(x) ∧ InCollege(x) → HasMoreFreedomRegardingLifestyle(x) ∧ GraduatedFromHighSchool(x))
+¬HasMoreFreedomRegardingLifestyle(catherine)
+TeenagerStudent(catherine)"
+166,"∀x (TeenagerStudent(x) → (InCollege(x) ∨ InHighSchool(x)))
+InCollege(john) ∧ TeenagerStudent(john)
+∀x (TeenagerStudent(x) ∧ InCollege(x) → MoreFreedomRegardingLifestyle(x) → ExplorePersonalInterests(x))
+∀x (TeenagerStudent(x) ∧ InCollege(x) → MoreFreedomRegardingLifestyle(x) ∧ GraduatedFromHighSchool(x))
+¬MoreFreedomRegardingLifestyle(catherine)
+TeenagerStudent(catherine)"
+167,"∀x (Resident(x, bookCity) ∧ Has(x, timeAllocatedToRead) ∧ ¬Has(x, readingHabit) → ¬Resident(x, bookCity))
+∀x (Resident(x, bookCity) ∧ Cares(x, learningNewKnowledge) → Has(x, timeAllocatedToRead))
+∀x (Resident(x, bookCity) ∧ Is(x, humbleAboutKnowledge) → Cares(x, learningNewKnowledge))
+∀x (Resident(x, bookCity) → Is(x, humbleAboutKnowledge) ∨ Is(x, confidentAboutKnowledge))
+¬(Resident(mary, bookCity) ∧ ¬Is(mary, humbleAboutKnowledge) ∧ ¬Has(mary, readingHabit)) → ¬Is(mary, humbleAboutKnowledge)"
+168,"∀x (Resident(x, bookCity) ∧ HasTimeAllocatedToRead(x) ∧ ¬HasReadingHabit(x)) → ¬Exists(x)
+∀x (Resident(x, bookCity) ∧ CaresAboutLearningNewKnowledge(x)) → HasTimeAllocatedToRead(x)
+∀x (Resident(x, bookCity) ∧ IsHumbleAboutTheirKnowledge(x)) → CaresAboutLearningNewKnowledge(x)
+∀x (Resident(x, bookCity) → IsHumbleAboutWhatTheyKnow(x) ∨ IsConfidentAboutTheirKnowledge(x))
+¬(IsHumbleAboutTheirKnowledge(mary) ∧ ¬HasReadingHabit(mary)) → ¬IsHumbleAboutTheirKnowledge(mary)"
+169,"∀x (Resident(x, bookCity) ∧ HasTimeAllocatedToRead(x) ∧ ¬HasReadingHabit(x)) → ¬Exists(x)
+∀x (Resident(x, bookCity) ∧ CaresAboutLearningNewKnowledge(x)) → HasTimeAllocatedToRead(x)
+∀x (Resident(x, bookCity) ∧ IsHumbleAboutTheirKnowledge(x)) → CaresAboutLearningNewKnowledge(x)
+∀x (Resident(x, bookCity) → IsHumbleAboutWhatTheyKnow(x) ∨ IsConfidentAboutTheirKnowledge(x))
+¬(Resident(mary, bookCity) ∧ IsHumbleAboutTheirKnowledge(mary) ∧ ¬HasReadingHabit(mary)) → ¬IsHumbleAboutTheirKnowledge(mary)"
+170,"PsychedelicMusicProject(tameImpala) ∧ Of(tameImpala, kevinParker) ∧ AustralianMultiInstrumentalist(kevinParker)
+∀x (Writes(kevinParker, x) ∧ Records(kevinParker, x) ∧ Performs(kevinParker, x) ∧ Produces(kevinParker, x) ∧ In(x, recordingStudio) → Of(x, tameImpala))
+∀x (MemberOf(x, tameImpala) → (x = kevinParker ∨ x = dominicSimper ∨ x = jayWatson ∨ x = camAvery ∨ x = julienBarbagallo))
+MostPopularSong(theLessIKnowTheBetter, tameImpala)
+∀x (MostPopularSong(x, tameImpala) → In(x, psychedelicMusicProject(kevinParker)))"
+171,"PsychedelicMusicProject(tameImpala) ∧ Of(tameImpala, kevinParker) ∧ AustralianMultiInstrumentalist(kevinParker)
+∀x (Writes(kevinParker, x) ∧ Records(kevinParker, x) ∧ Performs(kevinParker, x) ∧ Produces(kevinParker, x) ∧ In(x, recordingStudio) → Of(x, tameImpala))
+∀x (MemberOf(x, tameImpala) → (x = kevinParker ∨ x = dominicSimper ∨ x = jayWatson ∨ x = camAvery ∨ x = julienBarbagallo))
+MostPopularSong(theLessIKnowTheBetter, tameImpala)
+∀x (MostPopularSong(x, tameImpala) → In(x, psychedelicMusicProject(kevinParker)))"
+172,"PsychedelicMusicProject(tameImpala) ∧ Of(tameImpala, kevinParker) ∧ AustralianMultiInstrumentalist(kevinParker)
+∀x (Writes(kevinParker, x) ∧ Records(kevinParker, x) ∧ Performs(kevinParker, x) ∧ Produces(kevinParker, x) ∧ In(kevinParker, recordingStudio))
+∀x (MemberOf(x, tameImpala) → (x = kevinParker ∨ x = dominicSimper ∨ x = jayWatson ∨ x = camAvery ∨ x = julienBarbagallo))
+MostPopularSong(theLessIKnowTheBetter, tameImpala)
+∀x (MostPopularSong(x, tameImpala) → In(x, psychedelicMusicProject(kevinParker)))"
+173,"∀x (Vegetable(x) → ¬Called(x, sweet))
+∀x (Dessert(x) → Called(x, sweet))
+∀x (Vegetable(x) → Grown(x))
+∀x (Cookie(x) → Dessert(x))
+Called(cake, cookie) ⊕ Called(cake, sweet)"
+174,"∀x (Vegetable(x) → ¬Called(x, sweet))
+∀x (Dessert(x) → Called(x, sweet))
+∀x (Vegetable(x) → Grown(x))
+∀x (Cookie(x) → Dessert(x))
+Called(cake, cookie) ⊕ Called(cake, sweet)"
+175,"∀x (Vegetable(x) → ¬Called(x, sweet))
+∀x (Dessert(x) → Called(x, sweet))
+∀x (Vegetable(x) → Grown(x))
+∀x (Cookie(x) → Dessert(x))
+Called(cake, cookie) ⊕ Called(cake, sweet)"
+176,"∀x (Play(x, competitiveEquestrianPolo) → ¬Expect(x, prepareForStandardizedExams))
+∀x (WorldClass(x, horseRiding) ∧ WorldClass(x, polo) → Play(x, competitiveEquestrianPolo))
+∀x (Expect(x, becomeDoctor) ∨ Expect(x, becomeLawyer) → Expect(x, prepareForStandardizedExams))
+∀x (Expect(x, getHighPayingAndStableCareers) → (Expect(x, becomeDoctor) ∨ Expect(x, becomeLawyer)))
+∀x (Nominated(x, cRAReward) ∧ UndergraduateStudy(x) → Expect(x, getHighPayingAndStableCareers))
+(Expect(riley, getHighPayingAndStableCareers) ∧ Expect(riley, prepareForStandardizedExams)) ⊕ ¬(Expect(riley, getHighPayingAndStableCareers) ∨ Expect(riley, prepareForStandardizedExams))"
+177,"∀x (Play(x, competitiveEquestrianPolo) → ¬Expect(x, prepareForStandardizedExams))
+∀x (WorldClass(x, horseRiding) ∧ WorldClass(x, polo) → Play(x, competitiveEquestrianPolo))
+∀x (Expect(x, becomeDoctor) ∨ Expect(x, becomeLawyer) → Expect(x, prepareForStandardizedExams))
+∀x (Expect(x, getHighPayingCareer) ∧ Expect(x, getStableCareer) → (Expect(x, becomeDoctor) ∨ Expect(x, becomeLawyer)))
+∀x (Nominated(x, cRAReward) ∧ Undergraduate(x) → (Expect(x, getHighPayingCareer) ∧ Expect(x, getStableCareer)))
+(Expect(riley, getHighPayingCareer) ∧ Expect(riley, prepareForStandardizedExams)) ⊕ ¬(Expect(riley, getHighPayingCareer) ∨ Expect(riley, prepareForStandardizedExams))"
+178,"∀x (Play(x, competitiveEquestrianPolo) → ¬Expect(x, prepareForStandardizedExams))
+∀x (WorldClass(x, horseRiding) ∧ WorldClass(x, polo) → Play(x, competitiveEquestrianPolo))
+∀x (Expect(x, becomeDoctor) ∨ Expect(x, becomeLawyer) → Expect(x, prepareForStandardizedExams))
+∀x (Expect(x, getHighPayingAndStableCareers) → (Expect(x, becomeDoctor) ∨ Expect(x, becomeLawyer)))
+∀x (Nominated(x, cRAReward) ∧ UndergraduateStudy(x) → Expect(x, getHighPayingAndStableCareers))
+(Expect(riley, getHighPayingAndStableCareers) ∧ Expect(riley, prepareForStandardizedExams)) ⊕ ¬(Expect(riley, getHighPayingAndStableCareers) ∨ Expect(riley, prepareForStandardizedExams))"
+179,"MadeIn(riel, canada)
+AppearedIn(christopherPlummer, riel) ∧ Is(christopherPlummer, actor) ∧ PrimeMinisterOf(johnAMacdonald, canada)
+FilmedIn(riel, before1979)
+∀x ∀y (FilmedIn(x, beforeY) → ¬FilmedIn(x, afterY))"
+180,"MadeIn(riel, canada)
+AppearedIn(christopherPlummer, riel) ∧ Is(christopherPlummer, actor) ∧ Is(johnAMacdonald, canadaFirstPrimeMinister)
+FilmedBefore(riel, 1979)
+∀x ∀y (FilmedBefore(x, y) → ¬FilmedAfter(x, y))"
+181,"∀x (Cute(x) → ¬Pig(x))
+∀x (BabyAnimal(x) → Cute(x))
+∀x (AnimalInLab(x) → (Pig(x) ⊕ Sheep(x)))
+∀x (CurlyHair(x) → Sheep(x))
+∀x (Mouse(x) → ¬Sheep(x))
+AnimalInLab(waldo) ⊕ (BabyAnimal(waldo) ⊕ CurlyHair(waldo))
+AnimalInLab(murphy) ⊕ (Sheep(murphy) ⊕ Mouse(murphy))"
+182,"∀x (Cute(x) → ¬Pig(x))
+∀x (BabyAnimal(x) → Cute(x))
+∀x (AnimalInLab(x) → (Pig(x) ⊕ Sheep(x)))
+∀x (CurlyHair(x) → Sheep(x))
+∀x (Mouse(x) → ¬Sheep(x))
+AnimalInLab(waldo) ⊕ (BabyAnimal(waldo) ⊕ CurlyHair(waldo))
+AnimalInLab(murphy) ⊕ (Sheep(murphy) ⊕ Mouse(murphy))"
+183,"∀x (Cute(x) → ¬Pig(x))
+∀x (BabyAnimal(x) → Cute(x))
+∀x (AnimalInLab(x) → (Pig(x) ⊕ Sheep(x)))
+∀x (CurlyHair(x) → Sheep(x))
+∀x (Mouse(x) → ¬Sheep(x))
+AnimalInLab(waldo) ⊕ (BabyAnimal(waldo) ⊕ CurlyHair(waldo))
+AnimalInLab(murphy) ⊕ (Sheep(murphy) ⊕ Mouse(murphy))"
+184,"∀x (Cute(x) → ¬Pig(x))
+∀x (BabyAnimal(x) → Cute(x))
+∀x (AnimalInLab(x) → (Pig(x) ⊕ Sheep(x)))
+∀x (CurlyHair(x) → Sheep(x))
+∀x (Mouse(x) → ¬Sheep(x))
+AnimalInLab(waldo) ⊕ (BabyAnimal(waldo) ⊕ CurlyHair(waldo))
+AnimalInLab(murphy) ⊕ (Sheep(murphy) ⊕ Mouse(murphy))"
+185,∀x (Chair(x) → Furniture(x))
+186,"∀x (SpeciesOf(x, enterococcus) → Enterococcus(x))
+∀x (Enterococcus(x) → (GramPositive(x) ∧ CatalaseNegative(x) ∧ OxidaseNegative(x) ∧ Coccus(x) ∧ Bacterium(x)))
+∃x (StrainOf(x, enterococcusDurans) ∧ ProducerOf(x, antiInflammatoryAgent))
+∀x (AntiInflammatoryAgent(x) → StudiedIn(x, medicalResearch))"
+187,"∀x (SpeciesOf(x, enterococcus) → Enterococcus(x))
+∀x (Enterococcus(x) → (GramPositive(x) ∧ CatalaseNegative(x) ∧ OxidaseNegative(x) ∧ CoccusBacterium(x)))
+∃x (StrainOf(x, enterococcusDurans) ∧ ProducerOf(x, antiInflammatoryAgent))
+∀x (AntiInflammatoryAgent(x) → StudiedIn(x, medicalResearch))"
+188,"∀x (SpeciesOf(x, enterococcus) → Enterococcus(x))
+∀x (Enterococcus(x) → (GramPositive(x) ∧ CatalaseNegative(x) ∧ OxidaseNegative(x) ∧ CoccusBacterium(x)))
+∃x (StrainOf(x, enterococcusDurans) ∧ ProducerOf(x, antiInflammatoryAgent))
+∀x (AntiInflammatoryAgent(x) → StudiedIn(x, medicalResearch))"
+189,"∀x (ShootingGuard(x) → ¬TallerThan(x, 7))
+∀x (Top75BasketballCenter(x) → TallerThan(x, 7))
+∀x (PlayingTwoPositions(x) ∧ BasketballPlayer(x) ∧ Guard(x)) → ShootingGuard(x)
+∀x (Guard(x) ∧ ¬PlayingPointPosition(x)) → (PlayingTwoPositions(x) ∧ BasketballPlayer(x))
+(Top75BasketballCenter(john) ∨ ShootingGuard(john)) → ¬(PlayingTwoPositions(john) ∧ Guard(john) ∧ ¬PlayingPointPosition(john))"
+190,"∀x (ShootingGuard(x) → ¬TallerThan(x, 7))
+∀x (Top75BasketballCenter(x) → TallerThan(x, 7))
+∀x (BasketballPlayerPlayingTwoPositions(x) ∧ Guard(x) → ShootingGuard(x))
+∀x (Guard(x) ∧ ¬PlayPointPosition(x) → BasketballPlayerPlayingTwoPositions(x))
+(Top75BasketballCenter(john) ∨ ShootingGuard(john)) → ¬(BasketballPlayerPlayingTwoPositions(john) ∧ Guard(john) ∧ ¬PlayPointPosition(john))"
+191,"∀x (ShootingGuard(x) → ¬TallerThan(x, 7))
+∀x (Top75BasketballCenter(x) → TallerThan(x, 7))
+∀x (BasketballPlayerPlayingTwoPositions(x) ∧ Guard(x) → ShootingGuard(x))
+∀x (Guard(x) ∧ ¬PlayPointPosition(x) → BasketballPlayerPlayingTwoPositions(x))
+(Top75BasketballCenter(john) ∨ ShootingGuard(john)) → ¬(BasketballPlayerPlayingTwoPositions(john) ∧ Guard(john) ∧ ¬PlayPointPosition(john))"
+192,"∀x (HitSong(x) → Catchy(x))
+∀x (¬Melody(x) ∨ ¬Rhythm(x) → ¬Popular(x))
+∀x (HitSong(x) → Popular(x))"
+193,"∀x (HitSong(x) → Catchy(x))
+∀x (¬Melody(x) ∨ ¬Rhythm(x) → ¬Popular(x))
+∀x (HitSong(x) → Popular(x))"
+194,"∀x (HitSong(x) → Catchy(x))
+∀x (¬Melody(x) ∨ ¬Rhythm(x) → ¬Popular(x))
+∀x (HitSong(x) → Popular(x))"
+195,"∀x ((Paper(x) ∧ AcceptedAsOralAt(x, iclr)) → NeedsToBePresentedOfflineAt(x, iclr))
+∀x ((NeedsToBePresentedOfflineAt(x, iclr)) → ¬RejectedBy(x, iclrCommittee))
+∀x ((Paper(x) ∧ SelectedAsBestPaperCandidateAt(x, iclr)) → AcceptedAsOralAt(x, iclr))
+∃x (SurveyPaper(x) ∧ SelectedAsBestPaperCandidateAt(x, iclr))
+SelectedAsBestPaperCandidateAt(analyticDpm, iclr)"
+196,"∀x ((AcceptedAsOral(x, iclr) ∧ Paper(x)) → NeedsToBePresentedOffline(x, iclr))
+∀x ((NeedsToBePresentedOffline(x, iclr) ∧ Paper(x)) → ¬RejectedBy(x, iclrCommittee))
+∀x ((SelectedAsBestPaperCandidate(x, iclr) ∧ Paper(x)) → AcceptedAsOral(x, iclr))
+∃x (SurveyPaper(x) ∧ SelectedAsBestPaperCandidate(x, iclr))
+SelectedAsBestPaperCandidate(“Analytic-DPM”, iclr)"
+197,"∀x ((Paper(x) ∧ AcceptedAsOralAt(x, iclr)) → NeedsToBePresentedOfflineAt(x, iclr))
+∀x ((NeedsToBePresentedOfflineAt(x, iclr)) → ¬RejectedBy(x, iclrCommittee))
+∀x ((Paper(x) ∧ SelectedAsBestPaperCandidateAt(x, iclr)) → AcceptedAsOralAt(x, iclr))
+∃x (SurveyPaper(x) ∧ SelectedAsBestPaperCandidateAt(x, iclr))
+SelectedAsBestPaperCandidateAt(analyticDpm, iclr)"
+198,"∀x (Attended(x, acl) ∧ In(x, aiLab) → ¬AuthorOf(x, aiLabPaper))
+∀x (GraduateStudent(x) ∧ In(x, aiLab) → AuthorOf(x, aiLabPaper))
+∀x (ComputerScienceStudent(x) ∧ In(x, aiLab) ∧ ResearchIn(x, nlp) → GraduateStudent(x))
+∀x (PhDStudent(x) ∧ In(x, aiLab) ∧ Took(x, appliedLinguisticsCourse) → ComputerScienceStudent(x) ∧ ResearchIn(x, nlp))
+In(paul, aiLab)
+(ComputerScienceStudent(paul) ∧ ResearchIn(paul, nlp)) ⊕ Attended(paul, acl) → ¬AuthorOf(paul, aiLabPaper)"
+199,"∀x (Attended(x, acl) ∧ In(x, aiLab) → ¬AuthorOf(x, aiLabPaper))
+∀x (GraduateStudent(x) ∧ In(x, aiLab) → AuthorOf(x, aiLabPaper))
+∀x (ComputerScienceStudent(x) ∧ In(x, aiLab) ∧ ResearchIn(x, nlp) → GraduateStudent(x))
+∀x (PhDStudent(x) ∧ In(x, aiLab) ∧ Took(x, appliedLinguisticsCourse) → ComputerScienceStudent(x) ∧ ResearchIn(x, nlp))
+In(paul, aiLab)
+(ComputerScienceStudent(paul) ∧ ResearchIn(paul, nlp)) ⊕ Attended(paul, acl) → ¬AuthorOf(paul, aiLabPaper)"
+200,"∀x (Attended(x, acl) ∧ In(x, aiLab) → ¬AuthorOf(x, aiLabPaper))
+∀x (GraduateStudent(x) ∧ In(x, aiLab) → AuthorOf(x, aiLabPaper))
+∀x (ComputerScienceStudent(x) ∧ In(x, aiLab) ∧ ResearchIn(x, nlp) → GraduateStudent(x))
+∀x (PhDStudent(x) ∧ In(x, aiLab) ∧ Took(x, appliedLinguisticsCourse) → ComputerScienceStudent(x) ∧ ResearchIn(x, nlp))
+In(paul, aiLab)
+(ComputerScienceStudent(paul) ∧ ResearchIn(paul, nlp)) ⊕ Attended(paul, acl) → ¬AuthorOf(paul, aiLabPaper)"
+201,"¬(Moth(moth) ∧ Butterfly(moth))
+∀x (Butterfly(x) → Have(x, thinAntennae))
+∀x (Moth(x) → EmergeFrom(x, cocoon))
+∃x (Moth(x) ∧ Pest(x))
+Moth(ceruraVinula)"
+202,"¬(Moth(moth) ↔ Butterfly(moth))
+∀x (Butterfly(x) → Have(x, thinAntennae))
+∀x (Moth(x) → EmergeFrom(x, cocoon))
+∃x (Moth(x) ∧ Pest(x))
+Moth(ceruraVinula)"
+203,"¬(Moth(moth) ∧ Butterfly(moth))
+∀x (Butterfly(x) → Have(x, thinAntennae))
+∀x (Moth(x) → EmergeFrom(x, cocoon))
+∃x (Moth(x) ∧ Pest(x))
+Moth(ceruraVinula)"
+204,"∀x (ParadeGround(x) ∧ Active(x) → UsedBy(x, military))
+∃x (FormerParadeGround(x) ∧ LocatedIn(x, vienna) ∧ ParadeGround(x) ∧ ExerciseGround(x))
+∃x (FootballField(x) ∧ ContainedWithin(x, schmelz) ∧ Of(x, skRapidWien))
+∃x (Artist(x) ∧ Made(x, paintingOf(x, schmelz)))"
+205,"∀x (ParadeGround(x) ∧ Active(x) → UsedBy(x, military))
+∃x (FormerParadeGround(x) ∧ LocatedIn(x, vienna) ∧ ParadeGround(x) ∧ ExerciseGround(x))
+∃x (FootballField(x) ∧ ContainedWithin(x, schmelz) ∧ Of(x, skRapidWien))
+∃x (Artist(x) ∧ Made(x, paintingOf(x, schmelz)))"
+206,"∀x (ParadeGround(x) ∧ Active(x) → UsedBy(x, military))
+∃x (FormerParadeGround(x) ∧ LocatedIn(x, vienna) ∧ ParadeGround(x) ∧ ExerciseGround(x))
+∃x (FootballField(x) ∧ ContainedWithin(x, schmelz) ∧ Of(x, skRapidWien))
+∃x (Artist(x) ∧ Made(x, paintingOf(x, schmelz)))"
+207,"∀x (Electroencephalogram(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) → Use(x, electrode))
+Electroencephalogram(x) ∨ FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)
+¬(FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) ∧ Measure(x, voltageChange))
+¬(NearInfraredSpectroscopy(x) ⊕ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))
+(NearInfraredSpectroscopy(x) ∧ (Electroencephalogram(x) ∨ Magnetoencephalography(x)) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)) → (Measure(x, voltageChange) ∧ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))"
+208,"∀x (Electroencephalogram(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) → Use(x, electrode))
+Electroencephalogram(x) ∨ FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)
+¬(FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) ∧ Measure(x, voltageChange))
+¬(NearInfraredSpectroscopy(x) ⊕ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))
+(NearInfraredSpectroscopy(x) ∧ (Electroencephalogram(x) ∨ Magnetoencephalography(x)) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)) → Measure(x, voltageChange) ∧ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)"
+209,"∀x (Electroencephalogram(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) → Use(x, electrode))
+Electroencephalogram(x) ∨ FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)
+¬(FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) ∧ Measure(x, voltageChange))
+¬(NearInfraredSpectroscopy(x) ∨ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))
+(NearInfraredSpectroscopy(x) ∧ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)) → (Measure(x, voltageChange) ∧ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))"
+210,"∀x (Electroencephalogram(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) → Use(x, electrode))
+Electroencephalogram(x) ∨ FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)
+¬(FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) ∧ Measure(x, voltageChange))
+¬(NearInfraredSpectroscopy(x) ∨ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))
+(NearInfraredSpectroscopy(x) ∧ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)) → (Measure(x, voltageChange) ∧ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))"
+211,"∀x (Electroencephalogram(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) → Use(x, electrode))
+Electroencephalogram(x) ∨ FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)
+¬(FMRi(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital) ∧ Measure(x, voltageChange))
+¬(NearInfraredSpectroscopy(x) ∨ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))
+(NearInfraredSpectroscopy(x) ∧ Electroencephalogram(x) ∨ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital)) → (Measure(x, voltageChange) ∧ Magnetoencephalography(x) ∧ AppliedForPhysicalExamination(x) ∧ In(x, newHavenHospital))"
+212,"Annual(tasteOfEdmonton) ∧ OutdoorFestival(tasteOfEdmonton) ∧ HeldIn(tasteOfEdmonton, alberta)
+WentOnHiatus(tasteOfEdmonton, 2020)
+∀x ∀y (Festival(x) ∧ WentOnHiatus(x, y) → ¬RunsFor(x, y))
+Largest(tasteOfEdmonton, foodAndEntertainmentFestival) ∧ In(tasteOfEdmonton, westernCanada)"
+213,"Annual(tasteOfEdmonton) ∧ OutdoorFestival(tasteOfEdmonton) ∧ HeldIn(tasteOfEdmonton, alberta)
+HiatusIn(tasteOfEdmonton, 2020)
+∀x ∀y (Festival(x) ∧ HiatusIn(x, y) → ¬RunFor(x, y))
+Largest(tasteOfEdmonton, foodAndEntertainmentFestival) ∧ In(tasteOfEdmonton, westernCanada)"
+214,"Annual(tasteOfEdmonton) ∧ OutdoorFestival(tasteOfEdmonton) ∧ HeldIn(tasteOfEdmonton, alberta)
+WentOnHiatus(tasteOfEdmonton, 2020)
+∀x ∀y (Festival(x) ∧ WentOnHiatus(x, y) → ¬RunsFor(x, y))
+Largest(tasteOfEdmonton, foodAndEntertainmentFestival) ∧ In(tasteOfEdmonton, westernCanada)"
+215,"∀x (AtHome(hugo, x) ∧ Cold(x)) → Wearing(hugo, sweater)
+∀x (Winter(x) ∧ ApartmentOf(hugo, x)) → Cold(x)
+February ∈ winter
+∀x (February(x) → In(x, winter))
+∀x (Read(hugo, x) ∧ Novel(x)) → AtHome(hugo, x)
+Read(hugo, novel)"
+216,"∀x (SoldIn(x, walmart) → ¬From(x, france))
+∀x (FavoredBy(x, localResident) → From(x, columbia))
+∀x (HighPrice(x) → FavoredBy(x, jack))
+∀x (Coffee(x) ∧ ¬From(x, columbia) → CivetCoffee(x))
+JamaicaBlueCoffee(x) ∧ HighPrice(x)
+∀x (ExpensiveCoffee(x) → HighPrice(x))"
+217,"∀x (SoldIn(x, walmart) → ¬From(x, france))
+∀x (FavoredBy(x, localResident) → From(x, columbia))
+∀x (HighPrice(x) → FavoredBy(x, jack))
+∀x (Coffee(x) ∧ ¬From(x, columbia) → CivetCoffee(x))
+JamaicaBlueCoffee(x) ∧ HighPrice(x)
+∀x (ExpensiveCoffee(x) → HighPrice(x))"
+218,"∀x (SoldIn(x, walmart) → ¬From(x, france))
+∀x (FavoredBy(x, localResident) → From(x, columbia))
+∀x (HighPrice(x) → FavoredBy(x, jack))
+∀x (Coffee(x) ∧ ¬From(x, columbia) → CivetCoffee(x))
+JamaicaBlueCoffee(x) ∧ HighPrice(x)
+∀x (ExpensiveCoffee(x) → HighPrice(x))"
+219,"∀x (Elation(x) → Pleasant(x))
+∀x (Pleasant(x) → Positive(x))"
+220,"GoTo(adam, downtownArea, foot)
+TShirt(adam) → Blue(tShirt)
+GoTo(adam, downtownArea) ↔ Shopping(adam)
+GoTo(adam, downtownArea) ⊕ GoTo(adam, downtownArea, bike)
+GoTo(adam, downtownArea, foot) → TShirt(adam)"
+221,"GoTo(adam, downtownArea, foot)
+TShirt(adam) → Blue(tShirt)
+GoTo(adam, downtownArea) ↔ Shopping(adam)
+GoTo(adam, downtownArea) ⊕ GoTo(adam, downtownArea, bike)
+GoTo(adam, downtownArea, foot) → TShirt(adam)"
+222,"GoTo(adam, downtownArea, foot)
+TShirt(adam) → Blue(tShirt)
+GoTo(adam, downtownArea) ↔ Shopping(adam)
+GoTo(adam, downtownArea) ⊕ GoTo(adam, downtownArea, bike)
+GoTo(adam, downtownArea, foot) → TShirt(adam)"
+223,"∀x (FlightDestinationFrom(x, tweedAirport) → In(x, domesticAmerica))
+∀x (¬RequirePassportFor(x, americanCitizen) → WidelySpokenLanguage(x, russian))
+∀x (In(x, domesticAmerica) → ¬RequirePassportFor(x, americanCitizen))
+∀x (BalticCountry(x) → WidelySpokenLanguage(x, russian))
+∀x (ManyEstonianStreetSigns(x) → BalticCountry(x))
+(FlightDestinationFrom(placeVisitedBy(max), tweedAirport) ⊕ BalticCountry(placeVisitedBy(max))) → ¬BalticCountry(placeThatMaxWantsToVisit)"
+224,"∀x (FlightDestinationFrom(x, tweedAirport) → In(x, domesticAmerica))
+∀x (¬RequirePassportFor(x, americanCitizen) → WidelySpokenLanguage(x, russian))
+∀x (In(x, domesticAmerica) → ¬RequirePassportFor(x, americanCitizen))
+∀x (BalticCountry(x) → WidelySpokenLanguage(x, russian))
+∀x (ManyEstonianStreetSigns(x) → BalticCountry(x))
+(FlightDestinationFrom(placeVisitedBy(max), tweedAirport) ∨ BalticCountry(placeVisitedBy(max))) → ¬BalticCountry(placeThatMaxWantsToVisit)"
+225,"∀x (FlightDestinationFrom(x, tweedAirport) → In(x, domesticAmerica))
+∀x (¬RequirePassportFor(x, americanCitizen) → WidelySpokenLanguage(x, russian))
+∀x (In(x, domesticAmerica) → ¬RequirePassportFor(x, americanCitizen))
+∀x (BalticCountry(x) → WidelySpokenLanguage(x, russian))
+∀x (ManyEstonianStreetSigns(x) → BalticCountry(x))
+(FlightDestinationFrom(placeVisitedBy(max), tweedAirport) ⊕ BalticCountry(placeVisitedBy(max))) → ¬BalticCountry(placeThatMaxWantsToVisit)"
+226,Uncertain
+227,Uncertain
+228,Uncertain
+229,Uncertain
+230,Uncertain
+231,Uncertain
+232,Uncertain
+233,Uncertain
+234,Uncertain
+235,Uncertain
+236,True
+237,True
+238,Uncertain
+239,Uncertain
+240,Uncertain
+241,True
+242,False
+243,Uncertain
+244,Uncertain
+245,Uncertain
+246,Uncertain
+247,Uncertain
+248,Uncertain
+249,Uncertain
+250,Uncertain
+251,Uncertain
+252,Uncertain
+253,Uncertain
+254,Uncertain
+255,Uncertain
+256,Uncertain
+257,Uncertain
+258,Uncertain
+259,True
+260,True
+261,Uncertain
+262,Uncertain
+263,Uncertain
+264,Uncertain
+265,Uncertain
+266,Uncertain
+267,Uncertain
+268,True
+269,Uncertain
+270,Uncertain
+271,Uncertain
+272,True
+273,True
+274,True
+275,Uncertain
+276,Uncertain
+277,Uncertain
+278,Uncertain
+279,True
+280,Uncertain
+281,True
+282,Uncertain
+283,Uncertain
+284,Uncertain
+285,Uncertain
+286,True
+287,Uncertain
+288,Uncertain
+289,Uncertain
+290,Uncertain
+291,Uncertain
+292,Uncertain
+293,True
+294,Uncertain
+295,False
+296,Uncertain
+297,Uncertain
+298,Uncertain
+299,True
+300,Uncertain
+301,Uncertain
+302,Uncertain
+303,True
+304,Uncertain
+305,Uncertain
+306,Uncertain
+307,True
+308,True
+309,Uncertain
+310,True
+311,True
+312,Uncertain
+313,Uncertain
+314,Uncertain
+315,Uncertain
+316,Uncertain
+317,Uncertain
+318,Uncertain
+319,Uncertain
+320,Uncertain
+321,Uncertain
+322,Uncertain
+323,True
+324,Uncertain
+325,Uncertain
+326,Uncertain
+327,Uncertain
+328,False
+329,True
+330,True
+331,Uncertain
+332,Uncertain
+333,Uncertain
+334,Uncertain
+335,Uncertain
+336,True
+337,True
+338,True
+339,Uncertain
+340,Uncertain
+341,Uncertain
+342,Uncertain
+343,True
+344,Uncertain
+345,Uncertain
+346,True
+347,Uncertain
+348,Uncertain
+349,Uncertain
+350,Uncertain
+351,Uncertain
+352,Uncertain
+353,Uncertain
+354,True
+355,Uncertain
+356,Uncertain
+357,Uncertain
+358,Uncertain
+359,Uncertain
+360,Uncertain
+361,Uncertain
+362,Uncertain
+363,Uncertain
+364,Uncertain
+365,False
+366,Uncertain
+367,True
+368,True
+369,True
+370,Uncertain
+371,Uncertain
+372,True
+373,True
+374,True
+375,Uncertain
+376,Uncertain
+377,Uncertain
+378,Uncertain
+379,Uncertain
+380,Uncertain
+381,Uncertain
+382,True
+383,True
+384,Uncertain
+385,True
+386,Uncertain
+387,Uncertain
+388,True
+389,True
+390,True
+391,Uncertain
+392,Uncertain
+393,Uncertain
+394,True
+395,True
+396,True
+397,Uncertain
+398,True
+399,Uncertain
+400,Uncertain
+401,True
+402,Uncertain
+403,Uncertain
+404,Uncertain
+405,False
+406,Uncertain
+407,Uncertain
+408,Uncertain
+409,Uncertain
+410,Uncertain
+411,Uncertain
+412,True
+413,True
+414,Uncertain
+415,Uncertain
+416,Uncertain
+417,Uncertain
+418,Uncertain
+419,Uncertain
+420,Uncertain
+421,Uncertain
+422,Uncertain
+423,True
+424,Uncertain
+425,Uncertain
+426,Uncertain
+427,True
+428,Uncertain
+429,True
+430,Uncertain
+431,Uncertain
+432,Uncertain
+433,Uncertain
+434,Uncertain
+435,Uncertain
+436,Uncertain
+437,Uncertain
+438,True
+439,True
+440,Uncertain
+441,True
+442,Uncertain
+443,Uncertain
+444,Uncertain
+445,False
+446,True
+447,Uncertain
+448,True
+449,Uncertain
+450,Uncertain
+451,Uncertain
+452,Stephen Curry is an athlete.
+453,Stephen Curry is a professional center back.
+454,"If Stephen Curry is a professional center back, then he is not an athlete."
+455,Tyler joins the student government in high school.
+456,"If Tyler either stays alone in high school or is well-adjusted within the community and engaged with the community, then Tyler does not have many opportunities to improve his communication skills or stays alone in high school."
+457,Tim majors in computer science.
+458,Tim is not a computer science major and is not from the Yale Running Club.
+459,Tim finished the Boston Marathon in under three hours.
+460,There exist two roses that are noisy.
+461,"Murphy does not study light generation, light transmission, or light detection."
+462,Murphy studies science.
+463,Someone studies engineering.
+464,Martha is Jane's friend and works in a lab.
+465,Martha is Jane's friend and either wears casual outfits to work or is inclined towards an analytical career.
+466,"Martha is Jane's friend and she either wears casual outfits to work and is inclined towards an analytical career, or neither wears casual outfits to work nor is inclined towards an analytical career."
+467,Jack is a human.
+468,Jack can vote and get married.
+469,Jack can either vote or get married.
+470,The University of Oxford is ranked among prestigious universities.
+471,The University of Edinburgh is older than the University of Oxford.
+472,The University of Oxford is made up of thirty-nine colleges.
+473,All bricks float on water.
+474,Pan refuses to work in person.
+475,Pan refuses to work in person or is hardworking.
+476,Pan does not refuse to work in person and is not hardworking.
+477,Kate has traveled to the Iberian Peninsula.
+478,Kate took a selfie at the Sagrada Familia.
+479,Kate has not taken a selfie at the Sagrada Familia.
+480,Kate has never left the United States.
+481,Kate has never left the United States.
+482,Kate either took a selfie at the Sagrada Familia or never left the United States.
+483,"If Kate has never taken a selfie at the Sagrada Familia and has never been to Europe, then Kate has never left the United States."
+484,"If Kate either took a selfie at the Sagrada Familia and has been to Europe, or neither took a selfie at the Sagrada Familia nor has been to Europe, then Kate took a selfie at the Sagrada Familia."
+485,Pulp is an English band.
+486,James Cocker is a documentary feature.
+487,Pulp is the best band.
+488,Today is December 1st.
+489,"If there are thirty days remaining until the end of the year, then it is Wednesday."
+490,Planes are faster than bicycles.
+491,Planes are faster than walking.
+492,There exists a scarf made of alpaca wool that was not bought by an experienced shopper.
+493,Jackie owns a startup.
+494,Jackie is either a full-time student or a part-time student.
+495,Jackie enrolls as part-time in the current semester and takes less than two courses in the current semester.
+496,"Jackie either enrolls as part-time in the current semester and takes less than two courses in the current semester, or Jackie enrolls as part-time in the current semester and takes two or more courses in the current semester."
+497,"If Jackie either enrolls as part-time in the current semester and is listed in the Forbes 30 Under 30, or neither enrolls as part-time in the current semester nor is listed in the Forbes 30 Under 30, then Jackie takes less than two courses in the current semester and listed in the Forbes 30 Under 30."
+498,James exercises every day.
+499,"James does not exercise every day, but he plays division 1 football at Yale University."
+500,James exercises every day and plays division 1 football at Yale University.
+501,"If James does not have a GPA above 3.5, then James exercises every day and plays division 1 football at Yale University."
+502,"If James does not exercise every day and plays division 1 football at Yale University, then James plays division 1 football at Yale University."
+503,Simon is a member of the Northern Premier League.
+504,Simon Hackney plays at Winchen Park.
+505,US 31 is in Alabama.
+506,CR47 is not in Alabama.
+507,SR287 is in the United States.
+508,Andres can propel the boat forward.
+509,Andres coaches the crew when the coach is not present and is in command of the boat.
+510,Andres is neither the coach of the crew when the coach is not present nor in command of the boat.
+511,A snare drum is a timpani.
+512,A snare drum is not a timpani.
+513,The snare drum is a xylophone.
+514,A snare drum is a xylophone or is tuned by tightening.
+515,The snare drum is either a xylophone or tuned by tightening.
+516,The banana needs to be washed.
+517,The banana is unripened and served in a bowl.
+518,The banana is either unripened or served in a bowl.
+519,Borj Masouda is military construction designed to defend territories in warfare.
+520,Borj Masouda is in Medina Sfax.
+521,Borj Masouda is not in Tunisia.
+522,Borj Masouda is a defensive wall.
+523,No rower is from Sydney.
+524,Australians are not represented by New South Wales.
+525,An Australian competes in sweep oared events and represents New South Wales.
+526,Susan grew up as an only child and has a close-knit family in this neighborhood.
+527,Susan lives in this neighborhood and is trying to start a new diet.
+528,Susan lives in this neighborhood and is not an only child with a close-knit family or has a packed schedule and lives close to Stop & Shop.
+529,John is a vegetarian if and only if he does not eat meat and does not eat fish.
+530,Vegans do not eat eggs.
+531,"If something does not eat eggs, then it is good for health."
+532,Provision of high meat content food and object play reduce predation of wild animals by domestic cats Felis catus without abstraction.
+533,"If the provision of high meat content food and object play reduces predation of wild animals by domestic cats Felis catus is either easily accepted or without abstract, then it is prominent and a publication that requires peer review."
+534,"If the provision of high-meat-content food and object play to reduce predation of wild animals by domestic cats Felis catus is not an abstract, or it requires peer review, then it is not both a science journal and easily accepted."
+535,Family Pirate Party was not released in North America.
+536,Family Pirate Party was released in Japan.
+537,Family Pirate Party was released in North America and Japan.
+538,Family Pirate Party is for Wii.
+539,"John took the IELTS exam on a computer, but he did not take the speaking test on a computer."
+540,"If John takes the IELTS exam, then he uses paper."
+541,"If someone takes the IELTS exam and takes the reading test, then they use paper or a computer."
+542,Chen does not use any Apple products or uses some Apple products.
+543,Chen either uses the Apple ecosystem or cares about extreme customization.
+544,Chen either uses Android or Apple EcoSystem.
+545,Chen either uses Apple products or the Apple ecosystem.
+546,"If Chen uses Apple or Apple's ecosystem, then Chen does not use Apple or Apple's ecosystem."
+547,"If Chen either does not use any Apple products or uses at least one Apple product, and Chen uses the Apple ecosystem, then Chen does not use Android or the Apple ecosystem."
+548,"If Chen does not use any Apple products or use the Apple ecosystem, then Chen either uses Apple products or the Apple ecosystem."
+549,Jan Jelinek is an electronic musician.
+550,Jan Jelinek is not a signed musician.
+551,Jan Jelinek is German.
+552,Amy is a Pasifika New Zealander.
+553,Amy is an Asian New Zealander.
+554,Joe is an Asian New Zealander.
+555,Joe speaks Samoan.
+556,No snake has feathers.
+557,Lily eats two different protein bars.
+558,Lily either focuses on endurance workouts or eats two protein bars.
+559,"If Lily eats two different protein bars, then Lily's workouts do not focus on building muscle and endurance."
+560,Bobby is a dog.
+561,Bobby is a rock.
+562,Bobby is either an animal or a rock.
+563,Hailee is an orienteer.
+564,Karl is not an orienteer.
+565,The bald eagle is an endangered species.
+566,Mickey is in a national park and sold in a public marketplace.
+567,"If Mickey is not both in a national park and sold in a public marketplace, then Mickey is endangered and sold in a public marketplace."
+568,"If Mickey is not in a national park and is not sold in a public marketplace, then Mickey is not hunted for profit by humans or is in a national park."
+569,Navarre can access ETB2.
+570,French casque country cannot access ETB2.
+571,Joseph Kmak is German.
+572,Joseph Kmak played in Major League Baseball.
+573,Joseph Kmak is a catcher.
+574,Andrew Wilson was born in Eastern Europe.
+575,Andrew Wilson specializes in Poland.
+576,Andrew Wilson specializes in Britain.
+577,No British person is a political scientist.
+578,Luca is capable of both naval and ground combat.
+579,Luca is not capable of both naval and ground combat.
+580,Luca is capable of naval combat or ground combat.
+581,Luca is not capable of naval combat and ground combat.
+582,Spencer was discharged.
+583,James is a student in China.
+584,James is not a student and is in China.
+585,Jack was invited to attend or presented at the conference.
+586,Jack was either invited to attend or presented at the conference.
+587,Jack is not registered for the conference and James is not invited to attend the conference.
+588,Sustainable energy sources are selected for the hall of fame.
+589,Sustainable energy sources are selected for the Hall of Fame.
+590,Sustainable energy sources are unfinished in the course.
+591,Tangent Online is not an online magazine.
+592,Tangent Online is a print magazine.
+593,"There exists an online magazine that is on the web, launched in 1997, and covers reviews."
+594,The Wind Is Watching is hard to access.
+595,The Wind Is Watching has a small budget.
+596,The Wind Is Watching is a dystopian novel.
+597,There exist two plants and two animals.
+598,Pots are anagrams of tops.
+599,Stop is an anagram of post.
+600,Post is an anagram of stop.
+601,"If something is not a roof, then it does not protect."
+602,"If something is a roof made of concrete and something else is a roof made of seagrass, then the concrete roof is stronger than the seagrass roof."
+603,Roofs made of concrete do not block sunlight.
+604,Ay Zor is not a popular musician.
+605,Tom has symptoms of COVID-19.
+606,Tom did not go to parties and did not have a fever.
+607,"If Tom does not have a fever, then he goes to parties."
+608,Some members of the Indian Armed Forces are recruited for special operation groups.
+609,Some members of the Indian Armed Forces are trained in engaging in warfare.
+610,The special operations group specializes in neutralizing.
+611,There is a central paramilitary force recruited for a special operation group that operates under the Odisha Police.
+612,The Special Operations Group specializes in naval warfare.
+613,Bob is an extrovert.
+614,Bob handles money.
+615,Bob is a businessperson who makes money from Microsoft.
+616,John explores personal interests.
+617,Catherine is a teenager student in high school.
+618,Catherine graduated from high school.
+619,X has time for reading.
+620,Mary is either humble or confident about their knowledge.
+621,Mary is either humble about their knowledge or confident about their knowledge.
+622,"Kevin Parker wrote ""The Less I Know the Better""."
+623,The origin of Tame Impala is found in San Francisco.
+624,Jay Watson is a member of Tame Impala.
+625,Cake is a dessert.
+626,Cake is a vegetable.
+627,Cake is not a vegetable.
+628,X is world-class at horse riding and polo.
+629,Riley was nominated for the CRA Award.
+630,Riley either plays competitive equestrian polo or is nominated for a CRA Award.
+631,Riel was filmed after 1979.
+632,Alexander Mackenzie was the second prime minister of Canada.
+633,Waldo is cute.
+634,Waldo is not cute.
+635,Murphy is a baby or has curly hair.
+636,Murphy is not a baby and does not have curly hair.
+637,There are at least two chairs.
+638,Enterococcus durans is catalase negative.
+639,There exists a Gram-positive bacterium that has been studied.
+640,"If Enterococcus Durans produces something, then it is not studied."
+641,John is a top 75 basketball center.
+642,John is a guard and does not play point position.
+643,John is not a guard and does not play at point position.
+644,"If a song does not have a melody, then it is not a hit."
+645,"If a song is catchy, then it is a hit."
+646,There exists a song that lacks rhythm and is a hit.
+647,Analytic-DPM is a survey.
+648,"If analytic-DPM is a best paper candidate, then it is a survey and rejected."
+649,"If the analytic-DPM is either a survey or presented in iCLR, then it is not rejected."
+650,Paul is a graduate student.
+651,Paul is a PhD student and took an applied linguistics course.
+652,Paul is not a PhD student and took an applied linguistics course.
+653,Ceruravinula emerges from a cocoon.
+654,Ceruravinula does not have thin antennae.
+655,Ceruravinula is a pest.
+656,Balthasar Wigand made a painting of a former parade ground.
+657,Schmelz is used by the military.
+658,No artist made a painting of Vienna.
+659,Near-infrared spectroscopy is used for electrodes.
+660,Near-infrared spectroscopy measures voltage changes and uses electrodes.
+661,Near-infrared spectroscopy uses electrodes and magnetoencephalography.
+662,"If near-infrared spectroscopy measures voltage changes or magnetoencephalography, then it measures voltage changes and uses electrodes."
+663,"If near-infrared spectroscopy measures voltage change or uses electrodes, then it uses electrodes and is an fMRI."
+664,The largest food and entertainment festival in western Canada was not held in 2020.
+665,There exists an outdoor festival that did not occur in 2020.
+666,Taste of Edmonton went on hiatus in 2021.
+667,Hugo is wearing a sweater now.
+668,Civet coffee is from France.
+669,Jamaica Blue is from Colombia.
+670,Jamaican Blue is favored by local residents.
+671,"If something is an elation, then it is not positive."
+672,Adam bought a T-shirt.
+673,"If Adam goes downtown by bike and wears a T-shirt, then he does not buy a T-shirt."
+674,"If Adam goes shopping, then he either goes by bike or on foot."
+675,Max visited a place that is a flight destination and is from Tweed Airport.
+676,The place visited by Max has many Estonian street signs.
+677,The place visited by Max does not have many Estonian street signs and is not a Baltic country.
