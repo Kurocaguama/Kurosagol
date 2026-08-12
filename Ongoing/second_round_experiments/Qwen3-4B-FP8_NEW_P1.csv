@@ -1,0 +1,140 @@
+,Texto
+0,"    <text>
+    </text>
+    Please write the FOL premises for the given natural language premises.
+    </text>
+    </text>
+    </text>
+    </text>
+"
+1,"    <text>
+    </text>
+    Please reason step by step, and output the FOL premises.
+    </s>
+
+    </s>
+
+    </s>
+
+    </s>
+
+"
+2,"    <text>
+    </text>
+    Please write the FOL premises for the given natural language premises.
+    </text>
+    </text>
+    </text>
+    </text>
+"
+3,"    <text>
+    </text>
+    <text>
+    </text>
+"
+4,"    <text>
+    </text>
+    <text>
+    </text>
+"
+5,"    ∀x (Square(x) → FourSided(x)) 
+    ∀x (FourSided(x) → Shape(x))
+    </text>
+    """"""
+    
+    """"""
+    Natural Language Premises:
+    All squares are four-sided.
+    All four-sided things are shapes.
+    FOL Premises:
+    ∀x (Square(x) → FourSided(x))
+    ∀x (FourSided(x) → Shape(x))
+    </text>
+    """"""
+    
+    """"""
+    Natural Language Premises:
+    All squares are four-sided.
+    All four-sided things are shapes.
+    FOL Premises:
+    ∀x (Square(x) → FourSided(x))
+"
+6,"    <text>
+    </text>
+    <text>
+    </text>
+"
+7,"    <text>
+    </text>
+
+    To solve this problem, I need to translate the given natural language premises into first-order logic formulas. Let's break down each premise and translate them step by step.
+
+    1) ""Stranger Things"" is a popular Netflix show.
+    - This is a straightforward statement. We can represent it as a fact about the show ""Stranger Things"".
+    - Let's define a predicate ""Popular(x)"" where x is a Netflix show. So, ""Stranger Things"" is a popular Netflix show would be: Popular(""Stranger Things"").
+
+    2) If a Netflix show is popular, Karen will binge-watch it.
+    - This is a conditional statement. If a show is popular, then Karen will binge-watch it.
+    - Let's define a predicate ""Binge(x)"" where x is a Netflix show, and ""KarenBinge(x)"" to represent Karen binge-watching show x.
+    - The statement becomes: ∀x (Popular(x) → KarenBinge(x)).
+
+    3) If and only if Karen binge-watches a Netflix show, she will download it.
+    - This is a biconditional statement. Karen will download a show if and only if she binge-watches it.
+    - Let's define a predicate ""Download(x)"" where x is a Netflix show.
+    - The statement becomes: ∀x (KarenBinge(x) ↔ Download(x)).
+
+    4) Karen does not download ""Black Mirror.""
+    - This is a direct statement about Karen not downloading a specific show.
+    - Let's define ""Black Mirror"" as a Netflix show. So, the statement becomes: ¬Download(""Black Mirror"").
+
+    5) ""Black Mirror"" is a Netflix show.
+    - This is a straightforward statement about the show ""Black Mirror"".
+    - Let's define ""Black Mirror"" as a Netflix show. So, the statement becomes: Netflix(""Black Mirror"").
+
+    6) If Karen binge-watches a Netflix show, she will share it with Lisa.
+    - This is a conditional statement. If Karen binge-watches a show, then she will share it with Lisa.
+    - Let's define a predicate ""Share(x)"" where x is a Netflix show.
+    - The statement becomes: ∀x (KarenBinge(x) → Share(x)).
+
+    Now, I need to make sure that all the predicates are consistent and that the statements are translated correctly into first-order logic formulas.
+    </text>
+    </text>
+    </text>
+    </text>
+"
+8,"    CapitalOf(x, y) ::: x is the capital of y.
+    City(x, y) ::: x is the capital city of the world's most populous nation y.
+    LocatedIn(x, y) ::: x is located in y.
+    Hosted(x, y) ::: x hosted the y games.
+    HasUniversities(x, y) ::: x has y universities.
+    <text>
+    FOL Premises:
+    CapitalOf(Beijing, People's Republic of China)
+    City(Beijing, world's most populous nation)
+    LocatedIn(Beijing, Northern China)
+    Hosted(Beijing, 2008 Summer Olympics)
+    Hosted(Beijing, 2008 Summer Paralympics Games)
+    Hosted(Beijing, Summer and Winter Olympics)
+    Hosted(Beijing, Summer and Winter Paralympics)
+    HasUniversities(Beijing, 91)
+    </text>
+    --------------
+    Now, the problem is to write FOL premises for the following natural language premises, using the given predicates. The following is the information you need to complete the task.
+    Natural Language Premises:
+    All students in the class are from the same city.
+    Some students in the class are from different cities.
+    There is at least one student in the class who is not from the same city as the others.
+    No student in the class is from both city A and city B.
+    All students in the class are from either city A or city B.
+    The class has at least one student from city A and at least one student from city B.
+    <text>
+    FOL Premises:
+    SameCity(x) ::: x is from the same city as all other students in the class.
+    FromCity(x, y) ::: x is from city y.
+    <text>
+    FOL Premises:
+    </text>
+    </text>
+    </text>
+    </text>
+"
